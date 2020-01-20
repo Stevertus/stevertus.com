@@ -1,0 +1,52 @@
+fluid-spinner {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 32px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.search {
+  padding: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  input {
+    width: 30%;
+    height: 40px;
+  }
+
+  fluid-icon {
+    color: var(--primary);
+    margin-left: -48px;
+    margin-right: 24px;
+  }
+
+  .tags {
+    margin-left: 8px;
+    display: flex;
+
+    align-items: center;
+    fluid-tag {
+      cursor: pointer;
+      margin: 0 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .search {
+    display: block;
+    input {
+      width: calc(100% - 32px);
+      height: 40px;
+    }
+  }
+}

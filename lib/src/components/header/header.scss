@@ -1,0 +1,42 @@
+fluid-appbar {
+  --appbar-background: white;
+  --appbar-text: black;
+  border-bottom: 1px solid #f3f3f7;
+}
+.logo-title {
+  position: relative;
+  margin-left: -16px;
+  p {
+    position: absolute;
+    top: 3px;
+    right: 9px;
+    font-weight: 700;
+    color: white;
+    font-size: 17px;
+  }
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  a {
+      padding: 0 16px;
+      font-weight: 500;
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        color: var(--primary);
+      }
+  }
+  div:nth-child(1n + 2) {
+    border-left: 1px solid #f3f3f7;
+    
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  .links {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+<fluid-modal title="Please select your item" id="crafting_item_selector">
+    <input type="text" fluidInput [(ngModel)]="id" placeholder="Item ID"><br>
+    <input type="text" fluidInput [(ngModel)]="count" placeholder="Count"><br>
+    <textarea fluidMultiInput [(ngModel)]="nbt" placeholder="Nbt tag"></textarea><br>
+
+    <p class="err" *ngIf="errorMsg != null">{{errorMsg}}</p>
+
+    <button fluidBtn (click)="submit()">Apply</button>
+</fluid-modal>

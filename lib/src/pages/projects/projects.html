@@ -1,0 +1,8 @@
+<div class="container">
+    <fluid-spinner *ngIf="loading">
+    </fluid-spinner>
+    <doc-grid *ngIf="!loading && projects.isNotEmpty" [documents]="projects"></doc-grid>
+    <p class="error" *ngIf="!loading && projects.isEmpty">
+        No projects have been found!
+    </p>
+</div>

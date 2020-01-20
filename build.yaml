@@ -1,0 +1,10 @@
+targets:
+  $default:
+    builders:
+      fluix_web|scss_builder:
+        enabled: True
+global_options:
+  angular|angular:
+    options:
+      no-emit-component-factories: True
+      no-emit-injectable-factories: True

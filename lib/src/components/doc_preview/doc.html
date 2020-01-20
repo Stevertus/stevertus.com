@@ -1,0 +1,5 @@
+<fluid-card>
+    <div class="img-container"><img [src]="doc.img" alt=""></div>
+    <h3>{{doc.title}}</h3>
+    <p *ngIf="doc.description.isNotEmpty">{{doc.description}}</p>
+</fluid-card>

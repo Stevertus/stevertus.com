@@ -4,7 +4,6 @@ import 'package:fluix_web/fluix/button/button.dart';
 import 'package:fluix_web/fluix/card/card.dart';
 import 'package:stevertus/src/http.dart' as http;
 import 'package:stevertus/src/services/safe_url.dart';
-import 'package:objd/core.dart' as objd show Project, Pack, File, getAllFiles;
 
 @Component(
   selector: 'tekpack',
@@ -30,13 +29,6 @@ class TekPackPage implements OnInit {
         print(items);
       }
     }).catchError((err) => print(err));
-
-    print(objd.getAllFiles(
-        objd.Project(
-            name: "test",
-            description: "my Project",
-            generate: objd.Pack(name: "test", main: objd.File("main"))),
-        []));
   }
 
   List getKeys(Map obj) => obj.keys.toList();

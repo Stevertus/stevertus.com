@@ -7,7 +7,8 @@
         <div id="leftControl" (click)="controlPages(false)" *ngIf="currentIndex > 0">
             <fluid-icon icon="arrowLeft" [size]="32"></fluid-icon>
         </div>
-        <p>Recipe {{currentIndex + 1}} of {{recipes.length}}</p>
+
+
         <div class="grid">
             <div class="slot" *ngFor="let slot of slots">
                 <div class="content" [class.selected]="selectedSlot == slot" (click)="onSelect(slot)">
@@ -29,7 +30,55 @@
                 <img [src]="getItemImage(current.result)" [alt]="current.result.getId()">
             </div>
         </div>
-        <!-- <nb-card id="card">
+    </div>
+
+    <fluid-card id="card">
+        <div class="split">
+            <div>
+                <h3>Recipe {{currentIndex + 1}} of {{recipes.length}}</h3>
+                <input type="number" fluidInput [(ngModel)]="current.id" placeholder="Override Recipe ID">
+
+                <fluid-checkbox [value]="current.isShapeless" (click)="current.isShapeless = !current.isShapeless"
+                    label="Shapeless">
+                </fluid-checkbox>
+                <fluid-checkbox [value]="current.exactlyPlaced" (click)="current.exactlyPlaced = !current.exactlyPlaced"
+                    label="Check for Empty Slots">
+
+
+                </fluid-checkbox>
+
+                <input type="number" fluidInput [(ngModel)]="current.exactResult" placeholder="exact Output Count">
+
+                <h3>Project</h3>
+                <input fluidInput [(ngModel)]="table.name" placeholder="Project namespace"><br>
+                <input type="number" fluidInput [(ngModel)]="table.id" placeholder="Base Id for all recipes">
+
+                <fluid-checkbox [value]="table.useBarrel" (click)="table.useBarrel = !table.useBarrel"
+                    label="use a barrel instead of a chest">
+                </fluid-checkbox>
+                <fluid-checkbox [value]="table.invisibleHitbox" (click)="table.invisibleHitbox = !table.invisibleHitbox"
+                    label="make the chest invisible(just up to 1.14)">
+                </fluid-checkbox>
+
+                <fluid-checkbox [value]="table.giveCommandFunction"
+                    (click)="table.giveCommandFunction = !table.giveCommandFunction"
+                    label=" include a function to generate recipes in minecraft">
+                </fluid-checkbox>
+            </div>
+            <textarea *ngIf="errorText == null" placeholder="Result" disabled cols="30" rows="10">
+                {{result}}
+            </textarea>
+            <textarea *ngIf="errorText != null" class="error" placeholder="ERROR" disabled cols="30" rows="10">
+                {{errorText}}
+            </textarea>
+        </div>
+
+        <button fluidBtn highlight (click)="download()">Download Datapack</button>
+        <button fluidBtn (click)="generate()">Generate</button>
+
+    </fluid-card>
+
+    <!-- <nb-card id="card">
         <nb-card-body>
             <button type="button" name="button" class="btn btn-hero-success" (click)="onGenerateOne()">Generate this
                 recipe</button>
@@ -74,7 +123,6 @@
             </div>
         </nb-card-footer>
     </nb-card> -->
-    </div>
 </div>
 
 <item-selector [(item)]="selectedItem"></item-selector>

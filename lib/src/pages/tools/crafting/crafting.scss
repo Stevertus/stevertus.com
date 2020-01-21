@@ -2,6 +2,22 @@
   position: relative;
 }
 
+#card {
+  --inputBackground: #f8f8fc;
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  button {
+    margin: 8px;
+    width: 47%;
+  }
+}
+#card * {
+  margin: 8px 0;
+}
+
 fluid-icon {
   color: grey;
   &:hover {
@@ -62,6 +78,7 @@ fluid-icon {
 }
 
 .grid {
+  position: relative;
   width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

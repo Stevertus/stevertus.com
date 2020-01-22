@@ -6,6 +6,7 @@ import 'package:fluix_web/fluix/checkbox/checkbox.dart';
 import 'package:fluix_web/fluix/icon/icon.dart';
 import 'package:fluix_web/fluix/input/input.dart';
 import 'package:fluix_web/fluix/modal/modal_service.dart';
+import 'package:fluix_web/fluix/multi_input/input.dart';
 
 import 'package:objd/core.dart';
 import 'package:objd_crafting/objd_crafting.dart';
@@ -24,6 +25,7 @@ import 'package:stevertus/src/components/objd/item_selector/item.dart';
     FluidCheckbox,
     FluidButton,
     FluidInput,
+    FluidMultiInput,
     ItemSelectorComponent,
     formDirectives
   ],
@@ -72,10 +74,9 @@ class CraftingToolPage implements OnInit {
   }
 
   void addEmptyRecipe() {
-    recipes.add(Recipe(
-      {1: Item(Items.carrot)},
-      Item("stone"),
-    ));
+    recipes.add(
+      Recipe({}, null),
+    );
   }
 
   void switchPage(int index, [save = true]) {
@@ -101,11 +102,9 @@ class CraftingToolPage implements OnInit {
         Project(name: table.name, generate: table),
       );
 
-      result = generatedFiles[
-              "data/craft/functions/recipes/${table.name}.mcfunction"] +
+      result = generatedFiles["data/craft/functions/recipes/craft.mcfunction"] +
           "\n" +
-          generatedFiles[
-              "data/craft/functions/recipes/res_${table.name}.mcfunction"];
+          generatedFiles["data/craft/functions/recipes/res_craft.mcfunction"];
     } catch (err) {
       errorText = err.toString();
       generatedFiles = {};

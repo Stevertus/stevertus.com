@@ -34,6 +34,8 @@ class ItemSelectorComponent implements AfterChanges {
 
   @Input('item')
   Item item;
+  @Input('name')
+  String name;
 
   final _itemChange = StreamController<Item>();
   @Output('itemChange')
@@ -42,26 +44,19 @@ class ItemSelectorComponent implements AfterChanges {
   String errorMsg;
 
   String id;
-  int _count;
-  String get count => _count?.toString() ?? "";
-  set count(String s) => _count = int.tryParse(s);
   String nbt;
 
   @override
   void ngAfterChanges() {
-    print("check");
-    if (item == null) item = Item("");
+    name ??= "item_selector";
+    item ??= Item("");
     id = item.getId();
-    _count = item.count;
     nbt = json.encode(item.tag);
-
-    print(id);
   }
 
   void submit() {
     errorMsg = null;
     item.type = ItemType(id);
-    item.count = _count;
     try {
       item.tag = nbt.isNotEmpty ? json.decode(nbt) : {};
       _itemChange.add(item);

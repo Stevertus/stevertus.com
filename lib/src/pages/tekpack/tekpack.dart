@@ -26,7 +26,6 @@ class TekPackPage implements OnInit {
         for (var i = 0; i < res["items"].length; i++) {
           items.add(TekPackItem.fromJson(res["items"][i]));
         }
-        print(items);
       }
     }).catchError((err) => print(err));
   }

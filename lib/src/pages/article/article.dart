@@ -3,6 +3,7 @@ import 'package:angular/security.dart';
 import 'package:angular_router/angular_router.dart';
 import 'package:fluix_web/fluix/icon/icon.dart';
 import 'package:fluix_web/fluix/spinner/spinner.dart';
+import 'package:ng_translate/ng_translate.dart';
 import 'package:stevertus/src/data/article.dart';
 import 'package:stevertus/src/http.dart';
 import 'package:stevertus/src/pages/article/slices/slices.dart';
@@ -22,10 +23,12 @@ import 'package:stevertus/src/services/safe_url.dart';
   ],
 )
 class ArticlePage implements OnActivate {
+  TranslationService lang;
+
   FullArticle article;
   DomSanitizationService sanitizer;
 
-  ArticlePage(this.sanitizer);
+  ArticlePage(this.sanitizer, this.lang);
 
   bool loading = true;
 
@@ -36,7 +39,8 @@ class ArticlePage implements OnActivate {
 
   @override
   void onActivate(_, RouterState current) async {
-    article = await getFullArticle(current.parameters["id"]);
+    article =
+        await getFullArticle(current.parameters["id"], lang.currentLocale);
     loading = false;
   }
 }

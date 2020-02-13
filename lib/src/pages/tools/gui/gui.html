@@ -1,0 +1,39 @@
+<div id="center">
+    <div class="container" [style.max-width]="getWidth()">
+        <div class="grid" [style.--columns]="columns">
+            <div class="slot" *ngFor="let slot of slotCount">
+                <div class="content">
+                    hi
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <fluid-card id="card">
+        <h3>Page
+            <!-- {{currentIndex + 1}} of {{recipes.length}} -->
+        </h3>
+
+
+
+
+
+        <h3>Project</h3>
+
+        <input fluidInput placeholder="Project namespace"><br>
+
+        <fluid-dropdown [(selected)]="selectedContainer" [values]="containers">
+
+        </fluid-dropdown>
+
+
+
+        <button class="full" fluidBtn (click)="download()">Download Datapack</button>
+
+    </fluid-card>
+</div>
+
+<!-- <item-selector [(item)]="selectedItem" name="crafting_item_selector"></item-selector>
+<item-selector [(item)]="table.placeholder" name="crafting_placeholder"></item-selector>
+<item-selector [(item)]="table.guiModel" name="crafting_gui"></item-selector>
+<item-selector [(item)]="table.blockModel" name="crafting_block"></item-selector> -->

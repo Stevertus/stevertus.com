@@ -4,6 +4,7 @@ import 'package:angular_router/angular_router.dart';
 import 'package:fluix_web/fluix/icon/icon.dart';
 import 'package:fluix_web/fluix/input/input.dart';
 import 'package:fluix_web/fluix/tag/tag.dart';
+import 'package:ng_translate/ng_translate.dart';
 import 'package:stevertus/src/components/doc_grid/grid.dart';
 import 'package:stevertus/src/data/document.dart';
 import 'package:stevertus/src/http.dart';
@@ -28,11 +29,21 @@ import 'package:fluix_web/fluix/spinner/spinner.dart';
 )
 class ProjectsPage implements OnInit {
   bool loading = true;
+  TranslationService lang;
+
+  ProjectsPage(this.lang);
 
   List<Document> projects = [];
 
   ngOnInit() {
-    getProjects().then((val) {
+    loadProjects(lang.currentLocale);
+
+    lang.localeChange.addListener(loadProjects);
+  }
+
+  void loadProjects(String locale) {
+    loading = true;
+    getProjects(lang.currentLocale).then((val) {
       loading = false;
       projects = val;
     });

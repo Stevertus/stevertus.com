@@ -4,9 +4,9 @@
         <h2>Stevertus</h2>
     </div>
     <div class="links">
-        <a href="">About</a>
-        <a href="">Contact</a>
-        <a href="">Tools</a>
+        <a href="" ngtranslate>footer.about</a>
+        <a routerLink="/fard" ngtranslate>contact</a>
+        <a routerLink="/articles?type=tool" ngtranslate>footer.tools</a>
     </div>
     <div class="social">
         <a href="https://www.youtube.com/channel/UCpXIIRHJ_U0LosNt_MIVl4A"><img src="/assets/social/yt.svg"></a>
@@ -21,10 +21,12 @@
 
     </div>
     <div class="madein">
-        Made with <fluid-icon>heart</fluid-icon> in Germany
+        <span ngtranslate>footer.madewith</span>
+        <fluid-icon>heart</fluid-icon> <span ngtranslate>footer.inG</span>
     </div>
 </div>
 <div class="rights">
-    <p>All rights reserved <a href="https://dmanager.stevertus.com/privacy/en">Privacy Policy</a></p>
+    <p> <span ngtranslate>footer.rightsReserved</span><a href="https://dmanager.stevertus.com/privacy/en"
+            ngtranslate>footer.privacyPolicy</a></p>
     © 2020 Stevertus
 </div>

@@ -25,20 +25,27 @@ Future _getToken() async {
 
 Future<Map> query(String q) async {
   await _getToken();
-  final res =
-      await http.get(guri + "?query=" + q, headers: {"Prismic-ref": token});
+  final res = await http.get(guri + "?query=" + q, headers: {
+    "Prismic-ref": token,
+    'Content-Type': 'application/octet-stream; charset=UTF-8',
+  });
   if (res.body == null || res.statusCode != 200) throw ("Request failed!");
-  final body = json.decode(res.body);
+  final body = json.decode(Utf8Decoder().convert(res.bodyBytes));
   if (body == null) throw ("No Json body!");
   return body;
 }
 
 Future<List<Document>> getArticlePreviews(
-    [List<String> tags, String search = ""]) async {
+  String locale, [
+  List<String> tags,
+  String search = "",
+]) async {
   String sTags = json.encode(tags);
 
+  locale = _getPrismicLocale(locale);
+
   Map res = await query("""{
-  allArticles(sortBy:date_DESC,fulltext: "${search}",tags_in:$sTags,lang:"en-us") {
+  allArticles(sortBy:date_DESC,fulltext: "${search}",tags_in:$sTags,lang:"$locale") {
     edges {
       node {
         header
@@ -79,9 +86,11 @@ Future<dynamic> getJsonFile(String url) async {
   return json.decode(inp);
 }
 
-Future<List<Document>> getProjects() async {
+Future<List<Document>> getProjects(String locale) async {
+  locale = _getPrismicLocale(locale);
+
   Map res = await query("""{
-  allProjects(sortBy:meta_firstPublicationDate_DESC,lang:"en-us") {
+  allProjects(sortBy:meta_firstPublicationDate_DESC,lang:"$locale") {
     edges {
       node {
         header
@@ -109,11 +118,18 @@ Future<List<Document>> getProjects() async {
   return ret;
 }
 
-Future<FullArticle> getFullArticle(String uid) async {
+String _getPrismicLocale(String locale) {
+  if (locale == 'de') return 'de-de';
+  return 'en-us';
+}
+
+Future<FullArticle> getFullArticle(String uid, String locale) async {
+  locale = _getPrismicLocale(locale);
+
   Map res = await query(r'''{
 article(uid:"''' +
       uid +
-      '''",lang: "en-us"){
+      '''",lang: "$locale"){
   _meta{uid}
   header
   title

@@ -45,12 +45,16 @@
             <p>Stevertus.com</p>
         </a>
         <div class="links">
-            <a routerLink="/articles">Articles</a>
-            <a routerLink="/projects">Projects</a>
-            <a href="https://www.youtube.com/channel/UCpXIIRHJ_U0LosNt_MIVl4A/videos">Videos</a>
+            <a routerLink="/articles" ngtranslate>articles</a>
+            <a routerLink="/projects" ngtranslate>projects</a>
+            <a href="https://www.youtube.com/channel/UCpXIIRHJ_U0LosNt_MIVl4A/videos" ngtranslate>videos</a>
         </div>
         <div trailing>
-            <button routerLink="/fard" fluidBtn small>Contact</button>
+
+            <button routerLink="/fard" fluidBtn small>{{'contact' | ngtranslate}}</button>
+
+            <fluid-dropdown [values]="locales" [selected]="selected" (selectedChange)="changeLang($event)">
+            </fluid-dropdown>
         </div>
     </fluid-bar-align>
 </fluid-appbar>

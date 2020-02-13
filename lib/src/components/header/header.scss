@@ -3,6 +3,19 @@ fluid-appbar {
   --appbar-text: black;
   border-bottom: 1px solid #f3f3f7;
 }
+
+[trailing] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  --dropdown-container: #f3f3f7;
+  * {
+    margin: 0 8px;
+    min-width: 80px;
+  }
+}
+
 .logo-title {
   position: relative;
   margin-left: -16px;
@@ -19,23 +32,21 @@ fluid-appbar {
   display: flex;
   flex-direction: row;
   a {
-      padding: 0 16px;
-      font-weight: 500;
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-      &:hover {
-        color: var(--primary);
-      }
+    padding: 0 16px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary);
+    }
   }
   div:nth-child(1n + 2) {
     border-left: 1px solid #f3f3f7;
-    
   }
 }
 
 @media screen and (max-width: 960px) {
-
   .links {
     display: none;
   }

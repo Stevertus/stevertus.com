@@ -1,5 +1,5 @@
 <div class="search">
-    <input type="text" fluidInput placeholder="Search" (keyup)="onSearch()" [(ngModel)]="searchInput">
+    <input type="text" fluidInput [placeholder]="'search' | ngtranslate" (keyup)="onSearch()" [(ngModel)]="searchInput">
     <fluid-icon icon="search" (click)="onSearch()"></fluid-icon>
     <div class="tags">
         <fluid-tag *ngFor="let tag of allTags" [value]="tags[tag] != null" (click)="toggleTag(tag)">{{tag}}</fluid-tag>

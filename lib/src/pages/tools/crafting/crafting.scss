@@ -104,26 +104,5 @@ fluid-icon {
       z-index: 30;
       position: absolute;
     }
-    .overlay {
-      input {
-        margin: 2px;
-      }
-      padding: 10px;
-      background-color: rgb(80, 80, 80);
-      width: 400%;
-      position: absolute;
-      height: 300%;
-      z-index: 1;
-    }
-    .overlay.right {
-      padding-left: calc(100% + 20px);
-      left: -10px;
-      top: -10px;
-    }
-    .overlay.left {
-      padding-right: calc(100% + 20px);
-      right: -10px;
-      top: -10px;
-    }
   }
 }

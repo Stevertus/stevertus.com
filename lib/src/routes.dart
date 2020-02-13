@@ -6,6 +6,7 @@ import './pages/articles/articles.template.dart' as arts;
 import './pages/projects/projects.template.dart' as proj;
 import './pages/tekpack/tekpack.template.dart' deferred as tek;
 import './pages/tools/crafting/crafting.template.dart' deferred as craft;
+import './pages/tools/gui/gui.template.dart' deferred as gui;
 import './pages/not_found.template.dart' as not_found_template;
 
 final redirects = [
@@ -33,6 +34,7 @@ class RoutePaths {
   static final article = RoutePath(path: 'article/:id');
   static final tekpack = RoutePath(path: 'tekpack');
   static final craftingTool = RoutePath(path: 'tools/crafting');
+  static final guiTool = RoutePath(path: 'tools/gui');
 }
 
 class Routes {
@@ -71,6 +73,13 @@ class Routes {
       return craft.CraftingToolPageNgFactory;
     },
   );
+  static final guiTool = RouteDefinition.defer(
+    routePath: RoutePaths.guiTool,
+    loader: () async {
+      await gui.loadLibrary();
+      return gui.GuiToolPageNgFactory;
+    },
+  );
 
   static final all = <RouteDefinition>[
     fard,
@@ -80,6 +89,7 @@ class Routes {
     projects,
     tekpack,
     craftingTool,
+    guiTool,
     ...redirects,
     RouteDefinition(
       path: '.+',

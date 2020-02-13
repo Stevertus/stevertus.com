@@ -108,7 +108,6 @@ class CraftingToolPage implements OnInit {
     } catch (err) {
       errorText = err.toString();
       generatedFiles = {};
-      print(err);
     }
   }
 

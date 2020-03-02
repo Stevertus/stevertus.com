@@ -14,7 +14,7 @@ import 'package:stevertus/src/components/objd/item_selector/item.dart';
 
 @Component(
   selector: 'crafting_tool',
-  styleUrls: ['crafting.css'],
+  styleUrls: ['crafting.css', '../tools.css'],
   templateUrl: 'crafting.html',
   providers: [ClassProvider(ModalService)],
   directives: [
@@ -102,9 +102,11 @@ class CraftingToolPage implements OnInit {
         Project(name: table.name, generate: table),
       );
 
-      result = generatedFiles["data/craft/functions/recipes/craft.mcfunction"] +
+      result = generatedFiles[
+              "data/${table.name}/functions/recipes/craft.mcfunction"] +
           "\n" +
-          generatedFiles["data/craft/functions/recipes/res_craft.mcfunction"];
+          generatedFiles[
+              "data/${table.name}/functions/recipes/res_craft.mcfunction"];
     } catch (err) {
       errorText = err.toString();
       generatedFiles = {};

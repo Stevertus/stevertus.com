@@ -45,7 +45,7 @@ Future<List<Document>> getArticlePreviews(
   locale = _getPrismicLocale(locale);
 
   Map res = await query("""{
-  allArticles(sortBy:date_DESC,fulltext: "${search}",tags_in:$sTags,lang:"$locale") {
+  allArticles(sortBy:date_DESC,fulltext: "${search}",tags_in:$sTags,lang:"$locale",where: {public: true}) {
     edges {
       node {
         header
@@ -90,7 +90,7 @@ Future<List<Document>> getProjects(String locale) async {
   locale = _getPrismicLocale(locale);
 
   Map res = await query("""{
-  allProjects(sortBy:meta_firstPublicationDate_DESC,lang:"$locale") {
+  allProjects(sortBy:date_DESC,lang:"$locale") {
     edges {
       node {
         header

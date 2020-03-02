@@ -1,9 +1,21 @@
 <div id="center">
     <div class="container" [style.max-width]="getWidth()">
+
+        <div id="rightControl" (click)="controlPages(true)">
+            <fluid-icon *ngIf="(currentPageIndex + 1) == module.pages.length" icon="plus" [size]="32"></fluid-icon>
+            <fluid-icon *ngIf="(currentPageIndex + 1) != module.pages.length" icon="arrowRight" [size]="32">
+            </fluid-icon>
+        </div>
+        <div id="leftControl" (click)="controlPages(false)" *ngIf="currentPageIndex > 0">
+            <fluid-icon icon="arrowLeft" [size]="32"></fluid-icon>
+        </div>
+
         <div class="grid" [style.--columns]="columns">
-            <div class="slot" *ngFor="let slot of slotCount">
-                <div class="content">
-                    hi
+            <div class="slot" *ngFor="let S of slotCount;let i = index">
+                <div class="content" (click)="changeSlot(i)">
+                    <img [src]="getImageUrl(i)">
+                    <p>{{getTextForIndex(i)}}</p>
+
                 </div>
             </div>
         </div>
@@ -11,21 +23,44 @@
 
     <fluid-card id="card">
         <h3>Page
-            <!-- {{currentIndex + 1}} of {{recipes.length}} -->
+            {{currentPageIndex + 1}} of {{module.pages.length}}
         </h3>
 
+        <fluid-checkbox [(value)]="currentPage.fillEmptySlots" label="Fill all empty slots with the placeholder below">
+        </fluid-checkbox>
 
+        <button fluidBtn secondary (click)="modalService.open('gui_placeholder')">Select Placeholder
+            Item</button>
 
 
 
         <h3>Project</h3>
 
-        <input fluidInput placeholder="Project namespace"><br>
+        <input [(ngModel)]="namespace" fluidInput placeholder="Project namespace"><br>
 
-        <fluid-dropdown [(selected)]="selectedContainer" [values]="containers">
+        <fluid-dropdown [selected]="selectedContainer" (selectedChange)="containerChanged($event)"
+            [values]="containers">
 
         </fluid-dropdown>
 
+        <input *ngIf="showLocation" [(ngModel)]="module.blockLocation.location" fluidInput
+            placeholder="Location of the block"><br>
+
+        <ng-container *ngIf="selected == 'HandItem'">
+            <button fluidBtn secondary (click)="modalService.open('gui_trigger')">Select Item that should trigger the
+                GUI</button><br>
+            <input [(ngModel)]="module.minecartName.value['text']" fluidInput placeholder="Custom Minecart Name"><br>
+
+            <fluid-checkbox [(value)]="module.minecartAlwaysActive"
+                label="Minecart is not hidden in front of the player">
+            </fluid-checkbox>
+            <input [(ngModel)]="module.offset.location" fluidInput placeholder="Custom Offset Location"><br>
+        </ng-container>
+
+        <textarea fluidMultiInput *ngIf="errorText != null" class="error" placeholder="ERROR" disabled cols="30"
+            rows="10">
+        {{errorText}}
+        </textarea>
 
 
         <button class="full" fluidBtn (click)="download()">Download Datapack</button>
@@ -34,6 +69,34 @@
 </div>
 
 <!-- <item-selector [(item)]="selectedItem" name="crafting_item_selector"></item-selector>
-<item-selector [(item)]="table.placeholder" name="crafting_placeholder"></item-selector>
-<item-selector [(item)]="table.guiModel" name="crafting_gui"></item-selector>
-<item-selector [(item)]="table.blockModel" name="crafting_block"></item-selector> -->
+<item-selector [(item)]="table.placeholder" name="crafting_placeholder"></item-selector> -->
+
+<item-selector (itemChange)="slotChanged" name="gui_slot" [showId]="showItemInputs" [showCount]="showItemInputs"
+    [showNbt]="showItemInputs">
+    <div before>
+        <p>Please select your desired action:</p>
+        <fluid-dropdown [(selected)]="selectedGuiType" [values]="guiSlots"></fluid-dropdown><br>
+        <textarea style="width:90%" *ngIf="selectedGuiType == 1" [(ngModel)]="selectedSlotActions" fluidMultiInput
+            cols="30" rows="5" placeholder="Commands to execute..."></textarea>
+
+        <input *ngIf="selectedGuiType == 1" fluidInput [(ngModel)]="selectedCountScore" placeholder="Count Scoreboard">
+        <input *ngIf="selectedGuiType == 1" fluidInput [(ngModel)]="selectedCountScoreEntity"
+            placeholder="Count Score Entity">
+        <input *ngIf="selectedGuiType == 5" type="number" fluidInput [(ngModel)]="selectedSlotPage"
+            placeholder="Page number...">
+
+
+        <h3 *ngIf="showItemInputs">Select your Item</h3>
+    </div>
+
+</item-selector>
+
+<item-selector [(item)]="currentPage.placeholder" name="gui_placeholder">
+    <p before>This item is applied to all placeholder slots that you did not specify or fills up the rest.</p>
+
+</item-selector>
+
+<item-selector [(item)]="module.triggerGui" *ngIf="selected == 'HandItem'" name="gui_trigger">
+    <p before>Hold this item in your hand and a minecart will be summoned in front of you.</p>
+
+</item-selector>

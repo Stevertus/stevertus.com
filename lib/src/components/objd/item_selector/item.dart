@@ -32,10 +32,16 @@ class ItemSelectorComponent implements AfterChanges {
 
   ItemSelectorComponent(this.service);
 
-  @Input('item')
+  @Input()
   Item item;
-  @Input('name')
+  @Input()
   String name;
+  @Input()
+  bool showId = true;
+  @Input()
+  bool showCount = true;
+  @Input()
+  bool showNbt = true;
 
   final _itemChange = StreamController<Item>();
   @Output('itemChange')
@@ -52,6 +58,7 @@ class ItemSelectorComponent implements AfterChanges {
     item ??= Item("");
     id = item.getId();
     nbt = json.encode(item.tag);
+    print(item);
   }
 
   void submit() {
@@ -59,8 +66,9 @@ class ItemSelectorComponent implements AfterChanges {
     item.type = ItemType(id);
     try {
       item.tag = nbt.isNotEmpty ? json.decode(nbt) : {};
-      _itemChange.add(item);
-      service.close("crafting_item_selector");
+      _itemChange.add(Item.clone(item));
+      item = Item("");
+      service.close(name);
     } catch (err) {
       errorMsg = err.toString();
       print(err);

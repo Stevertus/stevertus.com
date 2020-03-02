@@ -1,9 +1,16 @@
 <fluid-modal title="Please select your item" [id]="name">
-    <input type="text" fluidInput [(ngModel)]="id" placeholder="Item ID"><br>
-    <input type="number" fluidInput [(ngModel)]="item.count" placeholder="Count"><br>
-    <textarea fluidMultiInput [(ngModel)]="nbt" placeholder="Nbt tag"></textarea><br>
+
+    <ng-content select="[before]"></ng-content>
+
+    <input *ngIf="showId" type="text" fluidInput [(ngModel)]="id" placeholder="Item ID"><br>
+    <input *ngIf="showCount" type="number" fluidInput [(ngModel)]="item.count" placeholder="Count"><br>
+    <textarea *ngIf="showNbt" fluidMultiInput [(ngModel)]="nbt" placeholder="Nbt tag"></textarea><br>
+
+    <ng-content></ng-content>
 
     <p class="err" *ngIf="errorMsg != null">{{errorMsg}}</p>
 
     <button fluidBtn (click)="submit()">Apply</button>
+
+    <ng-content select="[button]"></ng-content>
 </fluid-modal>

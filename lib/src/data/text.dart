@@ -36,6 +36,7 @@ class TextSlice extends Slice {
             }
           case "image":
             {
+              print(t);
               body.add(ImgTextPart(t["url"], t["alt"]));
 
               break;

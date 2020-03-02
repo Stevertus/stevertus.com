@@ -9,13 +9,11 @@
         </div>
 
 
-        <div class="grid">
+        <div class="grid" style="--columns:3; width: 50%">
             <div class="slot" *ngFor="let slot of slots">
-                <div class="content" [class.selected]="selectedSlot == slot" (click)="onSelect(slot)">
-                    <div class="centered" *ngIf="current.ingredients[slot] != null">
-                        <img [src]="getItemImage(current.ingredients[slot])" [alt]="current.ingredients[slot].getId()">
-                        <!-- <div *ngIf="slot.nbt && slot.id">has nbt</div> -->
-                    </div>
+                <div class="content" (click)="onSelect(slot)">
+                    <img *ngIf="current.ingredients[slot] != null" [src]="getItemImage(current.ingredients[slot])"
+                        [alt]="current.ingredients[slot].getId()">
                 </div>
             </div>
         </div>
@@ -24,10 +22,14 @@
             [ngClass]="{selected: selectedSlot == 10}">
             {{slots.output.id}} | Has nbt
         </div> -->
-        <div class="result" (click)="onSelect(10)" [class.selected]="selectedSlot == 10">
-            <div class="centered" *ngIf="current.result != null">
+        <div class="result" (click)="onSelect(10)">
+            <div class="slot">
+                <div class="content">
+                    <img *ngIf="current.result != null" [src]="getItemImage(current.result)"
+                        [alt]="current.result.getId()">
+
+                </div>
                 <!-- <div *ngIf="slot.nbt && slot.id">has nbt</div> -->
-                <img [src]="getItemImage(current.result)" [alt]="current.result.getId()">
             </div>
         </div>
     </div>
@@ -38,11 +40,9 @@
                 <h3>Recipe {{currentIndex + 1}} of {{recipes.length}}</h3>
                 <input type="number" fluidInput [(ngModel)]="current.id" placeholder="Override Recipe ID">
 
-                <fluid-checkbox [value]="current.isShapeless" (click)="current.isShapeless = !current.isShapeless"
-                    label="Shapeless">
+                <fluid-checkbox [(value)]="current.isShapeless" label="Shapeless">
                 </fluid-checkbox>
-                <fluid-checkbox [value]="current.exactlyPlaced" (click)="current.exactlyPlaced = !current.exactlyPlaced"
-                    label="Check for Empty Slots">
+                <fluid-checkbox [(value)]="current.exactlyPlaced" label="Check for Empty Slots">
 
 
                 </fluid-checkbox>
@@ -56,8 +56,7 @@
                 <fluid-checkbox [value]="table.useBarrel" (click)="table.useBarrel = !table.useBarrel"
                     label="use a barrel instead of a chest">
                 </fluid-checkbox>
-                <fluid-checkbox [value]="table.invisibleHitbox" (click)="table.invisibleHitbox = !table.invisibleHitbox"
-                    label="make the chest invisible(just up to 1.14)">
+                <fluid-checkbox [(value)]="table.invisibleHitbox" label="make the chest invisible(just up to 1.14)">
                 </fluid-checkbox>
 
                 <button fluidBtn secondary (click)="modalService.open('crafting_placeholder')">Select Placeholder
@@ -65,8 +64,7 @@
                 <button fluidBtn secondary (click)="modalService.open('crafting_gui')">Select Gui Item</button>
                 <button fluidBtn secondary (click)="modalService.open('crafting_block')">Select Block Model</button>
 
-                <fluid-checkbox [value]="table.giveCommandFunction"
-                    (click)="table.giveCommandFunction = !table.giveCommandFunction"
+                <fluid-checkbox [(value)]="table.giveCommandFunction"
                     label=" include a function to generate recipes in minecraft">
                 </fluid-checkbox>
             </div>
@@ -131,7 +129,8 @@
     </nb-card> -->
 </div>
 
-<item-selector [(item)]="selectedItem" name="crafting_item_selector"></item-selector>
+<item-selector [(item)]="selectedItem" name="crafting_item_selector">
+</item-selector>
 <item-selector [(item)]="table.placeholder" name="crafting_placeholder"></item-selector>
 <item-selector [(item)]="table.guiModel" name="crafting_gui"></item-selector>
 <item-selector [(item)]="table.blockModel" name="crafting_block"></item-selector>

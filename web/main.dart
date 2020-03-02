@@ -7,9 +7,8 @@ import 'package:stevertus/app_component.template.dart' as ng;
 
 import 'main.template.dart' as self;
 
-@GenerateInjector(
-  routerProviders, // You can use routerProviders in production
-)
+@GenerateInjector(routerProviders // You can use routerProviders in production
+    )
 final InjectorFactory injector = self.injector$Injector;
 
 void main() async {

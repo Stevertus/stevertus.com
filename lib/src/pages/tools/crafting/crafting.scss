@@ -1,61 +1,17 @@
-.container {
-  position: relative;
-}
-
 #card {
-  --inputBackground: #f8f8fc;
-
   .split {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  button.full {
-    margin: 8px;
-    width: 47%;
-  }
-}
-#card * {
-  margin: 8px 0;
 }
 
-fluid-icon {
-  color: grey;
-  &:hover {
-    color: var(--primary);
-  }
-}
-
-#rightControl {
-  position: absolute;
-  right: -60px;
-  top: 240px;
-  font-size: 50px;
-  color: black;
-}
-#leftControl {
-  position: absolute;
-  left: -60px;
-  top: 240px;
-  font-size: 50px;
-  color: black;
-  .tooltip {
-    position: absolute;
-    right: 0px;
-  }
-}
-.errorText {
-  color: red;
-}
 .result {
   position: absolute;
   right: 5%;
   margin-top: -37%;
-  height: 33%;
   width: calc(100% / 6);
-  background-color: white;
   border: 8px solid rgb(80, 80, 80);
   text-align: center;
-  line-height: 800%;
 }
 #convertIcon {
   position: absolute;
@@ -65,9 +21,6 @@ fluid-icon {
   text-align: center;
   font-size: 50px;
 }
-.selected {
-  background-color: rgb(222, 222, 222);
-}
 
 .centered {
   position: absolute;
@@ -75,34 +28,4 @@ fluid-icon {
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.grid {
-  position: relative;
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
-  background-color: rgb(80, 80, 80);
-  padding: 10px;
-  margin-bottom: 15px;
-  .slot {
-    position: relative;
-    height: 0;
-    width: 100%;
-    padding-bottom: 100%;
-    .content {
-      background-color: white;
-      padding-bottom: 100%;
-      width: 100%;
-      &.selected {
-        background-color: rgb(222, 222, 222);
-      }
-    }
-
-    .raised {
-      z-index: 30;
-      position: absolute;
-    }
-  }
 }

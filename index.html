@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Stevertus.com</title>
+    <meta
+      name="description"
+      content="Generators, Datapacks, Tools and more | The official Stevertus website featuring all articles and downloads"
+    />
+    <base href="/" />
 
-<head>
-  <script>
-    // WARNING: DO NOT set the <base href> like this in production!
-    // Details: https://webdev.dartlang.org/angular/guide/router
-    (function () {
-      var m = document.location.pathname.match(/^(\/[-\w]+)+\/web($|\/)/);
-      document.write('<base href="' + (m ? m[0] : '/') + '" />');
-    }());
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>Stevertus.com</title>
-  <meta name="description"
-    content="Generators, Datapacks, Tools and more | The official Stevertus website featuring all articles and downloads">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://stevertus.com/" />
+    <meta property="og:title" content="Stevertus.com" />
+    <meta
+      property="og:description"
+      content="Generators, Datapacks, Tools and more | The official Stevertus website featuring all articles and downloads"
+    />
+    <meta property="og:image" content="/assets/yt_banner.webp" />
 
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://stevertus.com/" />
+    <meta property="twitter:title" content="Stevertus.com" />
+    <meta
+      property="twitter:description"
+      content="Generators, Datapacks, Tools and more | The official Stevertus website featuring all articles and downloads"
+    />
+    <meta property="twitter:image" content="/assets/yt_banner.webp" />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+    <script defer src="main.dart.js"></script>
+  </head>
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://stevertus.com/">
-  <meta property="og:title" content="Stevertus.com">
-  <meta property="og:description"
-    content="Generators, Datapacks, Tools and more | The official Stevertus website featuring all articles and downloads">
-  <meta property="og:image" content="/assets/yt_banner.webp">
-
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://stevertus.com/">
-  <meta property="twitter:title" content="Stevertus.com">
-  <meta property="twitter:description"
-    content="Generators, Datapacks, Tools and more | The official Stevertus website featuring all articles and downloads">
-  <meta property="twitter:image" content="/assets/yt_banner.webp">
-
-  <script defer src="main.dart.js"></script>
-</head>
-
-<body>
-  <my-app>
-    <div class="spinner"></div>
-  </my-app>
-</body>
-
+  <body>
+    <my-app>
+      <div class="spinner"></div>
+    </my-app>
+  </body>
 </html>

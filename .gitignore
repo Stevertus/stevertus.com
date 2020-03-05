@@ -4,3 +4,4 @@ ng_translate/
 .packages
 pubspec.lock
 pubspec.yaml
+build/

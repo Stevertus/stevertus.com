@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      // WARNING: DO NOT set the <base href> like this in production!
+      // Details: https://webdev.dartlang.org/angular/guide/router
+      (function() {
+        var m = document.location.pathname.match(/^(\/[-\w]+)+\/web($|\/)/);
+        document.write('<base href="' + (m ? m[0] : "/") + '" />');
+      })();
+    </script>
+
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <base href="/" />
+
     <title>Stevertus.com</title>
     <meta
       name="description"
       content="Generators, Datapacks, Tools and more | The official Stevertus website featuring all articles and downloads"
     />
-    <base href="/" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

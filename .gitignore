@@ -1,0 +1,6 @@
+.dart_tool/
+fluix-web/
+ng_translate/
+.packages
+pubspec.lock
+pubspec.yaml

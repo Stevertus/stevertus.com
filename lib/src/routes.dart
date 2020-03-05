@@ -34,7 +34,7 @@ class RoutePaths {
   static final article = RoutePath(path: 'article/:id');
   static final tekpack = RoutePath(path: 'tekpack');
   static final craftingTool = RoutePath(path: 'tools/crafting');
-  static final guiTool = RoutePath(path: 'tools/guiBETA');
+  static final guiTool = RoutePath(path: 'tools/gui');
 }
 
 class Routes {

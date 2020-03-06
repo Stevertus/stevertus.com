@@ -6,19 +6,19 @@ while(true)switch(y){case 0:y=3
 return P.aP(G.AM(C.b.ah(d,"http")?d:"https://stevertus.com/"+d,null),$async$zb)
 case 3:v=f
 u=v.e
-t=B.mk(J.R(U.me(u).c.a,"charset"))
+t=B.ml(J.R(U.mf(u).c.a,"charset"))
 s=v.x
 t.aG(0,s)
 t=v.b
 if(t!==200)throw H.d("Request failed!")
-w=B.mk(J.R(U.me(u).c.a,"charset")).aG(0,s)
+w=B.ml(J.R(U.mf(u).c.a,"charset")).aG(0,s)
 y=1
 break
 case 1:return P.b2(w,x)}})
 return P.b3($async$zb,x)},
 z9:function(d){var y=0,x=P.b4(null),w,v
 var $async$z9=P.b5(function(e,f){if(e===1)return P.b1(f,x)
-while(true)switch(y){case 0:v=C.i
+while(true)switch(y){case 0:v=C.l
 y=3
 return P.aP(G.zb(d),$async$z9)
 case 3:w=v.aG(0,f)
@@ -32,7 +32,7 @@ Ng:function(d,e){return new K.xX(E.L(H.b(d,"$iF"),H.q(e),X.aT))},
 Nh:function(d,e){H.b(d,"$iF")
 H.q(e)
 return new K.xY(N.aw(),E.L(d,e,X.aT))},
-Ni:function(d,e){return new K.m_(E.L(H.b(d,"$iF"),H.q(e),X.aT))},
+Ni:function(d,e){return new K.m0(E.L(H.b(d,"$iF"),H.q(e),X.aT))},
 Nj:function(d,e){return new K.xZ(E.L(H.b(d,"$iF"),H.q(e),X.aT))},
 Nk:function(d,e){return new K.y_(E.L(H.b(d,"$iF"),H.q(e),X.aT))},
 Nl:function(d,e){H.b(d,"$iF")
@@ -41,8 +41,8 @@ return new K.y0(N.aw(),E.L(d,e,X.aT))},
 Nm:function(d,e){H.b(d,"$iF")
 H.q(e)
 return new K.y1(N.aw(),E.L(d,e,X.aT))},
-Nn:function(d){return new K.y2(d,new G.cR())},
-iB:function iB(d){var _=this
+Nn:function(d){return new K.y2(d,new G.cS())},
+iC:function iC(d){var _=this
 _.c=_.b=_.a=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=_.e=null
 _.d=d},
 xW:function xW(d){var _=this
@@ -55,7 +55,7 @@ xY:function xY(d,e){var _=this
 _.b=d
 _.Q=_.z=_.y=_.x=_.r=_.f=_.e=_.d=_.c=null
 _.a=e},
-m_:function m_(d){this.c=this.b=null
+m0:function m0(d){this.c=this.b=null
 this.a=d},
 xZ:function xZ(d){this.c=this.b=null
 this.a=d},
@@ -72,15 +72,15 @@ y2:function y2(d,e){var _=this
 _.b=_.a=null
 _.c=d
 _.d=e},
-kf:function kf(d){this.a=d}},X={
-GV:function(d){var y=new X.is()
+kg:function kg(d){this.a=d}},X={
+GV:function(d){var y=new X.it()
 y.mz(d)
 return y},
 aT:function aT(d){this.a=d
 this.c=this.b=null},
 ug:function ug(d){this.a=d},
 uh:function uh(){},
-is:function is(){var _=this
+it:function it(){var _=this
 _.e=_.d=_.c=_.b=_.a=null},
 ue:function ue(d){this.a=d},
 uf:function uf(){}},S,N,E,M,Q,D,L,O,V,B,A={
@@ -122,7 +122,7 @@ Z=c[23]
 F=c[24]
 X.aT.prototype={
 D:function(){G.z9("tekpack.json").aS(new X.ug(this),P.z).hN(new X.uh())}}
-X.is.prototype={
+X.it.prototype={
 mz:function(d){var y,x,w,v=this,u="texture",t="isNotBlue",s=J.a_(d),r=s.h(d,"name")
 v.a=H.p(r==null?"":r)
 r=s.h(d,"description")
@@ -136,10 +136,10 @@ v.c=H.bG(s.h(d,t)!=null&&s.h(d,t))
 v.srt(H.c([],[P.e]))
 for(y=0;y<=8;++y){x=H.b(J.Fu(H.zj(s.h(d,"crafting")),new X.ue(y),new X.uf()),"$it")
 if(x!=null&&J.R(x,u)!=null){w=H.p(J.R(x,u))
-if(J.mu(w,"/"))w="assets/tekpack"+w}else w=null
+if(J.mv(w,"/"))w="assets/tekpack"+w}else w=null
 r=v.e;(r&&C.a).i(r,w)}},
 srt:function(d){this.e=H.k(d,"$if",[P.e],"$af")}}
-K.iB.prototype={
+K.iC.prototype={
 p:function(){var y,x,w,v,u,t,s,r,q,p,o,n,m,l,k,j=this,i="fluidBtn",h="style",g=j.aa(),f=document,e=T.V(f,g)
 j.C(e,"container")
 j.l(e)
@@ -152,7 +152,7 @@ j.q(y)
 x=T.V(f,e)
 j.C(x,"floatingCard")
 j.l(x)
-w=E.iz(j,3)
+w=E.iA(j,3)
 j.e=w
 v=w.c
 x.appendChild(v)
@@ -212,7 +212,7 @@ w=W.A
 J.aR(s,"click",j.B(j.gqi(),w,w))
 J.aR(m,"click",j.B(j.gqk(),w,w))
 w=j.d
-j.dy=new K.kf(H.b(w.a.O(C.ab,w.b),"$ifF"))},
+j.dy=new K.kg(H.b(w.a.O(C.ab,w.b),"$ifF"))},
 w:function(){var y,x,w=this,v=w.a,u=w.d.f===0
 if(u)w.f.D()
 if(u)w.x.d=!0
@@ -255,12 +255,12 @@ T.j(y,"allow","autoplay; encrypted-media")
 T.j(x.d,"allowfullscreen","")
 T.j(x.d,"frameborder","0")
 x.l(x.d)
-y=H.b(x.a.c,"$iiB").dy
+y=H.b(x.a.c,"$iiC").dy
 x.spC(A.Kg(y.gtk(y),null,null))
 x.I(v)},
 w:function(){var y=this,x=C.b.n("https://www.youtube.com/embed/",y.a.a.b)+"?rel=0&amp;controls=0&amp;showinfo=0",w=y.c.$1(x)
 x=y.b
-if(x==null?w!=null:x!==w){y.d.src=$.bN.c.iH(w)
+if(x==null?w!=null:x!==w){y.d.src=$.bN.c.iI(w)
 y.b=w}},
 spC:function(d){this.c=H.m(d,{func:1,args:[,]})},
 $aE:function(){return[X.aT]}}
@@ -302,7 +302,7 @@ w.Q=x
 w.C(x,"description")
 w.l(w.Q)
 w.I(u)},
-w:function(){var y,x,w,v=this,u=H.b(v.a.f.h(0,"$implicit"),"$iis"),t=u.e,s=v.r
+w:function(){var y,x,w,v=this,u=H.b(v.a.f.h(0,"$implicit"),"$iit"),t=u.e,s=v.r
 if(s==null?t!=null:s!==t){v.d.sbI(t)
 v.r=t}v.d.aO()
 v.c.F()
@@ -321,7 +321,7 @@ if(s!=w){v.Q.innerHTML=$.bN.c.lN(w)
 v.x=w}},
 H:function(){this.c.E()},
 $aE:function(){return[X.aT]}}
-K.m_.prototype={
+K.m0.prototype={
 p:function(){var y,x=this,w=document.createElement("div")
 H.b(w,"$iw")
 x.C(w,"crafting-item")
@@ -339,12 +339,12 @@ p:function(){var y=this,x=document.createElement("img")
 y.c=x
 y.q(x)
 y.I(y.c)},
-w:function(){var y=this,x=H.p(H.b(y.a.c,"$im_").a.f.h(0,"$implicit")),w=y.b
+w:function(){var y=this,x=H.p(H.b(y.a.c,"$im0").a.f.h(0,"$implicit")),w=y.b
 if(w!=x){y.c.src=$.bN.c.bN(x)
 y.b=x}},
 $aE:function(){return[X.aT]}}
 K.y_.prototype={
-p:function(){var y,x,w,v=this,u=E.iz(v,0)
+p:function(){var y,x,w,v=this,u=E.iA(v,0)
 v.b=u
 y=u.c
 v.l(y)
@@ -402,23 +402,23 @@ this.I(y)},
 w:function(){this.b.a8(H.p(O.c2(this.a.f.h(0,"$implicit"))))},
 $aE:function(){return[X.aT]}}
 K.y2.prototype={
-p:function(){var y,x,w=this,v=new K.iB(E.ay(w,0,3)),u=$.D0
+p:function(){var y,x,w=this,v=new K.iC(E.ay(w,0,3)),u=$.D0
 if(u==null)u=$.D0=O.aA($.Ll,null)
 v.b=u
 y=document.createElement("tekpack")
 v.c=H.b(y,"$iw")
 w.sbQ(v)
 x=w.b.c
-w.sbP(new X.aT(H.c([],[X.is])))
+w.sbP(new X.aT(H.c([],[X.it])))
 w.I(x)},
 w:function(){var y=this.d.e
 if(y===0)this.a.D()
 this.b.t()},
 $aaj:function(){return[X.aT]}}
-K.kf.prototype={
+K.kg.prototype={
 cc:function(d,e){H.p(e)
 this.a.toString
-return new R.ig(e==null?"":e)}}
+return new R.ih(e==null?"":e)}}
 var z=a.updateTypes([{func:1,ret:[E.E,-1],args:[A.F,P.r]},{func:1,ret:-1,args:[,]},{func:1,args:[,]},{func:1,ret:[G.aj,X.aT],args:[M.aB]}])
 A.zA.prototype={
 $1:function(d){var y,x
@@ -443,7 +443,7 @@ if(!(x<y))break
 C.a.i(v,X.GV(H.b(J.R(u.h(d,w),x),"$it")));++x}}},
 $S:4}
 X.uh.prototype={
-$1:function(d){return P.dA(d)},
+$1:function(d){return P.e6(d)},
 $S:3}
 X.ue.prototype={
 $1:function(d){return J.a6(J.R(d,"slot"),this.a)},
@@ -461,15 +461,15 @@ y(K,"M_","Nl",0)
 y(K,"M0","Nm",0)
 x(K,"M1","Nn",3)
 var u
-w(u=K.iB.prototype,"gqi","qj",1)
+w(u=K.iC.prototype,"gqi","qj",1)
 w(u,"gqk","ql",1)
-v(K.kf.prototype,"gtk","cc",2)})();(function inheritance(){var y=a.inheritMany,x=a.inherit
+v(K.kg.prototype,"gtk","cc",2)})();(function inheritance(){var y=a.inheritMany,x=a.inherit
 y(H.dl,[A.zA,X.ug,X.uh,X.ue,X.uf])
-y(P.o,[X.aT,X.is,K.kf])
-x(K.iB,E.a9)
-y(E.E,[K.xW,K.xX,K.xY,K.m_,K.xZ,K.y_,K.y0,K.y1])
+y(P.o,[X.aT,X.it,K.kg])
+x(K.iC,E.a9)
+y(E.E,[K.xW,K.xX,K.xY,K.m0,K.xZ,K.y_,K.y0,K.y1])
 x(K.y2,G.aj)})();(function constants(){C.c4=new D.aF("tekpack",K.M1(),[X.aT])})();(function staticFields(){$.Ly=['@font-face {font-family:"Minecraft";font-style:normal;font-weight:400;src:url("fonts/minecraft_font.woff") format("woff")}.container._ngcontent-%ID%{position:relative}.logo._ngcontent-%ID%{width:20vw;margin:2% calc(40vw - 2.25rem)}.floatingCard._ngcontent-%ID%{margin:8% 6%;width:45%}fluid-card._ngcontent-%ID%{margin:8% 6%;width:45%}.video._ngcontent-%ID%{width:35vw;position:absolute;right:5%;background:black;height:19.69vw;margin-top:-24vw}.video._ngcontent-%ID% iframe._ngcontent-%ID%{height:100%;width:100%}.grid._ngcontent-%ID%{margin:5vw;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-gap:1vw}.item._ngcontent-%ID%{min-height:200px}.item._ngcontent-%ID% h5._ngcontent-%ID%{font-family:Minecraft;text-align:center;border-bottom:1px solid #373737;padding:2% 0;margin:0 4%;font-weight:500;font-size:1.25rem}.item._ngcontent-%ID% .icon._ngcontent-%ID%{image-rendering:pixelated;width:30%;margin:4% 35%}.item:hover._ngcontent-%ID%{border:2px solid #373737;border-right-color:#fff;border-bottom-color:#fff;background:#c6c6c6;border-radius:5px;transform:scale(1.1)}.item:hover._ngcontent-%ID% .crafting-grid._ngcontent-%ID%{display:none}.item:hover._ngcontent-%ID% .description._ngcontent-%ID%{line-height:2rem;height:12vw;visibility:visible;margin:5% 8%}.description._ngcontent-%ID%{font-family:Minecraft;visibility:hidden;height:5px;font-size:14px;color:#555}.crafting-grid._ngcontent-%ID%{padding:3% 6%;background:#c6c6c6;width:calc(12vw + 12%);margin:2% auto;display:grid;grid-template-columns:1fr 1fr 1fr}.crafting-blue._ngcontent-%ID%{background:#4a6e9e}.crafting-blue._ngcontent-%ID% .crafting-item._ngcontent-%ID%{background-color:#344e70;border:3px solid #1c2a3d;border-right-color:#6ea4ea;border-bottom-color:#6ea4ea}.crafting-item._ngcontent-%ID%{height:4vw;background-color:#8b8b8b;border:3px solid #373737;border-right-color:#fff;border-bottom-color:#fff}.crafting-item._ngcontent-%ID% img._ngcontent-%ID%{image-rendering:pixelated;height:100%;width:100%}']
 $.D0=null
 $.Ll=[$.Ly]})()}
-$__dart_deferred_initializers__["ue9zBdZdzFMlU81Uf/pmvH9pR2c="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["20gYDB69pLvU+uoDR52Z54GLczY="] = $__dart_deferred_initializers__.current
 //# sourceMappingURL=main.dart.js_1.part.js.map

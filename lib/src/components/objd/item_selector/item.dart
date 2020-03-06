@@ -57,15 +57,14 @@ class ItemSelectorComponent implements AfterChanges {
     name ??= "item_selector";
     item ??= Item("");
     id = item.getId();
-    nbt = json.encode(item.tag);
-    print(item);
+    nbt = gson.encode(item.tag);
   }
 
   void submit() {
     errorMsg = null;
     item.type = ItemType(id);
     try {
-      item.tag = nbt.isNotEmpty ? json.decode(nbt) : {};
+      item.tag = nbt.isNotEmpty ? gson.decode(nbt) : {};
       _itemChange.add(Item.clone(item));
       item = Item("");
       service.close(name);

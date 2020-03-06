@@ -5,24 +5,27 @@ description: A web app that uses AngularDart Components
 # author: Schueler209 <schueler109@jbs-pinneberg.de>
 
 environment:
-  sdk: '>=2.5.0 <3.0.0'
+  sdk: ">=2.5.0 <3.0.0"
 
 dependencies:
   intl:
   angular: ^6.0.0-alpha+1
   angular_router: ^2.0.0-alpha+24
-  angular_forms: 
+  angular_forms:
   http:
   fluix_web:
     path: C:\dev\Dart\stevertus\fluix-web
   ng_translate:
     path: C:\dev\Dart\stevertus\ng_translate
   objd:
-    path: C:\dev\Dart\objectiveD
+    ^0.3.3-beta.2
+    # path: C:\dev\Dart\objectiveD
   objd_crafting:
-    path: C:\dev\Dart\objd_crafting
+    ^0.1.3
+    # path: C:\dev\Dart\objd_crafting
   objd_gui:
-    path: C:\dev\Dart\objd_gui
+    ^0.0.1
+    # path: C:\dev\Dart\objd_gui
 
 dev_dependencies:
   intl_translation:

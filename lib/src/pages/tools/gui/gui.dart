@@ -12,26 +12,27 @@ import 'package:fluix_web/fluix/multi_input/input.dart';
 import 'package:objd/core.dart';
 import 'package:objd_gui/gui.dart';
 import 'package:stevertus/src/components/objd/item_selector/item.dart';
+import 'package:ng_translate/ng_translate.dart';
 
 @Component(
-  selector: 'gui_tool',
-  styleUrls: ['gui.css', '../tools.css'],
-  templateUrl: 'gui.html',
-  providers: [ClassProvider(ModalService)],
-  directives: [
-    NgIf,
-    NgFor,
-    FluidIcon,
-    FluidCard,
-    FluidCheckbox,
-    FluidButton,
-    FluidInput,
-    FluidDropdown,
-    FluidMultiInput,
-    ItemSelectorComponent,
-    formDirectives
-  ],
-)
+    selector: 'gui_tool',
+    styleUrls: ['gui.css', '../tools.css'],
+    templateUrl: 'gui.html',
+    providers: [ClassProvider(ModalService)],
+    directives: [
+      NgIf,
+      NgFor,
+      FluidIcon,
+      FluidCard,
+      FluidCheckbox,
+      FluidButton,
+      FluidInput,
+      FluidDropdown,
+      FluidMultiInput,
+      ItemSelectorComponent,
+      formDirectives
+    ],
+    pipes: [TranslationPipe])
 class GuiToolPage {
   final ModalService modalService;
 

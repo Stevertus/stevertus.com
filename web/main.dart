@@ -21,6 +21,10 @@ void main() async {
     'videos': 'Videos',
     'contact': 'Contact',
     'search': 'Search',
+    'page': 'Page',
+    'of': 'of',
+    'project': 'Project',
+    'namespace': 'Project namespace',
     'landing': {
       'section1': {
         'title': 'Experimenting',
@@ -60,15 +64,38 @@ void main() async {
       'inG': 'in Germany',
       'rightsReserved': 'All rights reserved',
       'privacyPolicy': 'Privacy Policy',
+    },
+    'gui': {
+      'fillEmptySlots': 'Fill all empty slots with the placeholder below',
+      'gui_placeholder': 'Select Placeholder Item',
+      'blockLocation': 'Location of the block',
+      'gui_trigger': 'Select Item that should trigger the GUI',
+      'minecartName': 'Custom Minecart Name',
+      'minecartAlwaysActive': 'Minecart is not hidden in front of the player',
+      'offset': 'Custom Offset Location',
+      'actionSelect': 'Please select your desired action:',
+      'executeCommands': 'Commands to execute...',
+      'countScoreboard': 'Count Scoreboard',
+      'countEntity': 'Count Score Entity',
+      'pageNumber': 'Page number...',
+      'selectItem': 'Select your Item',
+      'placeholderItem':
+          'This item is applied to all placeholder slots that you did not specify or fills up the rest.',
+      'handItem':
+          'Hold this item in your hand and a minecart will be summoned in front of you.',
     }
   });
   TranslationService.initializeLocale('de', {
     'view': 'Anzeigen',
-    'download': 'Downloaden',
+    'download': 'Download',
     'articles': 'Artikel',
     'projects': 'Projekte',
     'contact': 'Kontakt',
     'search': 'Suchen',
+    'page': 'Seite',
+    'of': 'von',
+    'project': 'Projekt',
+    'namespace': 'Projekt namespace',
     'landing': {
       'section1': {
         'title': 'Experimentiere',
@@ -104,6 +131,21 @@ void main() async {
       'inG': 'in Deutschland gemacht',
       'rightsReserved': 'Alle Rechte vorbehalten',
       'privacyPolicy': 'Datenschutzerklärung',
+    },
+    'gui': {
+      'fillEmptySlots': 'Fülle alle leeren Slots mit dem Placeholder',
+      'gui_placeholder': 'Wähle Placeholder Item',
+      'blockLocation': 'Location des Blockes',
+      'gui_trigger': 'Wähle ein Item, das die GUI auslöst',
+      'minecartAlwaysActive': 'Minecart wird immer vor dem Spieler angezeigt',
+      'actionSelect': 'Bitte wähle deine Aktion:',
+      'executeCommands': 'Commands zum Ausführen...',
+      'pageNumber': 'Seitenzahl...',
+      'selectItem': 'Wähle dein Item',
+      'placeholderItem':
+          'Dieses Item wird auf alle placeholder slots angewandt, die nicht überschrieben werden, oder füllt leere Slots',
+      'handItem':
+          'Halte dieses Item in deiner Hand und ein Minecart wird vor dir auftauchen.',
     }
   });
 

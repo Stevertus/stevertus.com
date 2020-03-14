@@ -1,102 +1,178 @@
 <div id="center">
-    <div class="container" [style.max-width]="getWidth()">
-
-        <div id="rightControl" (click)="controlPages(true)">
-            <fluid-icon *ngIf="(currentPageIndex + 1) == module.pages.length" icon="plus" [size]="32"></fluid-icon>
-            <fluid-icon *ngIf="(currentPageIndex + 1) != module.pages.length" icon="arrowRight" [size]="32">
-            </fluid-icon>
-        </div>
-        <div id="leftControl" (click)="controlPages(false)" *ngIf="currentPageIndex > 0">
-            <fluid-icon icon="arrowLeft" [size]="32"></fluid-icon>
-        </div>
-
-        <div class="grid" [style.--columns]="columns">
-            <div class="slot" *ngFor="let S of slotCount;let i = index">
-                <div class="content" (click)="changeSlot(i)">
-                    <img [src]="getImageUrl(i)">
-                    <p>{{getTextForIndex(i)}}</p>
-
-                </div>
-            </div>
-        </div>
+  <div class="container" [style.max-width]="getWidth()">
+    <div id="rightControl" (click)="controlPages(true)">
+      <fluid-icon
+        *ngIf="(currentPageIndex + 1) == module.pages.length"
+        icon="plus"
+        [size]="32"
+      ></fluid-icon>
+      <fluid-icon
+        *ngIf="(currentPageIndex + 1) != module.pages.length"
+        icon="arrowRight"
+        [size]="32"
+      >
+      </fluid-icon>
+    </div>
+    <div
+      id="leftControl"
+      (click)="controlPages(false)"
+      *ngIf="currentPageIndex > 0"
+    >
+      <fluid-icon icon="arrowLeft" [size]="32"></fluid-icon>
     </div>
 
-    <fluid-card id="card">
-        <h3>Page
-            {{currentPageIndex + 1}} of {{module.pages.length}}
-        </h3>
+    <div class="grid" [style.--columns]="columns">
+      <div class="slot" *ngFor="let S of slotCount;let i = index">
+        <div class="content" (click)="changeSlot(i)">
+          <img [src]="getImageUrl(i)" />
+          <p>{{getTextForIndex(i)}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <fluid-checkbox [(value)]="currentPage.fillEmptySlots" label="Fill all empty slots with the placeholder below">
-        </fluid-checkbox>
+  <fluid-card id="card">
+    <h3>
+      {{'page' | ngtranslate}} {{currentPageIndex + 1}} {{'of' | ngtranslate}}
+      {{module.pages.length}}
+    </h3>
 
-        <button fluidBtn secondary (click)="modalService.open('gui_placeholder')">Select Placeholder
-            Item</button>
+    <fluid-checkbox
+      [(value)]="currentPage.fillEmptySlots"
+      [label]="'gui.fillEmptySlots' | ngtranslate"
+    >
+    </fluid-checkbox>
 
+    <button fluidBtn secondary (click)="modalService.open('gui_placeholder')">
+      {{'gui.gui_placeholder' | ngtranslate}}
+    </button>
 
+    <h3>{{'project' | ngtranslate}}</h3>
 
-        <h3>Project</h3>
+    <input
+      [(ngModel)]="namespace"
+      fluidInput
+      [placeholder]="'gui.namespace' | ngtranslate"
+    /><br />
 
-        <input [(ngModel)]="namespace" fluidInput placeholder="Project namespace"><br>
+    <fluid-dropdown
+      [selected]="selectedContainer"
+      (selectedChange)="containerChanged($event)"
+      [values]="containers"
+    >
+    </fluid-dropdown>
 
-        <fluid-dropdown [selected]="selectedContainer" (selectedChange)="containerChanged($event)"
-            [values]="containers">
+    <input
+      *ngIf="showLocation"
+      [(ngModel)]="module.blockLocation.location"
+      fluidInput
+      [placeholder]="'gui.blockLocation' | ngtranslate"
+    /><br />
 
-        </fluid-dropdown>
+    <ng-container *ngIf="selected == 'HandItem'">
+      <button fluidBtn secondary (click)="modalService.open('gui_trigger')">
+        {{'gui.gui_trigger' | ngtranslate}}</button
+      ><br />
+      <input
+        [(ngModel)]="module.minecartName.value['text']"
+        fluidInput
+        [placeholder]="'gui.minecartName' | ngtranslate"
+      /><br />
 
-        <input *ngIf="showLocation" [(ngModel)]="module.blockLocation.location" fluidInput
-            placeholder="Location of the block"><br>
+      <fluid-checkbox
+        [(value)]="module.minecartAlwaysActive"
+        [label]="'gui.minecartAlwaysActive' | ngtranslate"
+      >
+      </fluid-checkbox>
+      <input
+        [(ngModel)]="module.offset.location"
+        fluidInput
+        [placeholder]="'gui.offset' | ngtranslate"
+      /><br />
+    </ng-container>
 
-        <ng-container *ngIf="selected == 'HandItem'">
-            <button fluidBtn secondary (click)="modalService.open('gui_trigger')">Select Item that should trigger the
-                GUI</button><br>
-            <input [(ngModel)]="module.minecartName.value['text']" fluidInput placeholder="Custom Minecart Name"><br>
-
-            <fluid-checkbox [(value)]="module.minecartAlwaysActive"
-                label="Minecart is not hidden in front of the player">
-            </fluid-checkbox>
-            <input [(ngModel)]="module.offset.location" fluidInput placeholder="Custom Offset Location"><br>
-        </ng-container>
-
-        <textarea fluidMultiInput *ngIf="errorText != null" class="error" placeholder="ERROR" disabled cols="30"
-            rows="10">
+    <textarea
+      fluidMultiInput
+      *ngIf="errorText != null"
+      class="error"
+      placeholder="ERROR"
+      disabled
+      cols="30"
+      rows="10"
+    >
         {{errorText}}
-        </textarea>
+        </textarea
+    >
 
-
-        <button class="full" fluidBtn (click)="download()">Download Datapack</button>
-
-    </fluid-card>
+    <button class="full" fluidBtn (click)="download()">
+      {{'download' | ngtranslate}} Datapack
+    </button>
+  </fluid-card>
 </div>
 
 <!-- <item-selector [(item)]="selectedItem" name="crafting_item_selector"></item-selector>
 <item-selector [(item)]="table.placeholder" name="crafting_placeholder"></item-selector> -->
 
-<item-selector (itemChange)="slotChanged" name="gui_slot" [showId]="showItemInputs" [showCount]="showItemInputs"
-    [showNbt]="showItemInputs">
-    <div before>
-        <p>Please select your desired action:</p>
-        <fluid-dropdown [(selected)]="selectedGuiType" [values]="guiSlots"></fluid-dropdown><br>
-        <textarea style="width:90%" *ngIf="selectedGuiType == 1" [(ngModel)]="selectedSlotActions" fluidMultiInput
-            cols="30" rows="5" placeholder="Commands to execute..."></textarea>
+<item-selector
+  (itemChange)="slotChanged"
+  name="gui_slot"
+  [showId]="showItemInputs"
+  [showCount]="showItemInputs"
+  [showNbt]="showItemInputs"
+>
+  <div before>
+    <p>{{'gui.actionSelect' | ngtranslate}}</p>
+    <fluid-dropdown
+      [(selected)]="selectedGuiType"
+      [values]="guiSlots"
+    ></fluid-dropdown
+    ><br />
+    <textarea
+      style="width:90%"
+      *ngIf="selectedGuiType == 1"
+      [(ngModel)]="selectedSlotActions"
+      fluidMultiInput
+      cols="30"
+      rows="5"
+      [placeholder]="'gui.executeCommands' | ngtranslate"
+    ></textarea>
 
-        <input *ngIf="selectedGuiType == 1" fluidInput [(ngModel)]="selectedCountScore" placeholder="Count Scoreboard">
-        <input *ngIf="selectedGuiType == 1" fluidInput [(ngModel)]="selectedCountScoreEntity"
-            placeholder="Count Score Entity">
-        <input *ngIf="selectedGuiType == 5" type="number" fluidInput [(ngModel)]="selectedSlotPage"
-            placeholder="Page number...">
+    <input
+      *ngIf="selectedGuiType == 1"
+      fluidInput
+      [(ngModel)]="selectedCountScore"
+      [placeholder]="'gui.countScoreboard' | ngtranslate"
+    />
+    <input
+      *ngIf="selectedGuiType == 1"
+      fluidInput
+      [(ngModel)]="selectedCountScoreEntity"
+      [placeholder]="'gui.countEntity' | ngtranslate"
+    />
+    <input
+      *ngIf="selectedGuiType == 5"
+      type="number"
+      fluidInput
+      [(ngModel)]="selectedSlotPage"
+      [placeholder]="'gui.pageNumber' | ngtranslate"
+    />
 
-
-        <h3 *ngIf="showItemInputs">Select your Item</h3>
-    </div>
-
+    <h3 *ngIf="showItemInputs">{{'gui.selectItem' | ngtranslate}}</h3>
+  </div>
 </item-selector>
 
 <item-selector [(item)]="currentPage.placeholder" name="gui_placeholder">
-    <p before>This item is applied to all placeholder slots that you did not specify or fills up the rest.</p>
-
+  <p before>
+    {{'gui.placeholderItem' | ngtranslate}}
+  </p>
 </item-selector>
 
-<item-selector [(item)]="module.triggerGui" *ngIf="selected == 'HandItem'" name="gui_trigger">
-    <p before>Hold this item in your hand and a minecart will be summoned in front of you.</p>
-
+<item-selector
+  [(item)]="module.triggerGui"
+  *ngIf="selected == 'HandItem'"
+  name="gui_trigger"
+>
+  <p before>
+    {{'gui.handItem' | ngtranslate}}
+  </p>
 </item-selector>

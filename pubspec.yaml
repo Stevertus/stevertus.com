@@ -18,7 +18,7 @@ dependencies:
   ng_translate:
     path: C:\dev\Dart\stevertus\ng_translate
   objd:
-    ^0.3.3-beta.2
+    ^0.3.3-beta.3
     # path: C:\dev\Dart\objectiveD
   objd_crafting:
     ^0.1.3

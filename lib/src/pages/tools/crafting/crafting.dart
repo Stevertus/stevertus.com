@@ -35,7 +35,7 @@ class CraftingToolPage implements OnInit {
 
   CraftingToolPage(this.modalService);
 
-  final slots = List.generate(9, (i) => i);
+  final slots = List.generate(9, (i) => i + 1);
 
   CraftingTable table;
 
@@ -96,21 +96,22 @@ class CraftingToolPage implements OnInit {
   void generate() {
     errorText = null;
     table.recipes = recipes;
+    print(recipes.first?.ingredients);
 
-    try {
-      generatedFiles = getAllFiles(
-        Project(name: table.name, generate: table),
-      );
+    // try {
+    generatedFiles = getAllFiles(
+      Project(name: table.name, generate: table),
+    );
 
-      result = generatedFiles[
-              "data/${table.name}/functions/recipes/craft.mcfunction"] +
-          "\n" +
-          generatedFiles[
-              "data/${table.name}/functions/recipes/res_craft.mcfunction"];
-    } catch (err) {
-      errorText = err.toString();
-      generatedFiles = {};
-    }
+    result = generatedFiles[
+            "data/${table.name}/functions/recipes/craft.mcfunction"] +
+        "\n" +
+        generatedFiles[
+            "data/${table.name}/functions/recipes/res_craft.mcfunction"];
+    // } catch (err) {
+    //   errorText = err.toString();
+    //   generatedFiles = {};
+    // }
   }
 
   void download() {

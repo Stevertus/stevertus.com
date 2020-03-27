@@ -5,8 +5,9 @@ import 'package:stevertus/app_component.template.dart' as ng;
 
 import 'main.template.dart' as self;
 
-@GenerateInjector(routerProviders // You can use routerProviders in production
-    )
+@GenerateInjector(
+  routerProviders, // You can use routerProviders in production
+)
 final InjectorFactory injector = self.injector$Injector;
 
 void main() async {
@@ -23,6 +24,7 @@ void main() async {
     'of': 'of',
     'project': 'Project',
     'namespace': 'Project namespace',
+    'selectItem': 'Please select your item',
     'landing': {
       'section1': {
         'title': 'Experimenting',
@@ -94,6 +96,7 @@ void main() async {
     'of': 'von',
     'project': 'Projekt',
     'namespace': 'Projekt namespace',
+    'selectItem': 'Item auswählen',
     'landing': {
       'section1': {
         'title': 'Experimentiere',
@@ -144,6 +147,64 @@ void main() async {
           'Dieses Item wird auf alle placeholder slots angewandt, die nicht überschrieben werden, oder füllt leere Slots',
       'handItem':
           'Halte dieses Item in deiner Hand und ein Minecart wird vor dir auftauchen.',
+    }
+  });
+  TranslationService.initializeLocale('zh', {
+    'view': '浏览',
+    'download': '下载',
+    'articles': '文章',
+    'projects': '项目',
+    'videos': '视频',
+    'contact': '联系',
+    'search': '搜索',
+    'page': '页面',
+    'of': 'of',
+    'project': '项目',
+    'namespace': '项目命名空间',
+    'selectItem': '请选择你的物品',
+    'landing': {
+      'section1': {
+        'title': '体验',
+        'subtitle': '全新的点子',
+        'text': '将Minecraft推至其极限，创造新的点子及工具'
+      },
+      'section2': {
+        'title': '创造',
+        'subtitle': '从现在开始',
+        'text': '使用工具，编程来改造Minecraft',
+        'button': '学习编程'
+      },
+      'learnProgramming': '学习编程',
+      'card_objd': {'title': 'objD', 'desc': '数据包生成框架', 'button': '开始使用'},
+      'card_mcscript': {'title': 'mcscript', 'desc': '为Minecraft服务的编程语言'},
+      'card_dmanager': {'title': 'dManager', 'desc': '用于分享，安装，管理数据包的应用'},
+      'card_worldedit': {
+        'title': 'Vanilla Worldedit',
+        'desc': '用于原版Minecraft的Worldedit数据包'
+      }
+    },
+    'footer': {
+      'about': '关于',
+      'tools': '工具',
+      'madewith': 'Made with',
+      'inG': 'in Germany',
+      'rightsReserved': 'All rights reserved',
+      'privacyPolicy': 'Privacy Policy'
+    },
+    'gui': {
+      'fillEmptySlots': '使用以下占位符填满所有未被占用的槽位',
+      'blockLocation': '方块位置',
+      'gui_trigger': '选择会触发GUI的物品',
+      'minecartName': '自定义矿车名称',
+      'minecartAlwaysActive': '矿车总会在玩家面前显示',
+      'offset': '自定义偏移量',
+      'executeCommands': '执行命令...',
+      'countScoreboard': '数量计分板',
+      'countEntity': '数量实体',
+      'pageNumber': '页码...',
+      'selectItem': '选择你的物品',
+      'placeholderItem': '该物品会替换所有未被定义的Placeholder槽位或所有未被占用的槽位',
+      'handItem': '手持该物品会在你面前生成运输矿车'
     }
   });
 

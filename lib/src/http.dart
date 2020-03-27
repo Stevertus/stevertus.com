@@ -120,6 +120,7 @@ Future<List<Document>> getProjects(String locale) async {
 
 String _getPrismicLocale(String locale) {
   if (locale == 'de') return 'de-de';
+  if (locale == 'zh') return 'zh-cn';
   return 'en-us';
 }
 

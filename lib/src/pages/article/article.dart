@@ -34,13 +34,19 @@ class ArticlePage implements OnActivate {
 
   bool playingVideo = false;
 
-  get safeVideoUrl => sanitizer.bypassSecurityTrustResourceUrl(
+  SafeResourceUrl get safeVideoUrl => sanitizer.bypassSecurityTrustResourceUrl(
       'https://www.youtube.com/embed/' + article.video + '?rel=0;&autoplay=1');
 
-  @override
-  void onActivate(_, RouterState current) async {
-    article =
-        await getFullArticle(current.parameters["id"], lang.currentLocale);
+  void getArticle(String id) async {
+    loading = true;
+    article = await getFullArticle(id, lang.currentLocale);
     loading = false;
+  }
+
+  @override
+  void onActivate(_, RouterState current) {
+    getArticle(current.parameters['id']);
+
+    lang.localeChange.addListener((l) => getArticle(current.parameters['id']));
   }
 }

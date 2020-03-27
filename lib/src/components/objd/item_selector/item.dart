@@ -10,21 +10,25 @@ import 'package:fluix_web/fluix/multi_input/input.dart';
 import 'package:objd/core.dart';
 import 'package:fluix_web/fluix/modal/modal.dart';
 
+import 'package:ng_translate/ng_translate.dart';
+
 @Component(
-    selector: 'item-selector',
-    styleUrls: ['item.css'],
-    templateUrl: 'item.html',
-    directives: [
-      NgIf,
-      Input,
-      Output,
-      FluidModal,
-      FluidInput,
-      FluidMultiInput,
-      FluidButton,
-      formDirectives
-    ],
-    providers: [ClassProvider(ModalService)])
+  selector: 'item-selector',
+  styleUrls: ['item.css'],
+  templateUrl: 'item.html',
+  directives: [
+    NgIf,
+    Input,
+    Output,
+    FluidModal,
+    FluidInput,
+    FluidMultiInput,
+    FluidButton,
+    formDirectives
+  ],
+  providers: [ClassProvider(ModalService)],
+  pipes: [TranslationPipe],
+)
 class ItemSelectorComponent implements AfterChanges {
   // Nothing here yet. All logic is in TodoListComponent.
 

@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:angular/angular.dart';
 import 'package:angular_forms/angular_forms.dart';
 import 'package:fluix_web/fluix/button/button.dart';
@@ -117,5 +119,9 @@ class CraftingToolPage implements OnInit {
   void download() {
     generate();
     saveAsZip(generatedFiles, table.name + ".zip");
+  }
+
+  void copy() {
+    if (result != null) window.navigator.clipboard.writeText(result);
   }
 }

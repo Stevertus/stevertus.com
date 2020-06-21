@@ -4,11 +4,13 @@
       <fluid-icon
         *ngIf="(currentPageIndex + 1) == module.pages.length"
         icon="plus"
+        class="icon"
         [size]="32"
       ></fluid-icon>
       <fluid-icon
         *ngIf="(currentPageIndex + 1) != module.pages.length"
         icon="arrowRight"
+        class="icon"
         [size]="32"
       >
       </fluid-icon>
@@ -18,7 +20,7 @@
       (click)="controlPages(false)"
       *ngIf="currentPageIndex > 0"
     >
-      <fluid-icon icon="arrowLeft" [size]="32"></fluid-icon>
+      <fluid-icon class="icon" icon="arrowLeft" [size]="32"></fluid-icon>
     </div>
 
     <div class="grid" [style.--columns]="columns">
@@ -128,7 +130,7 @@
     ></fluid-dropdown
     ><br />
     <textarea
-      style="width:90%"
+      style="width: 90%;"
       *ngIf="selectedGuiType == 1"
       [(ngModel)]="selectedSlotActions"
       fluidMultiInput

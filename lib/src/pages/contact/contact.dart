@@ -9,9 +9,9 @@ import 'package:http/http.dart' as http;
 final URL = "https://end5dyr2pyfxi28.m.pipedream.net";
 
 @Component(
-  selector: 'fard_contact',
-  styleUrls: ['fard_contact.css'],
-  templateUrl: 'fard_contact.html',
+  selector: 'contact',
+  styleUrls: ['contact.css'],
+  templateUrl: 'contact.html',
   directives: [
     FluidCard,
     FluidInput,
@@ -21,7 +21,7 @@ final URL = "https://end5dyr2pyfxi28.m.pipedream.net";
     formDirectives
   ],
 )
-class FardContactPage {
+class ContactPage {
   String name = "";
   String email = "";
   String message = "";

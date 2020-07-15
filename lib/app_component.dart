@@ -11,7 +11,6 @@ import 'package:stevertus/src/components/footer/footer.dart';
 import 'package:stevertus/src/routes.dart';
 import 'package:stevertus/src/components/header/header.dart';
 import 'package:stevertus/src/components/sidebar/sidebar.dart';
-import 'package:stevertus/src/pages/fard/fard_contact/fard_contact.dart';
 
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
@@ -23,7 +22,6 @@ import 'package:stevertus/src/pages/fard/fard_contact/fard_contact.dart';
   directives: [
     routerDirectives,
     FooterComponent,
-    FardContactPage,
     HeaderComponent,
     SidebarComponent,
     FluidShell,

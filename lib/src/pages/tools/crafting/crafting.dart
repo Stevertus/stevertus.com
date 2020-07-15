@@ -56,7 +56,7 @@ class CraftingToolPage implements OnInit {
   }
 
   String getItemImage(Item i) =>
-      "https://minecraftitemids.com/item/64/${i.getId()}.png";
+      'https://minecraftitemids.com/item/64/${i.getId()}.png';
 
   Item get selectedItem =>
       selectedSlot > 9 ? current.result : current.ingredients[selectedSlot];
@@ -87,7 +87,7 @@ class CraftingToolPage implements OnInit {
   }
 
   void onSelect(int index) {
-    modalService.open("crafting_item_selector");
+    modalService.open('crafting_item_selector');
     selectedSlot = index;
   }
 
@@ -105,10 +105,10 @@ class CraftingToolPage implements OnInit {
       );
 
       result = generatedFiles[
-              "data/${table.name}/functions/recipes/craft.mcfunction"] +
+              'data/${table.name}/functions/recipes/craft.mcfunction'] +
           "\n" +
           generatedFiles[
-              "data/${table.name}/functions/recipes/res_craft.mcfunction"];
+              'data/${table.name}/functions/recipes/res_craft.mcfunction'];
     } catch (err) {
       errorText = err.toString();
       print(err);

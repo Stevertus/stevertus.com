@@ -12,8 +12,15 @@
     *ngIf="showCount"
     type="number"
     fluidInput
-    [(ngModel)]="item.count"
+    [(ngModel)]="count"
     placeholder="Count"
+  /><br />
+  <input
+    *ngIf="showModel"
+    type="number"
+    fluidInput
+    [(ngModel)]="model"
+    placeholder="Modelid"
   /><br />
   <textarea
     *ngIf="showNbt"

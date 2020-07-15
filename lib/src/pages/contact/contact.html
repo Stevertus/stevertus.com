@@ -1,0 +1,51 @@
+<div class="container">
+  <fluid-card>
+    <img src="/assets/yt_banner.png" alt="" />
+
+    <h2>Hello!</h2>
+
+    <p>
+      I am Stevertus and I make stuff with Minecraft! You have a problem,
+      question or want to help with my obsession?
+    </p>
+
+    <b>Great!</b>
+    <br />
+
+    <p>
+      Just write me an <a href="mailto://contact@stevertus.com">Email</a>, visit
+      my <a href="https://discord.gg/McYXVC8">Discord</a> or write me a kind
+      message below, I'll try to answer asap.
+    </p>
+
+    <div class="inputs">
+      <p class="error" *ngIf="error.isNotEmpty">{{error}}</p>
+      <p class="success" *ngIf="success">
+        Thank you for your message! I'll try to respond as soon as possible.
+      </p>
+      <input
+        type="text"
+        [(ngModel)]="name"
+        fluidInput
+        placeholder="Your name"
+      />
+      <br />
+      <input
+        type="email"
+        [(ngModel)]="email"
+        fluidInput
+        placeholder="email to contact you"
+      />
+      <br />
+
+      <textarea
+        fluidMultiInput
+        [(ngModel)]="message"
+        placeholder="Your message..."
+        rows="15"
+      ></textarea>
+
+      <button fluidBtn full (click)="submit()">Send</button>
+    </div>
+  </fluid-card>
+</div>

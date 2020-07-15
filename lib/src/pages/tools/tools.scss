@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-#card {
+.card {
   --inputBackground: #f8f8fc;
 
   .split {
@@ -16,7 +16,7 @@
   }
 }
 
-#card * {
+.card * {
   margin: 8px 0;
 }
 

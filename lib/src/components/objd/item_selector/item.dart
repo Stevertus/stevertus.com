@@ -46,6 +46,8 @@ class ItemSelectorComponent implements AfterChanges {
   bool showCount = true;
   @Input()
   bool showNbt = true;
+  @Input()
+  bool showModel = true;
 
   final _itemChange = StreamController<Item>();
   @Output('itemChange')
@@ -54,6 +56,8 @@ class ItemSelectorComponent implements AfterChanges {
   String errorMsg;
 
   String id;
+  int model;
+  int count;
   String nbt;
 
   @override
@@ -61,15 +65,20 @@ class ItemSelectorComponent implements AfterChanges {
     name ??= "item_selector";
     item ??= Item("");
     id = item.getId();
+    model = item.tag['CustomModelData'];
+    count = item.count;
     nbt = gson.encode(item.tag);
   }
 
   void submit() {
     errorMsg = null;
-    item.type = ItemType(id);
     try {
-      item.tag = nbt.isNotEmpty ? gson.decode(nbt, simplify: true) : {};
-      _itemChange.add(Item.clone(item));
+      var tag = nbt.isNotEmpty ? gson.decode(nbt, simplify: true) : {};
+      _itemChange.add(
+        id.isEmpty
+            ? null
+            : item.copyWith(nbt: tag, type: id, model: model, count: count),
+      );
       item = Item("");
       service.close(name);
     } catch (err) {

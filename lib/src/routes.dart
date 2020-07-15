@@ -1,5 +1,5 @@
 import 'package:angular_router/angular_router.dart';
-import './pages/fard/fard_contact/fard_contact.template.dart' as fc;
+import './pages/contact/contact.template.dart' as ct;
 import './pages/landing/landing.template.dart' as landing;
 import './pages/article/article.template.dart' as art;
 import './pages/articles/articles.template.dart' as arts;
@@ -7,6 +7,7 @@ import './pages/projects/projects.template.dart' as proj;
 import './pages/tekpack/tekpack.template.dart' deferred as tek;
 import './pages/tools/crafting/crafting.template.dart' deferred as craft;
 import './pages/tools/gui/gui.template.dart' deferred as gui;
+import './pages/tools/blocks/blocks.template.dart' deferred as blocks;
 import './pages/not_found.template.dart' as not_found_template;
 
 final redirects = [
@@ -21,6 +22,7 @@ final redirects = [
   redirectTo("tools/guiguide", "/article/guiguide"),
   redirectTo("tools/mccam", "/article/cam"),
   redirectTo("tekPack", "/tekpack"),
+  redirectTo("fard", "/contact"),
 ];
 
 RouteDefinition redirectTo(String path, String redirect) =>
@@ -28,19 +30,20 @@ RouteDefinition redirectTo(String path, String redirect) =>
 
 class RoutePaths {
   static final home = RoutePath(path: '');
-  static final fard = RoutePath(path: 'fard');
+  static final contact = RoutePath(path: 'contact');
   static final articles = RoutePath(path: 'articles');
   static final projects = RoutePath(path: 'projects');
   static final article = RoutePath(path: 'article/:id');
   static final tekpack = RoutePath(path: 'tekpack');
   static final craftingTool = RoutePath(path: 'tools/crafting');
   static final guiTool = RoutePath(path: 'tools/gui');
+  static final blocksTool = RoutePath(path: 'tools/blocks');
 }
 
 class Routes {
-  static final fard = RouteDefinition(
-    routePath: RoutePaths.fard,
-    component: fc.FardContactPageNgFactory,
+  static final contact = RouteDefinition(
+    routePath: RoutePaths.contact,
+    component: ct.ContactPageNgFactory,
   );
   static final home = RouteDefinition(
     routePath: RoutePaths.home,
@@ -80,9 +83,16 @@ class Routes {
       return gui.GuiToolPageNgFactory;
     },
   );
+  static final blocksTool = RouteDefinition.defer(
+    routePath: RoutePaths.blocksTool,
+    loader: () async {
+      await blocks.loadLibrary();
+      return blocks.BlocksToolPageNgFactory;
+    },
+  );
 
   static final all = <RouteDefinition>[
-    fard,
+    contact,
     home,
     article,
     articles,
@@ -90,6 +100,7 @@ class Routes {
     tekpack,
     craftingTool,
     guiTool,
+    blocksTool,
     ...redirects,
     RouteDefinition(
       path: '.+',

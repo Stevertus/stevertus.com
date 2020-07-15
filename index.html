@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- <script>
+      // WARNING: DO NOT set the <base href> like this in production!
+      // Details: https://webdev.dartlang.org/angular/guide/router
+      (function() {
+        var m = document.location.pathname.match(/^(\/[-\w]+)+\/web($|\/)/);
+        document.write('<base href="' + (m ? m[0] : "/") + '" />');
+      })();
+    </script> -->
+
     <script>
-      (function () {
+      (function() {
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
         if (redirect && redirect != location.href) {

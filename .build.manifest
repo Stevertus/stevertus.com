@@ -79,6 +79,7 @@ packages/build_runner/src/server/graph_viz.html
 packages/build_runner/src/server/graph_viz.js
 packages/build_runner/src/server/graph_viz_main.dart.js
 packages/build_web_compilers/src/dev_compiler_stack_trace/stack_trace_mapper.dart.js
+packages/fluix_web/fluix/spinner/test.json
 packages/front_end/src/fasta/README.md
 packages/front_end/src/fasta/TESTING.md
 packages/front_end/src/fasta/builder/README.md

@@ -1,7 +1,7 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
 $__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,G,Y,R,K,X,S,N,E,M,Q,D,L,O,V,B,A,U,T={
-jq:function(d,e){var x=new T.ek(H.b([H.b([],y.h)],y.g),e,null,null,!0)
-x.sc7(x.c6(C.b.p("as ",d.n(0))+" at @s").c)
+js:function(d,e){var x=new T.eq(H.a([H.a([],y.g)],y.a),e,null,null,!0)
+x.sc7(x.c6(C.b.q("as ",d.n(0))+" at @s").c)
 return x}},Z,F
 a.setFunctionNamesIfNecessary([T])
 C=c[0]
@@ -30,7 +30,8 @@ T=a.updateHolder(c[22],T)
 Z=c[23]
 F=c[24]
 var z=a.updateTypes([])
-H.fp(b.typeUniverse,JSON.parse('{"fu":"B","fW":"B","fA":"c5","fv":"m","hd":"m","hg":"m","fx":"T","fy":"T","fI":"ah","h0":"ah","hc":"c1","hv":"bQ","fB":"D","h7":"D","hr":"F","hq":"bU","he":"bM","ho":"bh","fL":"bY","h4":"cn","h3":"cm","fO":"ap","fQ":"bn","fF":"bI","h8":"aX"}'))
-var y={g:H.aF("x<o<f>>"),h:H.aF("x<f>")};(function constants(){C.ax=new L.h_("Gamemode.creative")})()}
-$__dart_deferred_initializers__["j+v499tns4FqBHQSq8iN8+tJYm0="] = $__dart_deferred_initializers__.current
+H.fr(b.typeUniverse,JSON.parse('{"fy":"B","fY":"B","fE":"c6","fz":"n","he":"n","hh":"n","fB":"T","fC":"T","fK":"aj","h2":"aj","hv":"bT","fF":"E","h9":"E","hr":"H","hq":"bW","hf":"bO","ho":"bi","fN":"c_","h6":"cp","h5":"co","fQ":"aw","fS":"bm","fI":"bK","ha":"b0"}'))
+0
+var y={a:H.ar("y<o<f*>*>"),g:H.ar("y<f*>")};(function constants(){C.az=new L.h1("Gamemode.creative")})()}
+$__dart_deferred_initializers__["0J4BLUNTsnevbt3MuIw0PLkiVNE="] = $__dart_deferred_initializers__.current
 //# sourceMappingURL=main.dart.js_8.part.js.map

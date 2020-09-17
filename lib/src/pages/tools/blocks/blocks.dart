@@ -73,6 +73,8 @@ class BlocksToolPage implements OnInit {
   }
 
   void changeSelected(int i) {
+    selected?.id = id;
+
     if (blocks.length > i) {
       selectedIndex = i;
       selected = blocks[i];
@@ -84,6 +86,7 @@ class BlocksToolPage implements OnInit {
   Map<String, String> generatedFiles;
 
   void generate() {
+    selected?.id = id;
     errorText = null;
 
     try {

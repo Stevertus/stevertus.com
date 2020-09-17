@@ -104,9 +104,11 @@ class CraftingToolPage implements OnInit {
         Project(name: table.name, generate: table),
       );
 
+      print(generatedFiles);
+
       result = generatedFiles[
               'data/${table.name}/functions/recipes/craft.mcfunction'] +
-          "\n" +
+          '\n' +
           generatedFiles[
               'data/${table.name}/functions/recipes/res_craft.mcfunction'];
     } catch (err) {

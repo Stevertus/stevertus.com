@@ -17,7 +17,7 @@
     </fluid-list>
   </div>
 
-  <div *ngIf="selected == null" style="position: relative;">
+  <div *ngIf="selected == null" style="position: relative">
     <h3 class="centered">Please select a block</h3>
   </div>
 
@@ -30,7 +30,7 @@
     /><br />
     <input fluidInput [(ngModel)]="id" placeholder="Customblock ID" /><br />
 
-    <button fluidBtn secondary (click)="modalService.open('blocks_item')">
+    <button fluidBtn small secondary (click)="modalService.open('blocks_item')">
       Select Item
     </button>
 
@@ -47,7 +47,12 @@
       label="Set the entity on fire"
     ></fluid-checkbox>
 
-    <button fluidBtn secondary (click)="modalService.open('blocks_block')">
+    <button
+      fluidBtn
+      small
+      secondary
+      (click)="modalService.open('blocks_block')"
+    >
       Select Custom Blockmodel</button
     ><br />
 
@@ -64,7 +69,7 @@
   </fluid-card>
 </div>
 
-<div id="center" style="min-height: 300px;">
+<div id="center" style="min-height: 300px">
   <button class="full" fluidBtn highlight (click)="download()">
     Download Datapack
   </button>

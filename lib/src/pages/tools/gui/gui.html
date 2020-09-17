@@ -121,6 +121,7 @@
   [showId]="showItemInputs"
   [showCount]="showItemInputs"
   [showNbt]="showItemInputs"
+  [showModel]="showItemInputs"
 >
   <div before>
     <p>{{'gui.actionSelect' | ngtranslate}}</p>
@@ -130,7 +131,7 @@
     ></fluid-dropdown
     ><br />
     <textarea
-      style="width: 90%;"
+      style="width: 90%"
       *ngIf="selectedGuiType == 1"
       [(ngModel)]="selectedSlotActions"
       fluidMultiInput
@@ -164,9 +165,7 @@
 </item-selector>
 
 <item-selector [(item)]="currentPage.placeholder" name="gui_placeholder">
-  <p before>
-    {{'gui.placeholderItem' | ngtranslate}}
-  </p>
+  <p before>{{'gui.placeholderItem' | ngtranslate}}</p>
 </item-selector>
 
 <item-selector
@@ -174,7 +173,5 @@
   *ngIf="selected == 'HandItem'"
   name="gui_trigger"
 >
-  <p before>
-    {{'gui.handItem' | ngtranslate}}
-  </p>
+  <p before>{{'gui.handItem' | ngtranslate}}</p>
 </item-selector>

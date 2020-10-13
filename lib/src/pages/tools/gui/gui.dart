@@ -199,7 +199,7 @@ class GuiToolPage {
       return;
     }
 
-    Slot slot = Slot.chest(selectedGuiSlot + 1);
+    var slot = Slot.chest(selectedGuiSlot + 1);
 
     if (selected == 'Inventory') slot = Slot.inv(selectedGuiSlot + 1);
 
@@ -207,8 +207,10 @@ class GuiToolPage {
     switch (selectedGuiType) {
       case 1:
         {
-          List<Command> commands =
-              selectedSlotActions.split('\n').map((a) => Command(a)).toList();
+          final commands = selectedSlotActions
+              .split('\n')
+              .map<Command>((a) => Command(a))
+              .toList();
 
           Score score;
 
@@ -376,8 +378,12 @@ class GuiToolPage {
   }
 
   void download() {
-    if (module.offset != null && module.offset.location.isEmpty) {
+    if (module.offset != null && module.offset.location.trim().isEmpty) {
       module.offset = null;
+    }
+    if (module.blockLocation != null &&
+        module.blockLocation.location.trim().isEmpty) {
+      module.blockLocation = Location.here();
     }
     if (module.minecartName != null &&
         module.minecartName.value['text'].isEmpty) module.minecartName = null;

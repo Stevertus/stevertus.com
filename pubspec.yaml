@@ -17,15 +17,9 @@ dependencies:
     path: C:\dev\Dart\stevertus\fluix-web
   ng_translate:
     path: C:\dev\Dart\stevertus\ng_translate
-  objd:
-    #^0.3.3-beta.4
-    path: C:\dev\Dart\objectiveD
-  objd_crafting:
-    #0.1.3
-    path: C:\dev\Dart\objd_crafting
-  objd_gui:
-    #^0.1.0
-    path: C:\dev\Dart\objd_gui
+  objd: ^0.3.4
+  objd_crafting: 0.1.3
+  objd_gui: ^0.1.2
 
 dev_dependencies:
   intl_translation:

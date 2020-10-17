@@ -8,18 +8,20 @@ environment:
   sdk: ">=2.5.0 <3.0.0"
 
 dependencies:
-  intl:
-  angular: ^6.0.0-alpha+1
-  angular_router: ^2.0.0-alpha+24
-  angular_forms:
+  angular: ^6.0.0
+  angular_router: ^2.0.0
+  angular_forms: ^3.0.0
   http:
   fluix_web:
     path: C:\dev\Dart\stevertus\fluix-web
   ng_translate:
     path: C:\dev\Dart\stevertus\ng_translate
-  objd: ^0.3.4
-  objd_crafting: 0.1.3
-  objd_gui: ^0.1.2
+  objd:
+    path: C:\dev\Dart\ObjectiveD
+  objd_crafting:
+    path: C:\dev\Dart\objd_crafting
+  objd_gui:
+    path: C:\dev\Dart\objd_gui
 
 dev_dependencies:
   intl_translation:

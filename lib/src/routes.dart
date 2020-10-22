@@ -11,18 +11,18 @@ import './pages/tools/blocks/blocks.template.dart' deferred as blocks;
 import './pages/not_found.template.dart' as not_found_template;
 
 final redirects = [
-  redirectTo("worldedit/package", "/article/worldedit-package"),
-  redirectTo("worldedit/cyl", "/article/worldedit-cyl"),
-  redirectTo("worldedit/qb", "/article/worldedit-qb"),
-  redirectTo("worldedit/li", "/article/worldedit-li"),
-  redirectTo("worldedit/br", "/article/worldedit-br"),
-  redirectTo("worldedit/tb", "/article/worldedit-tb"),
-  redirectTo("worldedit/sel", "/article/worldedit-sel"),
-  redirectTo("worldedit/cp", "/article/worldedit-cp"),
-  redirectTo("tools/guiguide", "/article/guiguide"),
-  redirectTo("tools/mccam", "/article/cam"),
-  redirectTo("tekPack", "/tekpack"),
-  redirectTo("fard", "/contact"),
+  redirectTo('worldedit/package', '/article/worldedit-package'),
+  redirectTo('worldedit/cyl', '/article/worldedit-cyl'),
+  redirectTo('worldedit/qb', '/article/worldedit-qb'),
+  redirectTo('worldedit/li', '/article/worldedit-li'),
+  redirectTo('worldedit/br', '/article/worldedit-br'),
+  redirectTo('worldedit/tb', '/article/worldedit-tb'),
+  redirectTo('worldedit/sel', '/article/worldedit-sel'),
+  redirectTo('worldedit/cp', '/article/worldedit-cp'),
+  redirectTo('tools/guiguide', '/article/guiguide'),
+  redirectTo('tools/mccam', '/article/cam'),
+  redirectTo('tekPack', '/tekpack'),
+  redirectTo('fard', '/contact'),
 ];
 
 RouteDefinition redirectTo(String path, String redirect) =>

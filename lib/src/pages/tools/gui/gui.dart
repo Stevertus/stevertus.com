@@ -307,13 +307,13 @@ class GuiToolPage {
     print(slot?.slot);
     if (slot == null) return '';
     if (slot is Interactive && slot.item.getId() != null) {
-      return "https://minecraftitemids.com/item/64/${slot.item.getId()}.png";
+      return 'https://minecraftitemids.com/item/64/${slot.item.getId()}.png';
     }
     if (slot is Placeholder && slot.item.getId() != null) {
-      return "https://minecraftitemids.com/item/64/${slot.item.getId()}.png";
+      return 'https://minecraftitemids.com/item/64/${slot.item.getId()}.png';
     }
     if (slot is ChangePage && slot.item.getId() != null) {
-      return "https://minecraftitemids.com/item/64/${slot.item.getId()}.png";
+      return 'https://minecraftitemids.com/item/64/${slot.item.getId()}.png';
     }
     return '';
   }
@@ -359,22 +359,22 @@ class GuiToolPage {
     errorText = null;
     //table.recipes = recipes;
 
-    // try {
-    generatedFiles = getAllFiles(
-      Project(
-        name: '',
-        generate: Pack(
-          name: namespace,
-          main: File('main'),
-          load: File('load'),
-          modules: [module],
+    try {
+      generatedFiles = getAllFiles(
+        Project(
+          name: '',
+          generate: Pack(
+            name: namespace,
+            main: File('main'),
+            load: File('load'),
+            modules: [module],
+          ),
         ),
-      ),
-    );
-    // } catch (err) {
-    //   errorText = err.toString();
-    //   print(err);
-    // }
+      );
+    } catch (err) {
+      errorText = err.toString();
+      print(err);
+    }
   }
 
   void download() {

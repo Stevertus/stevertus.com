@@ -1,0 +1,20 @@
+:host {
+  border: none;
+  background-color: var(--inputBackground);
+  color: black;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "Lato";
+}
+:host:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--primary);
+}
+:host.fluidMultiInput-error {
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--errorColor);
+}
+:host:focus {
+  outline: none;
+}

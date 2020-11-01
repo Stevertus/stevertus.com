@@ -1,0 +1,11 @@
+<div class="container" [ngClass]="active ? 'active' : ''">
+    <div class="side">
+        <fluid-icon *ngIf="icon != null" [icon]="icon"></fluid-icon>
+        <ng-container *ngIf="icon == null">
+            <ng-content></ng-content>
+        </ng-container>
+    </div>
+    <div class="text" [ngClass]="expanded ? 'expand' : 'shrink'">
+        {{text}}
+    </div>
+</div>

@@ -1,0 +1,23 @@
+:host {
+    border: none;
+    background-color: var(--inputBackground);
+    color: black;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+
+
+    &:focus {
+        padding-bottom: 6px;
+        border-bottom: 2px solid var(--primary); 
+    }
+
+    &.fluidInput-error {
+        padding-bottom: 6px;
+        border-bottom: 2px solid var(--errorColor); 
+    }
+
+    &:focus{
+        outline: none;
+    }
+}

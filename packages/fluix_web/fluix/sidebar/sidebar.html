@@ -1,0 +1,14 @@
+<div *ngIf="fixed" class="bar-spacer">
+</div>
+<div [ngClass]="expandable ? (expanded ? 'expand expanded' : 'shrink') : ''">
+        <div class="container">
+                <div class="scrollable">
+                        <ng-content></ng-content>
+                        <fluid-sidebar-item></fluid-sidebar-item>
+                </div>
+                <div *ngIf="expandable" class="expand" (click)="handleToggleExpand()">
+                        <fluid-icon>listView</fluid-icon>
+                </div>
+        </div>
+
+</div>

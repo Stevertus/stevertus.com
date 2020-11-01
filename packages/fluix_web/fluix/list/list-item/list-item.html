@@ -1,0 +1,10 @@
+<div class="fluid-item" [ngClass]="cssClasses">
+  <div>
+    <div class="leading">
+      <ng-content select="[leading]"></ng-content>
+      <fluid-icon *ngIf="icon != null" [icon]="icon"></fluid-icon>
+    </div>
+    <ng-content></ng-content>
+  </div>
+  <ng-content select="[trailing]"></ng-content>
+</div>

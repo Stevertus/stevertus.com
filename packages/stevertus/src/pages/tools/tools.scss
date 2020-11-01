@@ -1,0 +1,104 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.card {
+  --inputBackground: #f8f8fc;
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  button.full {
+    margin: 8px;
+    width: 47%;
+  }
+}
+
+.card * {
+  margin: 8px 0;
+}
+
+.icon {
+  color: grey;
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+#rightControl {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: black;
+}
+#leftControl {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: black;
+  .tooltip {
+    position: absolute;
+    right: 0px;
+  }
+}
+.errorText {
+  color: red;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  margin: 16px 0;
+
+  grid-gap: 5px;
+  background-color: rgb(80, 80, 80);
+  padding: 10px;
+}
+
+.slot {
+  width: 100%;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+
+    &.selected,
+    &:hover {
+      background-color: rgb(222, 222, 222);
+    }
+
+    img {
+      position: absolute;
+      width: 40%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    p {
+      width: 100%;
+      position: absolute;
+      bottom: 5%;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

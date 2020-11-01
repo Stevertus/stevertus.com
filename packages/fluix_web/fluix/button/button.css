@@ -1,0 +1,58 @@
+:host {
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  display: inline-block;
+  padding: 15.4px 34px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+:host:focus {
+  outline: none;
+}
+:host:hover {
+  background-color: var(--primary-dark);
+}
+:host:active {
+  background-color: var(--primary-darker);
+}
+:host:disabled {
+  background-color: #abe5eb;
+  color: rgba(255, 255, 255, 0.5);
+}
+:host.fluidBtn-small {
+  height: 40px;
+  padding: 8px 34px !important;
+}
+:host.fluidBtn-secondary {
+  color: var(--primary);
+  background: #f8f8fc;
+}
+:host.fluidBtn-secondary:hover {
+  background: #f3f3f7;
+}
+:host.fluidBtn-secondary:active {
+  background: #e9e9ed;
+}
+:host.fluidBtn-highlight {
+  color: #000000;
+  background: var(--accent);
+}
+:host.fluidBtn-highlight:hover {
+  background: var(--accent-dark);
+}
+:host.fluidBtn-highlight:active {
+  background: var(--accent-darker);
+}
+:host.fluidBtn-ghost {
+  color: var(--primary);
+  background-color: transparent;
+  font-weight: bold;
+}
+:host.fluidBtn-ghost:hover {
+  color: var(--primary-dark);
+}
+:host.fluidBtn-ghost:active {
+  color: var(--primary-dark);
+}

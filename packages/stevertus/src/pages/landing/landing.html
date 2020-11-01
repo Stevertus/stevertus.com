@@ -1,0 +1,55 @@
+<div class="container">
+
+    <img src="/assets/yt_banner.webp" alt="" class="banner">
+
+    <landing-section>
+        <h1 ngtranslate>landing.section1.title</h1>
+        <h3 ngtranslate>landing.section1.subtitle</h3>
+        <div class="spacer"></div>
+        <p ngtranslate>landing.section1.text</p>
+        <div class="spacer"></div>
+        <img src="/assets/blob1.svg" right alt="">
+
+    </landing-section>
+
+    <div class="cards">
+        <div class="scroll-content">
+            <landing-card (click)="navigateTo('https://objd.stevertus.com')">
+                <img src="/assets/logos/objd.png" alt="">
+                <h3 ngtranslate>landing.card_objd.title</h3>
+                <p ngtranslate>landing.card_objd.desc</p>
+                <button fluidBtn highlight>{{'landing.card_objd.button' | ngtranslate}}</button>
+            </landing-card>
+            <landing-card (click)="navigateTo('https://stevertus.com/mscript')">
+                <img src="/assets/logos/mcscript.png" alt="">
+                <h3 ngtranslate>landing.card_mcscript.title</h3>
+                <p ngtranslate>landing.card_mcscript.desc</p>
+                <button fluidBtn>{{'view' | ngtranslate}}</button>
+            </landing-card>
+            <landing-card (click)="navigateTo('https://dmanager.stevertus.com')">
+                <img src="/assets/logos/dmanager.png" alt="">
+                <h3 ngtranslate>landing.card_dmanager.title</h3>
+                <p ngtranslate>landing.card_dmanager.desc</p>
+                <button fluidBtn>{{'download' | ngtranslate}}</button>
+            </landing-card>
+            <landing-card (click)="navigateTo('https://stevertus.com/worldedit/package')">
+                <img src="/assets/logos/worldedit.png" alt="">
+                <h3 ngtranslate>landing.card_worldedit.title</h3>
+                <p ngtranslate>landing.card_worldedit.desc</p>
+                <button fluidBtn>{{'view' | ngtranslate}}</button>
+            </landing-card>
+        </div>
+    </div>
+
+    <landing-section>
+
+        <img src="/assets/blob2.svg" left alt="">
+
+        <h1 ngtranslate>landing.section2.title</h1>
+        <h3 ngtranslate>landing.section2.subtitle</h3>
+        <div class="spacer"></div>
+        <p ngtranslate>landing.section2.text</p>
+        <button fluidBtn>{{'landing.section2.button' | ngtranslate}}</button>
+        <div class="spacer"></div>
+    </landing-section>
+</div>

@@ -1,0 +1,625 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "fluicons";
+  src: url("fonts/fluidicons.eot?svaj6g");
+  src: url("fonts/fluidicons.eot?svaj6g#iefix") format("embedded-opentype"), url("fonts/fluidicons.ttf?svaj6g") format("truetype"), url("fonts/fluidicons.woff?svaj6g") format("woff"), url("fonts/fluidicons.svg?svaj6g#fluidicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "fluicons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div {
+  display: none;
+}
+
+:host {
+  font-family: "fluicons" !important;
+}
+:host.fluid-icon-alarm i:before {
+  content: "";
+}
+:host.fluid-icon-atoms i:before {
+  content: "";
+}
+:host.fluid-icon-basket i:before {
+  content: "";
+}
+:host.fluid-icon-bin i:before {
+  content: "";
+}
+:host.fluid-icon-bioTech i:before {
+  content: "";
+}
+:host.fluid-icon-bitCoin i:before {
+  content: "";
+}
+:host.fluid-icon-bottle i:before {
+  content: "";
+}
+:host.fluid-icon-bulletList i:before {
+  content: "";
+}
+:host.fluid-icon-camera i:before {
+  content: "";
+}
+:host.fluid-icon-chatboxRound i:before {
+  content: "";
+}
+:host.fluid-icon-chatboxSquare i:before {
+  content: "";
+}
+:host.fluid-icon-chats i:before {
+  content: "";
+}
+:host.fluid-icon-clip i:before {
+  content: "";
+}
+:host.fluid-icon-cloudDownload i:before {
+  content: "";
+}
+:host.fluid-icon-cloudUpload1 i:before {
+  content: "";
+}
+:host.fluid-icon-costCenter1 i:before {
+  content: "";
+}
+:host.fluid-icon-coupon i:before {
+  content: "";
+}
+:host.fluid-icon-dashboard i:before {
+  content: "";
+}
+:host.fluid-icon-document i:before {
+  content: "";
+}
+:host.fluid-icon-dollar i:before {
+  content: "";
+}
+:host.fluid-icon-dollarCoins i:before {
+  content: "";
+}
+:host.fluid-icon-dollarSign i:before {
+  content: "";
+}
+:host.fluid-icon-education i:before {
+  content: "";
+}
+:host.fluid-icon-energy i:before {
+  content: "";
+}
+:host.fluid-icon-euro i:before {
+  content: "";
+}
+:host.fluid-icon-filter i:before {
+  content: "";
+}
+:host.fluid-icon-finance i:before {
+  content: "";
+}
+:host.fluid-icon-gridView i:before {
+  content: "";
+}
+:host.fluid-icon-growth i:before {
+  content: "";
+}
+:host.fluid-icon-headphone i:before {
+  content: "";
+}
+:host.fluid-icon-heart i:before {
+  content: "";
+}
+:host.fluid-icon-historicalData i:before {
+  content: "";
+}
+:host.fluid-icon-home i:before {
+  content: "";
+}
+:host.fluid-icon-honeycomb i:before {
+  content: "";
+}
+:host.fluid-icon-income i:before {
+  content: "";
+}
+:host.fluid-icon-keys i:before {
+  content: "";
+}
+:host.fluid-icon-language i:before {
+  content: "";
+}
+:host.fluid-icon-laptopAndMobile i:before {
+  content: "";
+}
+:host.fluid-icon-layer i:before {
+  content: "";
+}
+:host.fluid-icon-listView i:before {
+  content: "";
+}
+:host.fluid-icon-location i:before {
+  content: "";
+}
+:host.fluid-icon-lock i:before {
+  content: "";
+}
+:host.fluid-icon-logistics i:before {
+  content: "";
+}
+:host.fluid-icon-logisticUp i:before {
+  content: "";
+}
+:host.fluid-icon-message i:before {
+  content: "";
+}
+:host.fluid-icon-mic i:before {
+  content: "";
+}
+:host.fluid-icon-microscope i:before {
+  content: "";
+}
+:host.fluid-icon-money i:before {
+  content: "";
+}
+:host.fluid-icon-movie i:before {
+  content: "";
+}
+:host.fluid-icon-pencil i:before {
+  content: "";
+}
+:host.fluid-icon-people i:before {
+  content: "";
+}
+:host.fluid-icon-people2 i:before {
+  content: "";
+}
+:host.fluid-icon-person i:before {
+  content: "";
+}
+:host.fluid-icon-phone i:before {
+  content: "";
+}
+:host.fluid-icon-pipette i:before {
+  content: "";
+}
+:host.fluid-icon-plane i:before {
+  content: "";
+}
+:host.fluid-icon-posting i:before {
+  content: "";
+}
+:host.fluid-icon-pound i:before {
+  content: "";
+}
+:host.fluid-icon-puzzle i:before {
+  content: "";
+}
+:host.fluid-icon-reaction i:before {
+  content: "";
+}
+:host.fluid-icon-repost i:before {
+  content: "";
+}
+:host.fluid-icon-roundFlask i:before {
+  content: "";
+}
+:host.fluid-icon-settings i:before {
+  content: "";
+}
+:host.fluid-icon-share i:before {
+  content: "";
+}
+:host.fluid-icon-speaker i:before {
+  content: "";
+}
+:host.fluid-icon-testTube i:before {
+  content: "";
+}
+:host.fluid-icon-tools i:before {
+  content: "";
+}
+:host.fluid-icon-triangularFlask i:before {
+  content: "";
+}
+:host.fluid-icon-truck i:before {
+  content: "";
+}
+:host.fluid-icon-watch i:before {
+  content: "";
+}
+:host.fluid-icon-alarmOutline i:before {
+  content: "";
+}
+:host.fluid-icon-atomsOutline i:before {
+  content: "";
+}
+:host.fluid-icon-basketOutline i:before {
+  content: "";
+}
+:host.fluid-icon-binOutline i:before {
+  content: "";
+}
+:host.fluid-icon-bioTechOutline i:before {
+  content: "";
+}
+:host.fluid-icon-bitCoinOutline i:before {
+  content: "";
+}
+:host.fluid-icon-bottleOutline i:before {
+  content: "";
+}
+:host.fluid-icon-bulletListOutline i:before {
+  content: "";
+}
+:host.fluid-icon-cameraOutline i:before {
+  content: "";
+}
+:host.fluid-icon-chatboxRoundOutline i:before {
+  content: "";
+}
+:host.fluid-icon-chatboxSquareOutline i:before {
+  content: "";
+}
+:host.fluid-icon-chatsOutline i:before {
+  content: "";
+}
+:host.fluid-icon-clipOutline i:before {
+  content: "";
+}
+:host.fluid-icon-cloudDownloadOutline i:before {
+  content: "";
+}
+:host.fluid-icon-cloudUploadOutline i:before {
+  content: "";
+}
+:host.fluid-icon-costCenterOutline i:before {
+  content: "";
+}
+:host.fluid-icon-couponOutline i:before {
+  content: "";
+}
+:host.fluid-icon-dashboardOutline i:before {
+  content: "";
+}
+:host.fluid-icon-documentOutline i:before {
+  content: "";
+}
+:host.fluid-icon-dollarOutline i:before {
+  content: "";
+}
+:host.fluid-icon-dollarCoinsOutline i:before {
+  content: "";
+}
+:host.fluid-icon-dollarSignOutline i:before {
+  content: "";
+}
+:host.fluid-icon-educationOutline i:before {
+  content: "";
+}
+:host.fluid-icon-energyOutline i:before {
+  content: "";
+}
+:host.fluid-icon-euroOutline i:before {
+  content: "";
+}
+:host.fluid-icon-filterOutline i:before {
+  content: "";
+}
+:host.fluid-icon-financeOutline i:before {
+  content: "";
+}
+:host.fluid-icon-gridViewOutline i:before {
+  content: "";
+}
+:host.fluid-icon-growthOutline i:before {
+  content: "";
+}
+:host.fluid-icon-headphoneOutline i:before {
+  content: "";
+}
+:host.fluid-icon-heartOutline i:before {
+  content: "";
+}
+:host.fluid-icon-historicalDataOutline i:before {
+  content: "";
+}
+:host.fluid-icon-homeOutline i:before {
+  content: "";
+}
+:host.fluid-icon-honeycombOutline i:before {
+  content: "";
+}
+:host.fluid-icon-incomeOutline i:before {
+  content: "";
+}
+:host.fluid-icon-keysOutline i:before {
+  content: "";
+}
+:host.fluid-icon-languageOutline i:before {
+  content: "";
+}
+:host.fluid-icon-laptopAndMobileOutline i:before {
+  content: "";
+}
+:host.fluid-icon-layerOutline i:before {
+  content: "";
+}
+:host.fluid-icon-listViewOutline i:before {
+  content: "";
+}
+:host.fluid-icon-locationOutline i:before {
+  content: "";
+}
+:host.fluid-icon-lockOutline i:before {
+  content: "";
+}
+:host.fluid-icon-logisticsOutline i:before {
+  content: "";
+}
+:host.fluid-icon-logisticUpOutline i:before {
+  content: "";
+}
+:host.fluid-icon-messageOutline i:before {
+  content: "";
+}
+:host.fluid-icon-micOutline i:before {
+  content: "";
+}
+:host.fluid-icon-microscopeOutline i:before {
+  content: "";
+}
+:host.fluid-icon-moneyOutline i:before {
+  content: "";
+}
+:host.fluid-icon-movieOutline i:before {
+  content: "";
+}
+:host.fluid-icon-pencilOutline i:before {
+  content: "";
+}
+:host.fluid-icon-peopleOutline i:before {
+  content: "";
+}
+:host.fluid-icon-people2Outline i:before {
+  content: "";
+}
+:host.fluid-icon-personOutline i:before {
+  content: "";
+}
+:host.fluid-icon-phoneOutline i:before {
+  content: "";
+}
+:host.fluid-icon-pipetteOutline i:before {
+  content: "";
+}
+:host.fluid-icon-planeOutline i:before {
+  content: "";
+}
+:host.fluid-icon-postingOutline i:before {
+  content: "";
+}
+:host.fluid-icon-poundOutline i:before {
+  content: "";
+}
+:host.fluid-icon-puzzleOutline i:before {
+  content: "";
+}
+:host.fluid-icon-reactionOutline i:before {
+  content: "";
+}
+:host.fluid-icon-repostOutline i:before {
+  content: "";
+}
+:host.fluid-icon-roundFlaskOutline i:before {
+  content: "";
+}
+:host.fluid-icon-settingsOutline i:before {
+  content: "";
+}
+:host.fluid-icon-shareOutline i:before {
+  content: "";
+}
+:host.fluid-icon-speakerOutline i:before {
+  content: "";
+}
+:host.fluid-icon-testTubeOutline i:before {
+  content: "";
+}
+:host.fluid-icon-toolsOutline i:before {
+  content: "";
+}
+:host.fluid-icon-triangularFlaskOutline i:before {
+  content: "";
+}
+:host.fluid-icon-truckOutline i:before {
+  content: "";
+}
+:host.fluid-icon-watchOutline i:before {
+  content: "";
+}
+:host.fluid-icon-add i:before {
+  content: "";
+}
+:host.fluid-icon-arrowCheck i:before {
+  content: "";
+}
+:host.fluid-icon-arrowChevron i:before {
+  content: "";
+}
+:host.fluid-icon-arrowDoubleLeft i:before {
+  content: "";
+}
+:host.fluid-icon-arrowDoubleRight i:before {
+  content: "";
+}
+:host.fluid-icon-arrowDown i:before {
+  content: "";
+}
+:host.fluid-icon-arrowLeft i:before {
+  content: "";
+}
+:host.fluid-icon-arrowRight i:before {
+  content: "";
+}
+:host.fluid-icon-arrowTop i:before {
+  content: "";
+}
+:host.fluid-icon-attention i:before {
+  content: "";
+}
+:host.fluid-icon-bell i:before {
+  content: "";
+}
+:host.fluid-icon-calendar i:before {
+  content: "";
+}
+:host.fluid-icon-checkboxEmpty i:before {
+  content: "";
+}
+:host.fluid-icon-checkboxFilled i:before {
+  content: "";
+}
+:host.fluid-icon-checkboxFilled i:after {
+  content: "";
+  margin-left: -1em;
+  color: white;
+}
+:host.fluid-icon-circleX i:before {
+  content: "";
+}
+:host.fluid-icon-close i:before {
+  content: "";
+}
+:host.fluid-icon-dot i:before {
+  content: "";
+}
+:host.fluid-icon-dotHalf i:before {
+  content: "";
+}
+:host.fluid-icon-dots i:before {
+  content: "";
+}
+:host.fluid-icon-exportFile i:before {
+  content: "";
+}
+:host.fluid-icon-favorite i:before {
+  content: "";
+}
+:host.fluid-icon-filter_2 i:before {
+  content: "";
+}
+:host.fluid-icon-goods i:before {
+  content: "";
+}
+:host.fluid-icon-info i:before {
+  content: "";
+}
+:host.fluid-icon-infoCircle i:before {
+  content: "";
+}
+:host.fluid-icon-infoFilled i:before {
+  content: "";
+}
+:host.fluid-icon-infoM i:before {
+  content: "";
+}
+:host.fluid-icon-mediaAudio i:before {
+  content: "";
+}
+:host.fluid-icon-mediaFastForward i:before {
+  content: "";
+}
+:host.fluid-icon-mediaPause i:before {
+  content: "";
+}
+:host.fluid-icon-mediaPlay i:before {
+  content: "";
+}
+:host.fluid-icon-mediaRewind i:before {
+  content: "";
+}
+:host.fluid-icon-mediaStop i:before {
+  content: "";
+}
+:host.fluid-icon-minus i:before {
+  content: "";
+}
+:host.fluid-icon-options i:before {
+  content: "";
+}
+:host.fluid-icon-placeholder i:before {
+  content: "";
+}
+:host.fluid-icon-plus i:before {
+  content: "";
+}
+:host.fluid-icon-progressBarCheckMark i:before {
+  content: "";
+}
+:host.fluid-icon-progressBarComingUp i:before {
+  content: "";
+}
+:host.fluid-icon-progressBarDisabled i:before {
+  content: "";
+}
+:host.fluid-icon-progressBarIndicator i:before {
+  content: "";
+}
+:host.fluid-icon-radioButton i:before {
+  content: "";
+}
+:host.fluid-icon-radioButtonActive i:before {
+  content: "";
+}
+:host.fluid-icon-radioButtonEmpty i:before {
+  content: "";
+}
+:host.fluid-icon-radioButtonFilled i:before {
+  content: "";
+}
+:host.fluid-icon-radioButtonHover i:before {
+  content: "";
+}
+:host.fluid-icon-rental i:before {
+  content: "";
+}
+:host.fluid-icon-search i:before {
+  content: "";
+}
+:host.fluid-icon-service i:before {
+  content: "";
+}
+:host.fluid-icon-settings_2 i:before {
+  content: "";
+}
+:host.fluid-icon-star i:before {
+  content: "";
+}
+:host.fluid-icon-starHalf i:before {
+  content: "";
+}
+:host.fluid-icon-tooltipEmpty i:before {
+  content: "";
+}
+:host.fluid-icon-tooltipFilled i:before {
+  content: "";
+}
+:host.fluid-icon-travel i:before {
+  content: "";
+}
+:host.fluid-icon-upload i:before {
+  content: "";
+}
+:host.fluid-icon-warning i:before {
+  content: "";
+}

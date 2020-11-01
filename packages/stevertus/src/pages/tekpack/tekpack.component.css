@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Minecraft";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/minecraft_font.woff") format("woff");
+}
+.container {
+  position: relative;
+}
+
+.logo {
+  width: 20vw;
+  margin: 2% calc(40vw - 2.25rem);
+}
+
+.floatingCard {
+  margin: 8% 6%;
+  width: 45%;
+}
+
+fluid-card {
+  margin: 8% 6%;
+  width: 45%;
+}
+
+.video {
+  width: 35vw;
+  position: absolute;
+  right: 5%;
+  background: black;
+  height: 19.69vw;
+  margin-top: -24vw;
+}
+.video iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.grid {
+  margin: 5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1vw;
+}
+
+.item {
+  min-height: 200px;
+}
+.item h5 {
+  font-family: Minecraft;
+  text-align: center;
+  border-bottom: 1px solid #373737;
+  padding: 2% 0;
+  margin: 0 4%;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.item .icon {
+  image-rendering: pixelated;
+  width: 30%;
+  margin: 4% 35%;
+}
+.item:hover {
+  border: 2px solid #373737;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  background: #c6c6c6;
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+.item:hover .crafting-grid {
+  display: none;
+}
+.item:hover .description {
+  line-height: 2rem;
+  height: 12vw;
+  visibility: visible;
+  margin: 5% 8%;
+}
+
+.description {
+  font-family: Minecraft;
+  visibility: hidden;
+  height: 5px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.crafting-grid {
+  padding: 3% 6%;
+  background: #c6c6c6;
+  width: calc(12vw + 12%);
+  margin: 2% auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.crafting-blue {
+  background: #4a6e9e;
+}
+.crafting-blue .crafting-item {
+  background-color: #344e70;
+  border: 3px solid #1c2a3d;
+  border-right-color: #6ea4ea;
+  border-bottom-color: #6ea4ea;
+}
+
+.crafting-item {
+  height: 4vw;
+  background-color: #8b8b8b;
+  border: 3px solid #373737;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+.crafting-item img {
+  image-rendering: pixelated;
+  height: 100%;
+  width: 100%;
+}

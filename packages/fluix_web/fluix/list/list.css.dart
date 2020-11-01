@@ -1,0 +1,1 @@
+final List<dynamic> styles = ['.container {\n  position: relative;\n  border-radius: 6px;\n  background: var(--cardColor);\n}\n.container ::ng-deep > * div.fluid-item {\n  border-bottom: 1px solid #E9E9ED;\n}\n.container ::ng-deep > *:last-child div.fluid-item {\n  border-bottom: none;\n}\n'];

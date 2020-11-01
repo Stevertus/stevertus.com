@@ -1,0 +1,11 @@
+fluid-modal {
+  [fluidInput],
+  [fluidMultiInput] {
+    width: 80%;
+    margin: 8px 0;
+  }
+  --inputBackground: #f8f8fc;
+}
+.err {
+  color: var(--errorColor);
+}

@@ -1,0 +1,1 @@
+final List<dynamic> styles = ['._nghost-%ID%{border:none;background-color:var(--inputBackground);color:black;padding:8px 15px;border-radius:6px;font-size:16px}._nghost-%ID%:focus{padding-bottom:6px;border-bottom:2px solid var(--primary)}._nghost-%ID%.fluidInput-error{padding-bottom:6px;border-bottom:2px solid var(--errorColor)}._nghost-%ID%:focus{outline:none}'];

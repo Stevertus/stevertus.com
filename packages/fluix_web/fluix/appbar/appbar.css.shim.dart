@@ -1,0 +1,1 @@
+final List<dynamic> styles = ['.fluid-bar-spacer._ngcontent-%ID%{height:60px}.fluid-bar._ngcontent-%ID%{background-color:var(--appbar-background);color:var(--appbar-text, white);display:flex;align-items:center;padding:0 15px;position:relative;width:calc(100% - 30px)}.fluid-bar-fixed._ngcontent-%ID%{position:fixed;top:0;left:0;height:60px;z-index:1}'];

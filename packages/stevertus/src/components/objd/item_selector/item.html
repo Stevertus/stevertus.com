@@ -1,0 +1,40 @@
+<fluid-modal [title]="'selectItem' | ngtranslate" [id]="name">
+  <ng-content select="[before]"></ng-content>
+
+  <input
+    *ngIf="showId"
+    type="text"
+    fluidInput
+    [(ngModel)]="id"
+    placeholder="Item ID"
+  /><br />
+  <input
+    *ngIf="showCount"
+    type="number"
+    fluidInput
+    [(ngModel)]="count"
+    placeholder="Count"
+  /><br />
+  <input
+    *ngIf="showModel"
+    type="number"
+    fluidInput
+    [(ngModel)]="model"
+    placeholder="Modelid"
+  /><br />
+  <textarea
+    *ngIf="showNbt"
+    fluidMultiInput
+    [(ngModel)]="nbt"
+    placeholder="Nbt tag"
+  ></textarea
+  ><br />
+
+  <ng-content></ng-content>
+
+  <p class="err" *ngIf="errorMsg != null">{{errorMsg}}</p>
+
+  <button fluidBtn (click)="submit()">Apply</button>
+
+  <ng-content select="[button]"></ng-content>
+</fluid-modal>

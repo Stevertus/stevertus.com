@@ -1,0 +1,18 @@
+.shell-grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+fluid-appbar {
+  flex-basis: 0px;
+}
+
+.shell-body {
+  overflow: auto;
+  height: calc(100vh - 60px);
+}
+
+:host {
+  height: 100vh !important;
+}

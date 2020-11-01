@@ -1,0 +1,1 @@
+final List<dynamic> styles = ['fluid-modal {\n  --inputBackground: #f8f8fc;\n}\nfluid-modal [fluidInput],\nfluid-modal [fluidMultiInput] {\n  width: 80%;\n  margin: 8px 0;\n}\n\n.err {\n  color: var(--errorColor);\n}\n'];

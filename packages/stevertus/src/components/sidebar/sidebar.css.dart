@@ -1,0 +1,1 @@
+final List<dynamic> styles = ['img {\n  margin: 16px;\n  width: 48px;\n}\nimg:hover {\n  margin: 15px;\n  width: 50px;\n}\n'];

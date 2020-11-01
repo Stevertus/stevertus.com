@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  background: #e9e9ed;
+  min-height: 414px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rights {
+  background: #d5d5d9;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rights p {
+  margin: 4px 0;
+}
+.rights p a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 4px;
+}
+.rights p a:hover {
+  color: var(--primary);
+}
+
+.madein fluid-icon {
+  padding: 0 4px;
+  color: var(--primary);
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40px 0;
+}
+.logo h2 {
+  margin: 0;
+  margin-left: 16px;
+  color: #767680;
+}
+
+.links {
+  padding: 24px 0;
+}
+.links a {
+  padding: 8px;
+  color: black;
+  text-decoration: none;
+}
+.links a:hover {
+  color: var(--primary);
+}
+
+.social {
+  width: 380px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+.social img {
+  height: 25px;
+  margin-right: auto;
+}

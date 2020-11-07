@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['.shell-grid {\n  display: flex;\n  align-items: stretch;\n  justify-content: center;\n}\n\nfluid-appbar {\n  flex-basis: 0px;\n}\n\n.shell-body {\n  overflow: auto;\n  height: calc(100vh - 60px);\n}\n\n:host {\n  height: 100vh !important;\n}\n'];

@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['.container._ngcontent-%ID%{display:flex;flex-direction:row;align-items:center;width:100%}._nghost-%ID%{width:100%}.spacer._ngcontent-%ID%{flex-grow:1}'];

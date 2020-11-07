@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['.shell-grid._ngcontent-%ID%{display:flex;align-items:stretch;justify-content:center}fluid-appbar._ngcontent-%ID%{flex-basis:0px}.shell-body._ngcontent-%ID%{overflow:auto;height:calc(100vh - 60px)}._nghost-%ID%{height:100vh!important}'];

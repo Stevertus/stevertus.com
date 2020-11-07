@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['.download {\n  width: 60%;\n  min-width: 200px;\n  margin: 16px 20%;\n}\n\n.img {\n  width: 80%;\n  margin: 16px 10%;\n}\n\ndoc-grid {\n  margin: 16px -32px;\n  width: 100vw;\n}\n'];

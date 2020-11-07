@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['.download._ngcontent-%ID%{width:60%;min-width:200px;margin:16px 20%}.img._ngcontent-%ID%{width:80%;margin:16px 10%}doc-grid._ngcontent-%ID%{margin:16px -32px;width:100vw}'];

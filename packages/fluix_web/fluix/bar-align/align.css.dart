@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['.container {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  width: 100%;\n}\n\n:host {\n  width: 100%;\n}\n\n.spacer {\n  flex-grow: 1;\n}\n'];

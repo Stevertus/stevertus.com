@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['.container._ngcontent-%ID%{position:relative;border-radius:6px;background:var(--cardColor)}.container._ngcontent-%ID%  > * div.fluid-item{border-bottom:1px solid #E9E9ED}.container._ngcontent-%ID%  > *:last-child div.fluid-item{border-bottom:none}'];

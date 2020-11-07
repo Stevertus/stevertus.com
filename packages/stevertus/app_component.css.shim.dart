@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['@media screen AND (max-width:480px){sidebar._ngcontent-%ID%{display:none}}'];

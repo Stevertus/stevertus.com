@@ -1,1 +1,0 @@
-final List<dynamic> styles = ['@media screen and (max-width: 480px) {\r\n  sidebar {\r\n    display: none;\r\n  }\r\n}\r\n'];

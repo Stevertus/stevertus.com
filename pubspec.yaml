@@ -10,17 +10,17 @@ dependencies:
   angular: ^6.0.1
   angular_router: ^2.0.0
   angular_forms: ^3.0.0
-  http:
+  http: ^0.12.2
   fluix_web:
     path: C:\dev\Dart\stevertus\fluix-web
   ng_translate:
     path: C:\dev\Dart\stevertus\ng_translate
-  objd:
-    path: C:\dev\Dart\objectiveD
-  objd_crafting:
-    path: C:\dev\Dart\objd_crafting
-  objd_gui:
-    path: C:\dev\Dart\objd_gui
+  # objd:
+  #   path: C:\dev\Dart\objectiveD
+  # objd_crafting:
+  #   path: C:\dev\Dart\objd_crafting
+  # objd_gui:
+  #   path: C:\dev\Dart\objd_gui
 
 dev_dependencies:
   sass_builder:

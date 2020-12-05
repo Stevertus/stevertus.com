@@ -5,9 +5,9 @@ import './pages/article/article.template.dart' as art;
 import './pages/articles/articles.template.dart' as arts;
 import './pages/projects/projects.template.dart' as proj;
 import './pages/tekpack/tekpack.template.dart' deferred as tek;
-// import './pages/tools/crafting/crafting.template.dart' deferred as craft;
-// import './pages/tools/gui/gui.template.dart' deferred as gui;
-// import './pages/tools/blocks/blocks.template.dart' deferred as blocks;
+//import './pages/tools/crafting/crafting.template.dart' as craft;
+import './pages/tools/gui/gui.template.dart' deferred as gui;
+//import './pages/tools/blocks/blocks.template.dart' deferred as blocks;
 import './pages/not_found.template.dart' as not_found_template;
 
 final redirects = [
@@ -76,13 +76,13 @@ class Routes {
   //     return craft.CraftingToolPageNgFactory;
   //   },
   // );
-  // static final guiTool = RouteDefinition.defer(
-  //   routePath: RoutePaths.guiTool,
-  //   loader: () async {
-  //     await gui.loadLibrary();
-  //     return gui.GuiToolPageNgFactory;
-  //   },
-  // );
+  static final guiTool = RouteDefinition.defer(
+    routePath: RoutePaths.guiTool,
+    loader: () async {
+      await gui.loadLibrary();
+      return gui.GuiToolPageNgFactory;
+    },
+  );
   // static final blocksTool = RouteDefinition.defer(
   //   routePath: RoutePaths.blocksTool,
   //   loader: () async {
@@ -92,12 +92,13 @@ class Routes {
   // );
   static final craftingTool = RouteDefinition(
     routePath: RoutePaths.craftingTool,
+    //component: craft.CraftingToolPageNgFactory
     component: not_found_template.NotFoundComponentNgFactory,
   );
-  static final guiTool = RouteDefinition(
-    routePath: RoutePaths.guiTool,
-    component: not_found_template.NotFoundComponentNgFactory,
-  );
+  // static final guiTool = RouteDefinition(
+  //   routePath: RoutePaths.guiTool,
+  //   component: not_found_template.NotFoundComponentNgFactory,
+  // );
   static final blocksTool = RouteDefinition(
     routePath: RoutePaths.blocksTool,
     component: not_found_template.NotFoundComponentNgFactory,

@@ -12,10 +12,10 @@ include: package:pedantic/analysis_options.yaml
 analyzer:
   exclude: [build/**]
   plugins:
-  - angular
+    - angular
   errors:
     uri_has_not_been_generated: ignore
   # Angular plugin support is in beta. You're welcome to try it and report
   # issues: https://github.com/dart-lang/angular_analyzer_plugin/issues
   # plugins:
-    # - angular
+  # - angular

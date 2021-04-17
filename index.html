@@ -11,13 +11,26 @@
     </script> -->
 
     <script>
-      (function() {
+      (function () {
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
         if (redirect && redirect != location.href) {
           history.replaceState(null, null, redirect);
         }
       })();
+    </script>
+
+    <script
+      async
+      src="https://cdn.panelbear.com/analytics.js?site=BUuIHd27oC3"
+    ></script>
+    <script>
+      window.panelbear =
+        window.panelbear ||
+        function () {
+          (window.panelbear.q = window.panelbear.q || []).push(arguments);
+        };
+      panelbear("config", { site: "BUuIHd27oC3" });
     </script>
 
     <base href="/" />

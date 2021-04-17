@@ -20,6 +20,12 @@ a {
   text-decoration: none;
 }
 
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .spinner {
   position: absolute;
   display: block;

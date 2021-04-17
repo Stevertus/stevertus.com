@@ -1,5 +1,14 @@
 <div id="center">
   <div class="container" [style.max-width]="getWidth()">
+    <div class="spaceBetween">
+      <h2>Gui Generator</h2>
+      <version-dropdown
+        [min]="15"
+        [max]="17"
+        [selected]="mcversion"
+        (versionChanged)="mcversion = $event"
+      ></version-dropdown>
+    </div>
     <div id="rightControl" (click)="controlPages(true)">
       <fluid-icon
         *ngIf="(currentPageIndex + 1) == module.pages.length"
@@ -24,7 +33,7 @@
     </div>
 
     <div class="grid" [style.--columns]="columns">
-      <div class="slot" *ngFor="let S of slotCount;let i = index">
+      <div class="slot" *ngFor="let i of slotCount">
         <div class="content" (click)="changeSlot(i)">
           <img [src]="getImageUrl(i)" />
           <p>{{getTextForIndex(i)}}</p>
@@ -66,7 +75,7 @@
 
     <input
       *ngIf="showLocation"
-      [(ngModel)]="module.blockLocation.location"
+      [(ngModel)]="blockLocation"
       fluidInput
       [placeholder]="'gui.blockLocation' | ngtranslate"
     /><br />
@@ -87,7 +96,7 @@
       >
       </fluid-checkbox>
       <input
-        [(ngModel)]="module.offset.location"
+        [(ngModel)]="offsetLocation"
         fluidInput
         [placeholder]="'gui.offset' | ngtranslate"
       /><br />

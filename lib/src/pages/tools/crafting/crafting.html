@@ -1,5 +1,14 @@
 <div id="center">
   <div class="container">
+    <div class="spaceBetween">
+      <h2>Crafting Generator</h2>
+      <version-dropdown
+        [min]="15"
+        [max]="17"
+        [selected]="mcversion"
+        (versionChanged)="mcversion = $event"
+      ></version-dropdown>
+    </div>
     <div id="rightControl" (click)="controlPages(true)">
       <fluid-icon
         class="icon"
@@ -22,7 +31,7 @@
       <fluid-icon class="icon" icon="arrowLeft" [size]="32"></fluid-icon>
     </div>
 
-    <div class="grid" style="--columns: 3; width: 50%;">
+    <div class="grid" style="--columns: 3; width: 50%">
       <div class="slot" *ngFor="let slot of slots">
         <div class="content" (click)="onSelect(slot)">
           <img
@@ -59,22 +68,19 @@
         <input
           type="number"
           fluidInput
-          [(ngModel)]="current.id"
+          [(ngModel)]="currentID"
           placeholder="Override Recipe ID"
         />
 
-        <fluid-checkbox [(value)]="current.isShapeless" label="Shapeless">
+        <fluid-checkbox [(value)]="isShapeless" label="Shapeless">
         </fluid-checkbox>
-        <fluid-checkbox
-          [(value)]="current.exactlyPlaced"
-          label="Check for Empty Slots"
-        >
+        <fluid-checkbox [(value)]="exactlyPlaced" label="Check for Empty Slots">
         </fluid-checkbox>
 
         <input
           type="number"
           fluidInput
-          [(ngModel)]="current.exactResult"
+          [(ngModel)]="exactResult"
           placeholder="exact Output Count"
         />
 

@@ -13,6 +13,7 @@ import 'package:objd/core.dart';
 import 'package:objd_gui/gui.dart';
 import 'package:stevertus/src/components/objd/item_selector/item.dart';
 import 'package:ng_translate/ng_translate.dart';
+import 'package:stevertus/src/components/version_dropdown/dropdown.dart';
 
 @Component(
     selector: 'gui_tool',
@@ -30,6 +31,7 @@ import 'package:ng_translate/ng_translate.dart';
       FluidDropdown,
       FluidMultiInput,
       ItemSelectorComponent,
+      VersionDropdown,
       formDirectives
     ],
     pipes: [TranslationPipe])
@@ -49,6 +51,7 @@ class GuiToolPage {
   String get selected => containers[selectedContainer];
 
   int selectedContainer = 0;
+  int mcversion = 17;
 
   GuiToolPage(this.modalService) {
     addEmptyPage();
@@ -62,6 +65,11 @@ class GuiToolPage {
     Location(''),
     pages: [],
   );
+
+  String get blockLocation => module.blockLocation.location;
+  set blockLocation(String v) => module.blockLocation = Location(v);
+  String get offsetLocation => module.offset.location;
+  set offsetLocation(String v) => module.offset = Location(v);
 
   void containerChanged(int i) {
     selectedContainer = i;
@@ -191,6 +199,7 @@ class GuiToolPage {
   }
 
   void slotChanged(Item i) {
+    if (i == null) return;
     final existingData = getSlotforIndex(selectedGuiSlot);
     if (selectedGuiType == 0) {
       if (existingData != null) {
@@ -275,10 +284,11 @@ class GuiToolPage {
   }
 
   List get slotCount {
-    if (selected == 'Hopper') return List(5);
-    if (selected == 'Dropper') return List(9);
-    if (selected == 'Inventory') return List(36);
-    return List(27);
+    final id = (x) => x;
+    if (selected == 'Hopper') return List.generate(5, id);
+    if (selected == 'Dropper') return List.generate(9, id);
+    if (selected == 'Inventory') return List.generate(36, id);
+    return List.generate(27, id);
   }
 
   void controlPages(bool isRight) {
@@ -304,7 +314,6 @@ class GuiToolPage {
 
   String getImageUrl(int i) {
     final slot = getSlotforIndex(i);
-    print(slot?.slot);
     if (slot == null) return '';
     if (slot is Interactive && slot.item.getId() != null) {
       return 'https://minecraftitemids.com/item/64/${slot.item.getId()}.png';
@@ -363,6 +372,7 @@ class GuiToolPage {
       generatedFiles = getAllFiles(
         Project(
           name: '',
+          version: mcversion,
           generate: Pack(
             name: namespace,
             main: File('main'),

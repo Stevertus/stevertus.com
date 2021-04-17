@@ -14,6 +14,7 @@ import 'package:fluix_web/fluix/multi_input/input.dart';
 import 'package:objd/core.dart';
 import 'package:objd/custom_block.dart';
 import 'package:stevertus/src/components/objd/item_selector/item.dart';
+import 'package:stevertus/src/components/version_dropdown/dropdown.dart';
 
 @Component(
   selector: 'blocks_tool',
@@ -32,6 +33,7 @@ import 'package:stevertus/src/components/objd/item_selector/item.dart';
     FluidList,
     FluidListItem,
     ItemSelectorComponent,
+    VersionDropdown,
     formDirectives
   ],
 )
@@ -43,6 +45,7 @@ class BlocksToolPage implements OnInit {
   var blocks = <CustomBlock>[];
   int selectedIndex;
   CustomBlock selected;
+  int mcversion = 17;
 
   String get id => selected.id != null && selected.id.isNotEmpty
       ? selected.id
@@ -93,6 +96,7 @@ class BlocksToolPage implements OnInit {
       generatedFiles = getAllFiles(
         Project(
           name: '',
+          version: mcversion,
           generate: Pack(
             name: 'customblocks',
             modules: blocks,

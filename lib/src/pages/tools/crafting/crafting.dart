@@ -13,6 +13,7 @@ import 'package:fluix_web/fluix/multi_input/input.dart';
 import 'package:objd/core.dart';
 import 'package:objd_crafting/objd_crafting.dart';
 import 'package:stevertus/src/components/objd/item_selector/item.dart';
+import 'package:stevertus/src/components/version_dropdown/dropdown.dart';
 
 @Component(
   selector: 'crafting_tool',
@@ -29,6 +30,7 @@ import 'package:stevertus/src/components/objd/item_selector/item.dart';
     FluidInput,
     FluidMultiInput,
     ItemSelectorComponent,
+    VersionDropdown,
     formDirectives
   ],
 )
@@ -45,8 +47,23 @@ class CraftingToolPage implements OnInit {
   int currentIndex = 0;
 
   int selectedSlot = 0;
+  int mcversion = 17;
 
   Recipe get current => recipes[currentIndex];
+  set current(Recipe r) => recipes[currentIndex] = r;
+
+  int get currentID => current.id;
+  set currentID(int id) => current = current.copyWith(id: id);
+
+  bool get isShapeless => current.type == RecipeType.shapeless;
+  set isShapeless(bool v) => current =
+      current.copyWith(type: v ? RecipeType.shapeless : RecipeType.shaped);
+
+  bool get exactlyPlaced => current.exactlyPlaced;
+  set exactlyPlaced(bool v) => current = current.copyWith(exactlyPlaced: v);
+
+  int get exactResult => current.exactResult;
+  set exactResult(int v) => current = current.copyWith(exactResult: v);
 
   @override
   void ngOnInit() {
@@ -61,7 +78,7 @@ class CraftingToolPage implements OnInit {
   Item get selectedItem =>
       selectedSlot > 9 ? current.result : current.ingredients[selectedSlot];
   set selectedItem(Item s) => selectedSlot > 9
-      ? current.result = s
+      ? current = current.copyWith(result: s)
       : current.ingredients[selectedSlot] = s;
 
   void controlPages(bool isRight) {
@@ -101,10 +118,12 @@ class CraftingToolPage implements OnInit {
 
     try {
       generatedFiles = getAllFiles(
-        Project(name: table.name, generate: table),
+        Project(
+          name: table.name,
+          generate: table,
+          version: mcversion,
+        ),
       );
-
-      print(generatedFiles);
 
       result = generatedFiles[
               'data/${table.name}/functions/recipes/craft.mcfunction'] +

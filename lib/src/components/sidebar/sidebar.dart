@@ -13,6 +13,4 @@ import 'package:fluix_web/fluix/sidebar/sidebar.dart';
 )
 class SidebarComponent {
   bool isHome = true;
-
-  // Nothing here yet. All logic is in TodoListComponent.
 }

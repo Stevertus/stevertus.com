@@ -1,3 +1,13 @@
+<div class="spaceBetween">
+  <h2>Custom Blocks</h2>
+  <version-dropdown
+    [min]="15"
+    [max]="17"
+    [selected]="mcversion"
+    (versionChanged)="mcversion = $event"
+  ></version-dropdown>
+</div>
+
 <div class="split">
   <div class="list">
     <fluid-list>

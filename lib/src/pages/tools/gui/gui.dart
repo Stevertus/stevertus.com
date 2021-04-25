@@ -369,6 +369,7 @@ class GuiToolPage {
     //table.recipes = recipes;
 
     try {
+      print(mcversion);
       generatedFiles = getAllFiles(
         Project(
           name: '',

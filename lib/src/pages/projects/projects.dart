@@ -35,7 +35,8 @@ class ProjectsPage implements OnInit {
 
   List<Document> projects = [];
 
-  ngOnInit() {
+  @override
+  void ngOnInit() {
     loadProjects(lang.currentLocale);
 
     lang.localeChange.addListener(loadProjects);

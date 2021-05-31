@@ -62,24 +62,25 @@ class ItemSelectorComponent implements AfterChanges {
 
   @override
   void ngAfterChanges() {
-    name ??= "item_selector";
-    item ??= Item("");
+    name ??= 'item_selector';
+    item ??= Item('');
     id = item.getId();
     model = item.tag['CustomModelData'];
     count = item.count;
     nbt = gson.encode(item.tag);
+    if (nbt == '{}') nbt = '';
   }
 
   void submit() {
     errorMsg = null;
     try {
-      var tag = nbt.isNotEmpty ? gson.decode(nbt, simplify: true) : {};
+      Map<String, dynamic> tag = nbt.isNotEmpty ? gson.decode(nbt) : {};
       _itemChange.add(
         id.isEmpty
             ? null
             : item.copyWith(nbt: tag, type: id, model: model, count: count),
       );
-      item = Item("");
+      item = Item('');
       service.close(name);
     } catch (err) {
       errorMsg = err.toString();

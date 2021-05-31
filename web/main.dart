@@ -10,7 +10,7 @@ import 'main.template.dart' as self;
 )
 final InjectorFactory injector = self.injector$Injector;
 
-void main() async {
+void main() {
   TranslationService.defaultLocale = 'en';
   TranslationService.initializeLocale('en', {
     'view': 'View',

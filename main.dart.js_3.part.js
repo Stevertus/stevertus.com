@@ -1,8 +1,8 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
-$__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,G={e7:function e7(){}},Y,R,K,X,N,E,M,Q,D,O,V,A,T={
-ja:function(d,e){var x=new T.es(H.a([H.a([],y.h)],y.g),e,null,"objd",!0)
-x.sc9(x.c8(C.b.w("as ",d.n(0))+" at @s").c)
-return x}},L={f0:function f0(d){this.b=d}},U,Z,B,S,F
+$__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,G={e2:function e2(){}},Y,R,K,X,N,E,M,Q,D,O,V,A,T={
+je:function(d,e){var x=new T.eo(H.a([H.a([],y.h)],y.g),e,null,"objd",!0)
+x.sc8(x.c7(C.a.v("as ",d.n(0))+" at @s").c)
+return x}},L={f1:function f1(d){this.b=d}},U,Z,B,S,F
 a.setFunctionNamesIfNecessary([G,T,L])
 C=c[0]
 H=c[1]
@@ -29,14 +29,14 @@ Z=c[21]
 B=c[22]
 S=c[23]
 F=c[24]
-G.e7.prototype={}
-L.f0.prototype={
+G.e2.prototype={}
+L.f1.prototype={
 n:function(d){return this.b}}
 var z=a.updateTypes([]);(function inheritance(){var x=a.inherit
-x(G.e7,R.as)
-x(L.f0,P.t)})()
-H.qg(b.typeUniverse,JSON.parse('{"t6":"H","v2":"H","tn":"cZ","t7":"p","wW":"p","xR":"p","tb":"X","tc":"X","u3":"aA","vn":"aA","wV":"cS","zG":"ch","to":"L","wq":"L","zd":"G","yV":"cr","xc":"c6","yT":"bG","u6":"cH","w2":"dx","w1":"dw","uq":"az","uv":"bJ","tQ":"cj","wy":"bb","e7":{"as":[],"T":[]}}'))
+x(G.e2,R.as)
+x(L.f1,P.t)})()
+H.qk(b.typeUniverse,JSON.parse('{"e2":{"as":[],"T":[]}}'))
 0
-var y={g:H.aB("D<o<d>>"),h:H.aB("D<d>")};(function constants(){C.ax=new L.f0("Gamemode.creative")})()}
-$__dart_deferred_initializers__["kvk2BwQYdMfpvIK+CvLRJjDNAsY="] = $__dart_deferred_initializers__.current
+var y={g:H.ay("D<o<d>>"),h:H.ay("D<d>")};(function constants(){C.ax=new L.f1("Gamemode.creative")})()}
+$__dart_deferred_initializers__["Qc3k1WBNMV9heyaB0uQbg7eg0vY="] = $__dart_deferred_initializers__.current
 //# sourceMappingURL=main.dart.js_3.part.js.map

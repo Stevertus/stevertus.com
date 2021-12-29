@@ -1,0 +1,827 @@
+{
+  "video": "bNtorHWZ6ag",
+  "changes": {
+    "v0.7": [
+      "added conveyor belt",
+      "added item extractor",
+      "added item filter"
+    ],
+    "v0.6.1 and v0.6.2": [
+      "changed block rotation from teleport to summon",
+      "added 7 new decorative blocks"
+    ],
+    "v0.6": [
+      "Wind Turbines check for blocks only in front of now. You can build them side by side",
+      "Updated everything to Minecraft 1.14",
+      "All models use CustomModelData now",
+      "improved: placing technique and craftings",
+      "fixed: hidden item counts in crafter",
+      "reduced file sizes",
+      "added: tekBook"
+    ],
+    "v0.5": [
+      "added: Turbine Blades",
+      "added: Wind Turbine",
+      "added: Water Turbine",
+      "changed: The Battery accepts power from top now",
+      "made this webpage"
+    ],
+    "v0.4": ["added: The Drill", "added: Generator", "added: Vacuum Hopper"],
+    "v0.3": ["added: The Blockbreaker", "added: The electric Furnace"]
+  },
+  "items": [
+    {
+      "name": "Technical Crafting Table",
+      "description": "This is the custom crafting table for tekPack.\n Every recipe in blue needs to be crafted in here.",
+      "isNotBlue": true,
+      "texture": "/technical_crafter.png",
+      "crafting": [
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJFBMVEUAAAA8PABQUACGhgCurgC3YRDbohPcdhPe3gD//wv//4v///9uDl0TAAAAAXRSTlMAQObYZgAAAG1JREFUKFOtzWERgDAIhmEqrAIVrLAKVlgFKlBhFaiwcsIcnlP0j37/3ue4A+DXIb4CItZ6lhmsmogcMkMvS5crIDfPRZcCaOzFuhCEvZgoAn2WRxGtEZTSoVdKcAeTbNd7RaCSx/ETAE4VwddtU5NqYxsx1MoAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAHlBMVEUAAAAKK3oULq8bTZ8cU6giS680XsNFbtFaguJ0l+odY7K7AAAAAXRSTlMAQObYZgAAAGlJREFUKFOtzjEVwzAUQ1FTeBRMoRRMQRRE4VMQBbPtljSpnaXVpjvoqLX/BYZ4AuIxzR5IDZtT7sCUyugBohnL2kNVhMUOSM3Q9TFxBVzjhWW2QNKR+jHxBQH77AvokjheLqBxaSv4NW+98zYP7rKVIQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJFBMVEUAAAA8PABQUACGhgCurgC3YRDbohPcdhPe3gD//wv//4v///9uDl0TAAAAAXRSTlMAQObYZgAAAG1JREFUKFOtzWERgDAIhmEqrAIVrLAKVlgFKlBhFaiwcsIcnlP0j37/3ue4A+DXIb4CItZ6lhmsmogcMkMvS5crIDfPRZcCaOzFuhCEvZgoAn2WRxGtEZTSoVdKcAeTbNd7RaCSx/ETAE4VwddtU5NqYxsx1MoAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAP1BMVEUAAABfTTGfhE1QQyeLcUl2Yjm8mGJbSS1zXjlVRiqFa0O0kFpOPiY1Kho6Lx1pVDM/MR9MPSZcSS58Yj44LRzplsqCAAAAAXRSTlMAQObYZgAAAYFJREFUOE+VkYmSwyAMQ2PA3JC9/v9bVzL0mm07szTTppEsPzvH8b8TY3Tv5PN0LudXFhRnyq65+ER2MZ+xtRZzbs39sayH5xkJkTO+HiwtrjqEAAI353mfggKHGpQ76+DgzRbmFm7Q/A07OgAQAdTwA6f4ZQiq66FjIwSufyJXQ60h8GFbFsTlLJLSNvSuWvFBZgMFAJ1L3vskc26GXqArUj4RjYmQ7UXGSGIGxSmlBrOgEWpZPWZKm0ELpFIAC5f4NHFN73GthGKUGkqnh/GQ4Usim6H0AAUteqdhTKE8cbNaIJ9KxSS1lDEIiCHGuO5BLd5mrQEaFzCJ6LcBtUQAJqzQErskf52i9GqYFY2C2gK85aSxIUnJZdSAObAAsfiEmzVmNUo6MEzhCGTEqNjHJcEQOIcqw8kIj98JkJSvHOuGxXoPQ5DNQMzLoqpKsj2i0RjH7fQvxSAV6yAaMeY8Hk/nFtAKL0DkFn5/1vvk/sbHE5nnp1vCK5kHDM/C351fYqoRqazIzX8AAAAASUVORK5CYII="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABRFBMVEUAAAB2YjmLcUlfTTFQQyevckY6Lx1UOCOFa0NOPiY1Khqiaz5VRipbSS0TEAkZFAwOCwYcGA0rIxUhGxEOCwcUEAoXEgxUNyMSDwkNCga0kFpQJhZSNSFLKxirbkIUDwZVOCRxTSs/LBldQSRMMh0WEgtXRi0aFQ0WEAgsFw1TNiIgGhBBIRMsJBc3LBugaDwlHhJLMRxDJxYmHxIYEws4LRxbW1uFWDgiGxGydUkcFw9tbW0yKBiLTSyNUC2haT2xdEmgoKBbPCZJPSQPCwatcERTOiA/MR8eFgijXjSvc0dYOycuGA6ucUVDIxWdZjksIxZKMRylbkGjaz8SDgklHhGwc0eeWTJNNB2gaTyeWjNNLRknIBOpbEE7Lx+kbUGGhoZTQioyKRihaj6jbD9KKhhTNyKyjlgJBwRcSS61kVtRNSCvssljAAAAAXRSTlMAQObYZgAAAiJJREFUOE+VkUV3HDEQhFeMw7RMZmZmDDMz8/+/p2ftHT87dvJSFx36U6m6VCr9n/xq1f/L+HEYLiyEoXfF2Gfsxc74uLnHmH/J2GM3jckEuyGEmWHNiy7+0dHWlrjF5ubm55l4Zcx5Fz8MjWk0fj0wQmSZGWyAi5ma6rt4I9Xqk3b72VMzKARjmRjcfrkrxOuf1cWRHlBG/kjITCOr3zHbQnz63Pwy/nWGhb5HKicARqhWazbBv143pl6HBxjzPEIKQMpopVZj7FG7vbYmxA7bXV/fTx2nDyg0IIO7k7XaG/Yuyx7mt2+PudQh/BRAahrJycmVyPPD6rf7/mK6PzZGiNZOH0DI2okoQBj7vudR6rhDKV/lTgFYGCUJxkjicoU6nDpxTLuc0n5ILK/jILKbFgNAKOXcTelzp9jCquEcQANK5YCeJcQdcmaJ5oXDnhoOJuSAlLZc0bQLgEv1auGA0PCeSgLUQVJCBtpqvXVjiFhkkPLg/UGU2GmoFADeauk4dejZFkpi/GEikhAhzwAFfEyhJ8fR/QxWYTQawJIKMnC9sbE0BADXRQaMlQIAzp7D8jI9dDmnvOjBYoQrCZKdXgb4BPo9pqBTh8Tmd0cDazv5Fvnb+tCFg+i4dCLIkBeFNlUOgDlxU0K1Lp1J/QgiKTtWQVHkGIpKOS+dVzmBFlAekgNQiUt/ysJf9UJ29bVLxrmWep/FrxrnUkl88e1/6TfSkzftYPMEdQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAP1BMVEUAAABfTTGfhE1QQyeLcUl2Yjm8mGJbSS1zXjlVRiqFa0O0kFpOPiY1Kho6Lx1pVDM/MR9MPSZcSS58Yj44LRzplsqCAAAAAXRSTlMAQObYZgAAAYFJREFUOE+VkYmSwyAMQ2PA3JC9/v9bVzL0mm07szTTppEsPzvH8b8TY3Tv5PN0LudXFhRnyq65+ER2MZ+xtRZzbs39sayH5xkJkTO+HiwtrjqEAAI353mfggKHGpQ76+DgzRbmFm7Q/A07OgAQAdTwA6f4ZQiq66FjIwSufyJXQ60h8GFbFsTlLJLSNvSuWvFBZgMFAJ1L3vskc26GXqArUj4RjYmQ7UXGSGIGxSmlBrOgEWpZPWZKm0ELpFIAC5f4NHFN73GthGKUGkqnh/GQ4Usim6H0AAUteqdhTKE8cbNaIJ9KxSS1lDEIiCHGuO5BLd5mrQEaFzCJ6LcBtUQAJqzQErskf52i9GqYFY2C2gK85aSxIUnJZdSAObAAsfiEmzVmNUo6MEzhCGTEqNjHJcEQOIcqw8kIj98JkJSvHOuGxXoPQ5DNQMzLoqpKsj2i0RjH7fQvxSAV6yAaMeY8Hk/nFtAKL0DkFn5/1vvk/sbHE5nnp1vCK5kHDM/C351fYqoRqazIzX8AAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "tekBook",
+      "description": "You get this item at the start of your journey. It guides you through the different concepts and recipes and shows necessary information with images and custom fonts.",
+      "texture": "/tekbook.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAHlBMVEUAAAAWEAUmGwg4KAxUPhNbW1tlSxeZmZm3t7fW1tb5bXSbAAAAAXRSTlMAQObYZgAAAHJJREFUKFONzG0NwCAMRVEsYKEWnoVamIVaqIVamNtBNzY+GrL3h9yThpR+j4i2QCQivUxQE71M4OcCoMkEnuhkBZZH/M0RsLQBdkRg3FJNA8h8upTz0uXTBW6pqQbkCFzM3gygiuqXARQZMoCUxwxgtwvLX109dEM11AAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAHlBMVEUAAAAKK3oULq8bTZ8cU6giS680XsNFbtFaguJ0l+odY7K7AAAAAXRSTlMAQObYZgAAAGlJREFUKFOtzjEVwzAUQ1FTeBRMoRRMQRRE4VMQBbPtljSpnaXVpjvoqLX/BYZ4AuIxzR5IDZtT7sCUyugBohnL2kNVhMUOSM3Q9TFxBVzjhWW2QNKR+jHxBQH77AvokjheLqBxaSv4NW+98zYP7rKVIQAAAABJRU5ErkJggg=="
+        }
+      ]
+    },
+    {
+      "name": "Cable",
+      "description": "Connect your machines and devices with cables to power everything. \nCapacity: 1 EP(Energy Point)\nSpeed: 1 EP / 100ms ",
+      "texture": "/cable.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAk1BMVEUAAAALBgYMBgcNBggNBwgOBwkQCAkQCQoRCAoSCQsTCgwUCQwVCgwVCw0WCw4WDA0XCg0XDQ8YCw0ZDQ8ZDRAbDRAcDhAcDhEdDxIeDxIeEBIeEBMfDxMgERQhDxIjEBQkFBcnExcpFRkrFxssGBwuFhswGBwzGx80GB02GB44GB44Gh8+HiRAICZEJCpGJixKKjCSwQJGAAAAAXRSTlMAQObYZgAAAU5JREFUOE/tkd1SwjAUhFtaG03rTxKChkRzChLBVOr7P50b2g44A47jtXvTGfY7ezaHLPvXn0T0o+1oH8JlRKl+uw1BuXjBjjEQ4YMQOmcHa+Oj6z4IPsXvKYr6baDFYt5hOhLZGE+7ONUHSM0/Q1itbHKtdW4fR0QgMOCnPrzvdtYSdTFo3ffBEhsAUSH0EKtchyVWP8UORRiTA+B9VW82ZFE0hQG1KAlbNiNgRMt5ap6aqEOFspTwj4BvBwS3SoXLkummmYC6FmCQIoR763DKvNAaAJNsKPncVtUB8FzgRSyXmGaymRXLqWTbVsLw1nDvRaqG7LK4sstmfKZ/Md7zaw/AeIwCKGeHmAHIMgN5fnMLwGBzkzNZyoaV2VGGp5fc1QnIc2xh4w2O4hh/XQtRFNqiwun0JOSbtb/XD/DP2EkCi9h0nguIGP+g3+sLSeUpq9GOvjsAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAk1BMVEUAAAALBgYMBgcNBggNBwgOBwkQCAkQCQoRCAoSCQsTCgwUCQwVCgwVCw0WCw4WDA0XCg0XDQ8YCw0ZDQ8ZDRAbDRAcDhAcDhEdDxIeDxIeEBIeEBMfDxMgERQhDxIjEBQkFBcnExcpFRkrFxssGBwuFhswGBwzGx80GB02GB44GB44Gh8+HiRAICZEJCpGJixKKjCSwQJGAAAAAXRSTlMAQObYZgAAAU5JREFUOE/tkd1SwjAUhFtaG03rTxKChkRzChLBVOr7P50b2g44A47jtXvTGfY7ezaHLPvXn0T0o+1oH8JlRKl+uw1BuXjBjjEQ4YMQOmcHa+Oj6z4IPsXvKYr6baDFYt5hOhLZGE+7ONUHSM0/Q1itbHKtdW4fR0QgMOCnPrzvdtYSdTFo3ffBEhsAUSH0EKtchyVWP8UORRiTA+B9VW82ZFE0hQG1KAlbNiNgRMt5ap6aqEOFspTwj4BvBwS3SoXLkummmYC6FmCQIoR763DKvNAaAJNsKPncVtUB8FzgRSyXmGaymRXLqWTbVsLw1nDvRaqG7LK4sstmfKZ/Md7zaw/AeIwCKGeHmAHIMgN5fnMLwGBzkzNZyoaV2VGGp5fc1QnIc2xh4w2O4hh/XQtRFNqiwun0JOSbtb/XD/DP2EkCi9h0nguIGP+g3+sLSeUpq9GOvjsAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAk1BMVEUAAAALBgYMBgcNBggNBwgOBwkQCAkQCQoRCAoSCQsTCgwUCQwVCgwVCw0WCw4WDA0XCg0XDQ8YCw0ZDQ8ZDRAbDRAcDhAcDhEdDxIeDxIeEBIeEBMfDxMgERQhDxIjEBQkFBcnExcpFRkrFxssGBwuFhswGBwzGx80GB02GB44GB44Gh8+HiRAICZEJCpGJixKKjCSwQJGAAAAAXRSTlMAQObYZgAAAU5JREFUOE/tkd1SwjAUhFtaG03rTxKChkRzChLBVOr7P50b2g44A47jtXvTGfY7ezaHLPvXn0T0o+1oH8JlRKl+uw1BuXjBjjEQ4YMQOmcHa+Oj6z4IPsXvKYr6baDFYt5hOhLZGE+7ONUHSM0/Q1itbHKtdW4fR0QgMOCnPrzvdtYSdTFo3ffBEhsAUSH0EKtchyVWP8UORRiTA+B9VW82ZFE0hQG1KAlbNiNgRMt5ap6aqEOFspTwj4BvBwS3SoXLkummmYC6FmCQIoR763DKvNAaAJNsKPncVtUB8FzgRSyXmGaymRXLqWTbVsLw1nDvRaqG7LK4sstmfKZ/Md7zaw/AeIwCKGeHmAHIMgN5fnMLwGBzkzNZyoaV2VGGp5fc1QnIc2xh4w2O4hh/XQtRFNqiwun0JOSbtb/XD/DP2EkCi9h0nguIGP+g3+sLSeUpq9GOvjsAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAG1BMVEUAAAA5PEBYX2hzjY2isL66yNq9ytvZ3+fy8vKbMGZqAAAAAXRSTlMAQObYZgAAAEBJREFUKFNjYBhagElJAb8Ak2p4kRKyGLoAk3pFR3uJi6MAbgGN9vISZ2NDPAJqqaGBgoJwPqYAAyMKD5vAkAAAoM8QeTEC430AAAAASUVORK5CYII="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAG1BMVEUAAAA5PEBYX2hzjY2isL66yNq9ytvZ3+fy8vKbMGZqAAAAAXRSTlMAQObYZgAAAEBJREFUKFNjYBhagElJAb8Ak2p4kRKyGLoAk3pFR3uJi6MAbgGN9vISZ2NDPAJqqaGBgoJwPqYAAyMKD5vAkAAAoM8QeTEC430AAAAASUVORK5CYII="
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAk1BMVEUAAAALBgYMBgcNBggNBwgOBwkQCAkQCQoRCAoSCQsTCgwUCQwVCgwVCw0WCw4WDA0XCg0XDQ8YCw0ZDQ8ZDRAbDRAcDhAcDhEdDxIeDxIeEBIeEBMfDxMgERQhDxIjEBQkFBcnExcpFRkrFxssGBwuFhswGBwzGx80GB02GB44GB44Gh8+HiRAICZEJCpGJixKKjCSwQJGAAAAAXRSTlMAQObYZgAAAU5JREFUOE/tkd1SwjAUhFtaG03rTxKChkRzChLBVOr7P50b2g44A47jtXvTGfY7ezaHLPvXn0T0o+1oH8JlRKl+uw1BuXjBjjEQ4YMQOmcHa+Oj6z4IPsXvKYr6baDFYt5hOhLZGE+7ONUHSM0/Q1itbHKtdW4fR0QgMOCnPrzvdtYSdTFo3ffBEhsAUSH0EKtchyVWP8UORRiTA+B9VW82ZFE0hQG1KAlbNiNgRMt5ap6aqEOFspTwj4BvBwS3SoXLkummmYC6FmCQIoR763DKvNAaAJNsKPncVtUB8FzgRSyXmGaymRXLqWTbVsLw1nDvRaqG7LK4sstmfKZ/Md7zaw/AeIwCKGeHmAHIMgN5fnMLwGBzkzNZyoaV2VGGp5fc1QnIc2xh4w2O4hh/XQtRFNqiwun0JOSbtb/XD/DP2EkCi9h0nguIGP+g3+sLSeUpq9GOvjsAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAk1BMVEUAAAALBgYMBgcNBggNBwgOBwkQCAkQCQoRCAoSCQsTCgwUCQwVCgwVCw0WCw4WDA0XCg0XDQ8YCw0ZDQ8ZDRAbDRAcDhAcDhEdDxIeDxIeEBIeEBMfDxMgERQhDxIjEBQkFBcnExcpFRkrFxssGBwuFhswGBwzGx80GB02GB44GB44Gh8+HiRAICZEJCpGJixKKjCSwQJGAAAAAXRSTlMAQObYZgAAAU5JREFUOE/tkd1SwjAUhFtaG03rTxKChkRzChLBVOr7P50b2g44A47jtXvTGfY7ezaHLPvXn0T0o+1oH8JlRKl+uw1BuXjBjjEQ4YMQOmcHa+Oj6z4IPsXvKYr6baDFYt5hOhLZGE+7ONUHSM0/Q1itbHKtdW4fR0QgMOCnPrzvdtYSdTFo3ffBEhsAUSH0EKtchyVWP8UORRiTA+B9VW82ZFE0hQG1KAlbNiNgRMt5ap6aqEOFspTwj4BvBwS3SoXLkummmYC6FmCQIoR763DKvNAaAJNsKPncVtUB8FzgRSyXmGaymRXLqWTbVsLw1nDvRaqG7LK4sstmfKZ/Md7zaw/AeIwCKGeHmAHIMgN5fnMLwGBzkzNZyoaV2VGGp5fc1QnIc2xh4w2O4hh/XQtRFNqiwun0JOSbtb/XD/DP2EkCi9h0nguIGP+g3+sLSeUpq9GOvjsAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAk1BMVEUAAAALBgYMBgcNBggNBwgOBwkQCAkQCQoRCAoSCQsTCgwUCQwVCgwVCw0WCw4WDA0XCg0XDQ8YCw0ZDQ8ZDRAbDRAcDhAcDhEdDxIeDxIeEBIeEBMfDxMgERQhDxIjEBQkFBcnExcpFRkrFxssGBwuFhswGBwzGx80GB02GB44GB44Gh8+HiRAICZEJCpGJixKKjCSwQJGAAAAAXRSTlMAQObYZgAAAU5JREFUOE/tkd1SwjAUhFtaG03rTxKChkRzChLBVOr7P50b2g44A47jtXvTGfY7ezaHLPvXn0T0o+1oH8JlRKl+uw1BuXjBjjEQ4YMQOmcHa+Oj6z4IPsXvKYr6baDFYt5hOhLZGE+7ONUHSM0/Q1itbHKtdW4fR0QgMOCnPrzvdtYSdTFo3ffBEhsAUSH0EKtchyVWP8UORRiTA+B9VW82ZFE0hQG1KAlbNiNgRMt5ap6aqEOFspTwj4BvBwS3SoXLkummmYC6FmCQIoR763DKvNAaAJNsKPncVtUB8FzgRSyXmGaymRXLqWTbVsLw1nDvRaqG7LK4sstmfKZ/Md7zaw/AeIwCKGeHmAHIMgN5fnMLwGBzkzNZyoaV2VGGp5fc1QnIc2xh4w2O4hh/XQtRFNqiwun0JOSbtb/XD/DP2EkCi9h0nguIGP+g3+sLSeUpq9GOvjsAAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "Battery Cell",
+      "description": "A thing that indicates energy storage.\n Primarily used for further crafting and upgrades.",
+      "texture": "/battery_cell.png",
+      "crafting": [
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAElBMVEUAAAA9bQBamghlrAl2xhCD1BySGUAKAAAAAXRSTlMAQObYZgAAAFRJREFUKFPNz7ENgDAQQ9FbwSvcCl7BK/z9V6EKIgnQIeHOT3Lhql9Fkt5AIvGFVhAE3B6ygkggOeUO5s0OhoS2+wFKNtg9+g4l2T1/WWC7fwMf5wCfFx4nKJgmfAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAFVBMVEUAAAAtAAA2AABJAABUAAByAAD/AAAotwdgAAAAAXRSTlMAQObYZgAAAGBJREFUKJG90MEJwDAMQ1GvoBWyglbICn8F7z9CD6U0OCQ5FKrjAxmjiD8jHUCgLSjp1gYE4EEqCAC31AKU0En7Kc1Av4+2JZgEhkqFkA3Nfv+oEJJtDxtNECGVDSf4lAusHSV1TX9wSQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAFVBMVEUAAAAtAAA2AABJAABUAAByAAD/AAAotwdgAAAAAXRSTlMAQObYZgAAAGBJREFUKJG90MEJwDAMQ1GvoBWyglbICn8F7z9CD6U0OCQ5FKrjAxmjiD8jHUCgLSjp1gYE4EEqCAC31AKU0En7Kc1Av4+2JZgEhkqFkA3Nfv+oEJJtDxtNECGVDSf4lAusHSV1TX9wSQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        }
+      ]
+    },
+    {
+      "name": "Battery",
+      "description": "Stores Energy and displays it.(blue input, red output)\n Default Capacity: 15 EP.\n Can be deactivated by redstone.\nBattery Cells can be inserted to upgrade the capacity(each 5 EP)",
+      "texture": "/battery.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAFVBMVEUAAAAtAAA2AABJAABUAAByAAD/AAAotwdgAAAAAXRSTlMAQObYZgAAAGBJREFUKJG90MEJwDAMQ1GvoBWyglbICn8F7z9CD6U0OCQ5FKrjAxmjiD8jHUCgLSjp1gYE4EEqCAC31AKU0En7Kc1Av4+2JZgEhkqFkA3Nfv+oEJJtDxtNECGVDSf4lAusHSV1TX9wSQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 1,
+          "texture": "/battery_cell.png"
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAFVBMVEUAAAAtAAA2AABJAABUAAByAAD/AAAotwdgAAAAAXRSTlMAQObYZgAAAGBJREFUKJG90MEJwDAMQ1GvoBWyglbICn8F7z9CD6U0OCQ5FKrjAxmjiD8jHUCgLSjp1gYE4EEqCAC31AKU0En7Kc1Av4+2JZgEhkqFkA3Nfv+oEJJtDxtNECGVDSf4lAusHSV1TX9wSQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 3,
+          "texture": "/cable.png"
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABKVBMVEUAAABqThWPaR1/WiFWPRdTOhR6VR0jHxmVbC5eRhlUNxBINQ+kcieiayOnbh9AMBF/XyKreS18UhdLNhd4TxpvUCI2LyUzLiVSNhIfGxVIMRNpSBwhHhgVEw9YQyQ8LRg3MSc0LiVKMhJrTB+QZiowLCNJMxUgHBcmIhseGxUaFxMfGxaEYi+SYyM1LyYbGBOOYSYoJBw1KRV6enojHhhlQhJaQRtXV1djY2NIMBAzLCMzLSQWExAWEw8UEg82MCaQkJAyLCQhHRdsSRpjRBdnSRtCLhMoJB1sbGwoIxshHRYyLSaYmJgiHhgcGRQ+LhBVOxY4LyUzJxMQDgxYOxVXPh46KxcXFRFgQxwqJR1DMRgRDww7KhUhGxUfHBZINh0dGhZiSSMYFREVExf8AAAAAXRSTlMAQObYZgAAAitJREFUOE+VkeWS20AQhL28K1kWy5IMMjMeQ5ILMzPT+z9EZi1VJVfnu6r0L1X1Nz09q1Lp/9SazapX2asVxvP5ZUhLOhVcqWDcc1pb7KqcW265XHYrlXLZuYBEvR7GrmW5IEhx3fPImZR6DrsVy8IYPizr35RP0cyBGRjHmw0YWCBdOas+2ADtfvTKcVzYAAUhQC+CpvOoKiY5QPr9xUJKMPUiaGBZUlarQtAbBcB5u62Rco5gR0aREIwVwK0AIY5O+1Hk9KCFterBdN00GTUaeYIKPCAQpDyR0pEtmDZNSuN4cG0D9JVS3v7dextk0WrV60xPx53B4E2eMHqkwoOnu4Qg3h6JOjNMZhi23ZlM8oSTZnO9Prh5tB94hIwFNU2wfXu5zLKiw51as3l79+iFCgINxIav7a9Zej+/ok9Irfbj4eFj1e16ybPYtv3nk52dNKV+8Q4IEe/l8eHr9ajbHQpbh+90OoyZdgFwjggix2/fNUejoZgs32dphzLTYIMcOAk4gcckvAZdPtSzLE1NaMoYS4uSxAsIAnFS+zgUnZQaEA+nxn5+5ikiJAg0QUiY7FGq5+FU07CLhNCDCh48N0dqLPRP0Dboc56QJErBKyLP47w7rsPuONYVBn7jSylXMg1DOAQFQXcs4JlhB/XtRqP0V9NvKuSce7VkL6Yg2z9nb5AkVAiFQ0EN6l+0tZIkDNV3Ydp24/oWW+vn9NdQ+JfaWtPfW8Ov0h9LljtDt3me3AAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 5,
+          "texture": "/cable.png"
+        },
+        {
+          "slot": 6,
+          "texture": "/battery_cell.png"
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAACTFBMVEX///9jEAXjJgw0BgNJCQQyBgOQGAhLCQRHDANbEwjCIgpQDwRnEgV1FgY1BwNMCQR7FgZUDwRECwN0DwZ3DwaEGwy5IgpFCwNTDwR6FgajHAgxBgM4CANHCQTJIwvRKxNXDwVwDgacGghzFQY1BgM2BwM5CAM6CANGDANKDQRNDgRYDQRWDgVaDwVkEAVlEAVmEQVxFAZ4DwZ7EQZ/FgeLFQeQEAidGgifGgi2IQq6IQozBgM6CQM7CAM7CQM8CQM/BwNBCgNCCwNDCwNJDQRNCQRMDQROCwRPCwRQCwRQDQRTDARRDgRUDgRVDQRfDwVsEwZyDgZzDwZwEwZzFAZ5DwZ2FQZ9EQaBEgZ/FAeEEAeDFgeGFQeWFwiWGAiYGAieGgihGwilHAmqHgmrHgm0Hwq2Hwq1IQq8HgrBIArAIgrPIwvQIwtPDgRnEQVbCgWQFwh+FAc2BgM3BwM9CQNACQNACgNCCgNICQRKCQRIDARNCgRPCQRLDQRPDQRRCwRSCwRUCgRSDARSDQRSDgRWDARWDQRXDgVZDQVeDQVdDwVcEAVeDwVgDwVhEAVjDwViEAVpEgZqEgZqEwZsEgZtEwZvEwZuFAZwFAZ2DwZyFAZ0FAZ1EwZ2EgZ5EAZ3EgZ2FAZ3EwZ3FAZ9DwZ6FAZ6FQZ/EQZ/EgaAEgZ9FAeBEwaFEweGFweHFweKFQeNFQiQFgiUFQiTGAiUGAijGwioHQmsHgmvHgmwHgmyIAq7HAq5Hgq8HAq8IArGIAvHIAvIIAvUJAvVJAvkJAxGfUllAAAAAXRSTlMAQObYZgAAAmBJREFUeNqV0WNzXkEYgOHu7jFfG7Ft27Zt1lZq27Ztu3+se96c02YySWfyfL2v1eyyJQ70eOD/Msd1d2dk/F4kf3vwNjVtePjHkMUCF1rd39fV+rwrIeDTl3dD3Ec4P4+P9/YmXjMZ8QSk3U9N9Xrh3Dw1NTLS05OQYvT3T0kxmhKTkx2O9HSoZeiZsAwOfnht9I2/yZT46JnDYZnwwFlCURB+Te+7d7GhQakm7+2EV8kObwaEAMyCJIWMjr5pe1xfj68QkNbq4Dgl+6nAbr+gEI7rb27u6Bgbe4/fCaOqeJtNBbfEpjtxPvKybWDA8uunstpVZM2vUkHgefPpo3ExD2/A758nJ32bh1mDDYXbWQ3sa6x1n6iZOaXsgjNbHVaYtTYrdD97XAUxjXvl0i1lQGenKABs0UUbJAmh0HAeaOAIIdP0gZqTtUkU8OP98p0IoUzDNg3cXU4QKwiali812SlgKwnPRogkSRSuV4EOA2XkM+0tFNiTU5CdRzpJ0mCI0EDcJjdBuAn6art5JZjOWUPiySOlf6B4I00op1yvEzGwZpLKIInRnnmwWCZogEnsWfEFBi6cnUiSmOlZsOrKjp34im6aKK/TUaCaCXUiA4uk3L+gUxRkQJtpuhzEU0DPBCOEWOQqCNH+wqwTb16O3UqXRvpAWBCJrKvX50bw2m9SnU/N52LL5F2RghmDoCBksAYzDGsDGKjkiSgIhyKP+YCL2V3BMHq9mjUiVgqCUBlIgXX8ZraED1HzXKLTxYuBVFSFPuQwr+b5pMVup6Kio9XNFyT4N1k1L0ZwXtr8Ab7rdbKTwmKhAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 8,
+          "texture": "/battery_cell.png"
+        }
+      ]
+    },
+    {
+      "name": "Generator",
+      "description": "Turns fuel into electric energy.\n 1 Burn Point -> 1 EP (e.g coal -> 8 EP)\nStores up to 15 EP internally",
+      "texture": "/generator.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAElBMVEUAAAA9bQBamghlrAl2xhCD1BySGUAKAAAAAXRSTlMAQObYZgAAAFRJREFUKFPNz7ENgDAQQ9FbwSvcCl7BK/z9V6EKIgnQIeHOT3Lhql9Fkt5AIvGFVhAE3B6ygkggOeUO5s0OhoS2+wFKNtg9+g4l2T1/WWC7fwMf5wCfFx4nKJgmfAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 4,
+          "texture": "/battery_cell.png"
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAElBMVEUAAAA9bQBamghlrAl2xhCD1BySGUAKAAAAAXRSTlMAQObYZgAAAFRJREFUKFPNz7ENgDAQQ9FbwSvcCl7BK/z9V6EKIgnQIeHOT3Lhql9Fkt5AIvGFVhAE3B6ygkggOeUO5s0OhoS2+wFKNtg9+g4l2T1/WWC7fwMf5wCfFx4nKJgmfAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABhlBMVEUAAABZWVk9PT1VVVU4ODgeHh4AAAAYGBhAQEB6eno1NTVISEgxMTEtLS1hYWFeXl4yMjIcHBwlJSUbGxsvLy9paWkuLi4SEhJSUlIZGRlXV1dEREQ7OzspKSkkJCR4eHhQUFAnJycmJiYXFxchISF9fX1kZGQsLCxjY2NqamqQkJBnZ2dycnI8PDyCgoI6OjpLS0tFRUU+Pj5DQ0NaWlp7e3szMzOIiIiPj49/f39+fn5vb295eXlJSUmSkpJCQkI/Pz9bW1twcHAjIyMqKiowMDBsbGxlZWUaGho0NDQ2NjZGRkYNDQ0gICCUlJQoKCgrKyuHh4c5OTmYmJh8fHyXl5cdHR0VFRWAgIBHR0dYWFhra2tMTExWVlZiYmIfHx9RUVGRkZFdXV1UVFRzc3M3NzdOTk50dHSDg4NPT08UFBRoaGhgYGCMjIxKSkpubm4LCwuFhYWdnZ1fX19cXFwMDAyTk5NTU1MQEBBNTU2JiYkWFhYiIiIKCgoODg6Li4sRERGEhISvBf36AAAAAXRSTlMAQObYZgAAAnxJREFUOMuV0lVz20AABODciRkty8zMzBRmZuakzMz/vLLlzKRp05ns635aSTc3MvKwuCYn6f/UqNfr8fD8xD21yIO6p9E4rNqT3L/GHW97tUZjvZSoVKnkvvPv8Xj8x9QzADye3sqb4+Nw+Pa3iABUKhRV741aLM3myclnAGo1u9138zQ9WTwH4BwcxOOjG7Heq+r69aLF4vEeiOIAjPvoMr/zHrygqGtqezu5u15Ll56MWlwTis0EXp9bVZNJQD2lqFAoFjtdATzvdiuPl02AwQI9FuS4ff51PB4O7+1teD2ZDCaxY0vEAASdoEUiQcWJhnmKomL98YCVFUlIb5mvQBx6LIagkXGas+d41O0mAhm/q6DNodYBWECAT/IXs8zz4ObsrCgq05FMvnzBZR1DIHdOfTguT6cOyfKSLCkcyzCOiVw2OyOZYIwR8H4wYg6QsjQLl2dyGp3rdhzspgkcBfzbgFwmnO4tl4bm81qrxZCcCzNPUgRnKy/nDZCPXmKBJUjnYWS1EOmqcMEElvacsx569x1vRj8oUgai3RlIaxCNMuY5oMV0e9FZqJc+lj6NKxJHohwtthxTUQQOgZBOC2trnS4VCjPKF5YsM6ksnwAASdmGIKQKLFtdc+524LRN03ZgIqEDoOtkYAAu7AIewVmOXWznwDLxFUanjBYxyKq5sCqo/V/AWeGqbYkQTBQYMXrkZkFlVMxqNQR3FSqqfgjAI0TXHyGQtNmGd0rGpKM+sTeLbj9EjFpHICSIW7cSw46wn1Y2bZf9pPF1OgkDt2uTYBj+Swj6SQRJkcTduh8Jm6+cyXLqzvgfK5QQ9JG2++p+GHnBNvKw/Ab1Wl3ozqEajAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "Solar Panel",
+      "description": "Alternative energy producer.\n Generates EPs based on the light insolation(doesn't work at night).\nCan provide up to 1 EP / 10s",
+      "texture": "/solar.png",
+      "crafting": [
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAHlBMVEUAAAAKK3oULq8bTZ8cU6giS680XsNFbtFaguJ0l+odY7K7AAAAAXRSTlMAQObYZgAAAGlJREFUKFOtzjEVwzAUQ1FTeBRMoRRMQRRE4VMQBbPtljSpnaXVpjvoqLX/BYZ4AuIxzR5IDZtT7sCUyugBohnL2kNVhMUOSM3Q9TFxBVzjhWW2QNKR+jHxBQH77AvokjheLqBxaSv4NW+98zYP7rKVIQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABnRSTlMA/wD/AP83WBt9AAAFlUlEQVRIx7WWy6vfVxHAP3Me38fvdx+5adOmRYSQgC5cSbXgRhSKm4I7ERGKC/8Bd+JeV7ovFNyJW9fiwgdUoWoxummNtLU2Nze99/f+vs45My7ubdOksYS2zuocODOfGeZxRsyM/6eER3/67As/PXlnBnSL5Z1XfviIWvIoEXz1uz85PlNAiICpB9bHw+1Xf/RJAV964eers11/3DaH3bhuxRdASE40zhdWpDvZe/vvP/g4gK9858eLXTFrWz3t7bHWTjvdw1ys67zbolT1ZEU2p75ur+xW4//CPATwzPd/efd1D1S8BoT95dh/Djj0t4Bu2AOEWkU9fSkROLp8Crx7tr31+xc/CvDMt38WDwQ4W1wGykYAyatCG/yZaA9QAjDz29305DzeOVec1AFoBgZd3vrdiw8Cvvy9l6az2ZDW2TexMrVzBWeaRLyZlU6cLRVXuUG1Mt0ZvmajVHXVc/68ZM3OVXr87mXgvNIuyvT01ss69bPPPOexbjV470sp0dc6IqHDVXmX20ZCmMANy6qe+VJ0rHEaOvN+6Dfba49f+edmfcpAWP+hK3P4ACBv61SUt39Nc3R49Vmge2sCZX8yV5lRzV2hbZszoG4NI+/2yhh9EX81a70vyz+d3kaHf2Tx/djmob+v0UpIxeJQat8NZ2/9sba7+0ffBCY9mVZP+Go5bubAcnGuo0D91KpxS2BztgCm8Q1K7tatr/oP9u+9k6bJh1jww8InF+FXJcwu7T/39Of/9cZrT88vvZ5l5nYKaKrmj98Bzk4VsNVNddU4kLsgmDjnLKN2H8Dn6Fwhj7hZiCeWdDcq47Tkt8uz9NkbIYaD05MUZJzmX/CwWDdpMdf+F5H1kBTLYoTKSvKmCgpyfwRVIZOSCzXGJe/WlnPlt902plV17F9NLhxd/WLN3umbfwbK6i8q83HrsvM4i24AkotNnYdx7qvhYcNOL5iYV6Lzq356KsQutqy2ZprC9PIqXWJ80/I0ads0XQ6FrBLGMR85OkQQRAxwdmHZXbRDLzLicmOWXcwAGSDaVnyf1nPn/Nluv19syhDTFAUrRY25OE9530VT11RVh95z2907xY7YM2UDJSoHwJQbTPCiemFGXVHxlJSmFnOGBwSNkjAs92ZSRnsYIGSyR0JeJ8FjIuTKDUDTrErfBjeJGmAllyLnbirBmIn0gDIzbZyoD+2DgP3Du7k/8AyCq6osdGbRyQbDiqoJgA6AUy9yfjUJRS4suKSx9iucpFTFehvaxYMRIJAG0+JnWoYo5kz8pI2oYBepe68KBLAChjCZecEhIZVZoAecKw9GkIuL56OxDFK62I6GOvNILByoxaZd23mZBZWElApvpS9l8mLOzGPFS/+eWW96P8A7fIjUpLEDHKX0ziyYpTacOCZTKZ26EgHxI34CCaGEOhlGkYvOEpxL6cNJNi2lpCBJLKRB8uQAyw7cmA+jS86XUB0AMonzShHJ4moTVKeLBjJ8MS9OxX0I0KXa8lbVOanLUJUSzUTVgOA2wDg09ez0YjJOrSNpKqLjeUrUDHPqxDDBxJHywX2AqlrtUl3ap+r9FUQ/H1E0e8AIgIj491MnUBKQJ9EsGFac5sFpTtOBqXR98/Av8+j6NzRfOzj8D0K3ueKL+XYkplB6w9VN6oaxkn69nIvf5R5xAfGGl4KbjzpMSI+weufmR336R9efB/b2pFs+6cPdWBOiarGqZrvtohuH3SgiaXKmrWuzl3HaXlK/cDquT24+6tpy5cbXAT+7oruh3VPTotkl6xo39L1qVpwhIEzDCKxv/+3jLF5H1593ebd3aU+TmWgqQy1916USHgPS7hTYHr/ySVfHJ258DaFp29Vmrwm3S7cYSpR4efPv33w6u+m5HF77FrDX3FotdHv8109z+f0k8l93ln/QxsFIXAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAHlBMVEUAAAAKK3oULq8bTZ8cU6giS680XsNFbtFaguJ0l+odY7K7AAAAAXRSTlMAQObYZgAAAGlJREFUKFOtzjEVwzAUQ1FTeBRMoRRMQRRE4VMQBbPtljSpnaXVpjvoqLX/BYZ4AuIxzR5IDZtT7sCUyugBohnL2kNVhMUOSM3Q9TFxBVzjhWW2QNKR+jHxBQH77AvokjheLqBxaSv4NW+98zYP7rKVIQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAHlBMVEUAAACAgIC8vLyFn6LA9f6OtrxabG+z1tthfID+/v64t/aYAAAAAXRSTlMAQObYZgAAAMVJREFUKBUFwSFrw0AYANCXXe7IuS+u8jioL5T5isBsWZmvKpMVg9io6oj+4L0HAABgrwDATgUAUAF4jxjHCrADVGC5YFn2nQpfAPCHvjJWuIzPA1pfAcwFTQesM2j0J5h5obd87SvrvFHQoa9LYALgOJuEggZSDISCdqURYaDgyLd8CwBkftLMBgApTAzQgGAwFGQ6yQYFV7mRDoQoaCAFmHCDD2Ey+YUzGvAATrIUuAMk0kQB4CRt7gBwzvEAAD5fAAAA/yGYFv17pOKEAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAS1BMVEX////SwasgGxEWEwxlTzEaFg8mIBZHPSk8MyK+qo42LBvKtpwqIxclHhPZy7guJhkdGBAiHBIyKRrk284UEQodGQ8gGhEoIhYbFw9eG4YhAAAAAXRSTlMAQObYZgAAAORJREFUeNrtjckOwjAMRLGdrUm6t8D/fymTplaFKkCcuODTKO/N5PK/X10IH7AxUN5gmqmB8gp7T5SS90U5Y6IOEIfQNFCe8faeGnANqmgbT/WLPUBSxQVDHVZR3oKpKwjBVoE5mNqGUkLaQhDZhci8Qpk7QhsrCMCLyKhCnFaskEGR8BMC2kvbDir0mSND8WaeiYwHllHaqwpTEWLkFSuU0F4EbQj3XXD5xrHvJ8aF0ga7DjIOFsKu8NRvM+ws2kW4i2JdyZmx4iygtMPRPpQbhFyF8YR1BcJT+7zirLZfKcDf3QPobAwqiDuQggAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAHlBMVEUAAACAgIC8vLyFn6LA9f6OtrxabG+z1tthfID+/v64t/aYAAAAAXRSTlMAQObYZgAAAMVJREFUKBUFwSFrw0AYANCXXe7IuS+u8jioL5T5isBsWZmvKpMVg9io6oj+4L0HAABgrwDATgUAUAF4jxjHCrADVGC5YFn2nQpfAPCHvjJWuIzPA1pfAcwFTQesM2j0J5h5obd87SvrvFHQoa9LYALgOJuEggZSDISCdqURYaDgyLd8CwBkftLMBgApTAzQgGAwFGQ6yQYFV7mRDoQoaCAFmHCDD2Ey+YUzGvAATrIUuAMk0kQB4CRt7gBwzvEAAD5fAAAA/yGYFv17pOKEAAAAAElFTkSuQmCC"
+        }
+      ]
+    },
+    {
+      "name": "Wind Turbine",
+      "description": "Generates power based on the height difference. The more height from the ground -> more energy.\nStacked on top of each other passes energy in the lowest turbine.\nHas cool animations.\nCan generate up to 1 EP/ 7s",
+      "texture": "/wind_turbine.png",
+      "crafting": [
+        {
+          "slot": 3,
+          "texture": "https://minecraftitemids.com/item/32/cobblestone.png"
+        },
+        {
+          "slot": 4,
+          "texture": "/turbine_blades.png"
+        },
+        {
+          "slot": 5,
+          "texture": "https://minecraftitemids.com/item/32/cobblestone.png"
+        },
+        {
+          "slot": 6,
+          "texture": "https://minecraftitemids.com/item/32/feather.png"
+        },
+        {
+          "slot": 7,
+          "texture": "/generator.png"
+        },
+        {
+          "slot": 8,
+          "texture": "https://minecraftitemids.com/item/32/feather.png"
+        }
+      ]
+    },
+    {
+      "name": "Water Turbine",
+      "description": "Generates power based on falling water in front of it. The more height to the water source -> more energy.\nHas cool animations.\nCan generate up to 1 EP/ 7s",
+      "texture": "/water_turbine.png",
+      "crafting": [
+        {
+          "slot": 3,
+          "texture": "https://minecraftitemids.com/item/32/cobblestone.png"
+        },
+        {
+          "slot": 4,
+          "texture": "/turbine_blades.png"
+        },
+        {
+          "slot": 5,
+          "texture": "https://minecraftitemids.com/item/32/cobblestone.png"
+        },
+        {
+          "slot": 6,
+          "texture": "https://minecraftitemids.com/item/32/water_bucket.png"
+        },
+        {
+          "slot": 7,
+          "texture": "/generator.png"
+        },
+        {
+          "slot": 8,
+          "texture": "https://minecraftitemids.com/item/32/water_bucket.png"
+        }
+      ]
+    },
+    {
+      "name": "Turbine Blades",
+      "description": "Just used to craft any turbines.",
+      "texture": "/turbine_blades.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "https://minecraftitemids.com/item/32/iron_bars.png"
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMA/1uRIrUAAAD5SURBVDjL7ZLxSsMwEMb3jBaKGfocwnDD5o/pM5kYWpteaLhPO9h8nXppOynS6QPoEUhCfvd9yV1W/S+x+pOA8eR+AJ59oDdQeQGwHiHNB5BdAIwH/Lg8YqYyAaZB7AKD+v4EIDKfVQbgpWZKmR1HluO2kk0EVRNgHdrXgT4dY0TbNKMRw9kB2Dw4YhL/DzDLYK6F7VCbdTYCWj+VgdskLsnvAAewNzdKfQG62JcEbmg0YnirUmTTJbe60LtCkDoZHc7H17Nn7kRFPzoxakX8VuVK5d8KVSRkXwVv1yk7Xyj1NiF3V4P6hWbda73JZtkL7S4E+P/2S/EJ1G2qnC9xu6QAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 2,
+          "texture": "https://minecraftitemids.com/item/32/iron_bars.png"
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMA/1uRIrUAAAD5SURBVDjL7ZLxSsMwEMb3jBaKGfocwnDD5o/pM5kYWpteaLhPO9h8nXppOynS6QPoEUhCfvd9yV1W/S+x+pOA8eR+AJ59oDdQeQGwHiHNB5BdAIwH/Lg8YqYyAaZB7AKD+v4EIDKfVQbgpWZKmR1HluO2kk0EVRNgHdrXgT4dY0TbNKMRw9kB2Dw4YhL/DzDLYK6F7VCbdTYCWj+VgdskLsnvAAewNzdKfQG62JcEbmg0YnirUmTTJbe60LtCkDoZHc7H17Nn7kRFPzoxakX8VuVK5d8KVSRkXwVv1yk7Xyj1NiF3V4P6hWbda73JZtkL7S4E+P/2S/EJ1G2qnC9xu6QAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 4,
+          "texture": "https://minecraftitemids.com/item/32/iron_block.png"
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMA/1uRIrUAAAD5SURBVDjL7ZLxSsMwEMb3jBaKGfocwnDD5o/pM5kYWpteaLhPO9h8nXppOynS6QPoEUhCfvd9yV1W/S+x+pOA8eR+AJ59oDdQeQGwHiHNB5BdAIwH/Lg8YqYyAaZB7AKD+v4EIDKfVQbgpWZKmR1HluO2kk0EVRNgHdrXgT4dY0TbNKMRw9kB2Dw4YhL/DzDLYK6F7VCbdTYCWj+VgdskLsnvAAewNzdKfQG62JcEbmg0YnirUmTTJbe60LtCkDoZHc7H17Nn7kRFPzoxakX8VuVK5d8KVSRkXwVv1yk7Xyj1NiF3V4P6hWbda73JZtkL7S4E+P/2S/EJ1G2qnC9xu6QAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 6,
+          "texture": "https://minecraftitemids.com/item/32/iron_bars.png"
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMA/1uRIrUAAAD5SURBVDjL7ZLxSsMwEMb3jBaKGfocwnDD5o/pM5kYWpteaLhPO9h8nXppOynS6QPoEUhCfvd9yV1W/S+x+pOA8eR+AJ59oDdQeQGwHiHNB5BdAIwH/Lg8YqYyAaZB7AKD+v4EIDKfVQbgpWZKmR1HluO2kk0EVRNgHdrXgT4dY0TbNKMRw9kB2Dw4YhL/DzDLYK6F7VCbdTYCWj+VgdskLsnvAAewNzdKfQG62JcEbmg0YnirUmTTJbe60LtCkDoZHc7H17Nn7kRFPzoxakX8VuVK5d8KVSRkXwVv1yk7Xyj1NiF3V4P6hWbda73JZtkL7S4E+P/2S/EJ1G2qnC9xu6QAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 8,
+          "texture": "https://minecraftitemids.com/item/32/iron_bars.png"
+        }
+      ]
+    },
+    {
+      "name": "Electric Furnace",
+      "description": "Melts items like a normal furnace but with energy.\n Shows if energy is available.\n1 EP -> 1 Item",
+      "texture": "/electric_furnace.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 3,
+          "texture": "/cable.png"
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAFVBMVEUAAAAtAAA2AABJAABUAAByAAD/AAAotwdgAAAAAXRSTlMAQObYZgAAAGBJREFUKJG90MEJwDAMQ1GvoBWyglbICn8F7z9CD6U0OCQ5FKrjAxmjiD8jHUCgLSjp1gYE4EEqCAC31AKU0En7Kc1Av4+2JZgEhkqFkA3Nfv+oEJJtDxtNECGVDSf4lAusHSV1TX9wSQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 5,
+          "texture": "/cable.png"
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABhlBMVEUAAABZWVk9PT1VVVU4ODgeHh4AAAAYGBhAQEB6eno1NTVISEgxMTEtLS1hYWFeXl4yMjIcHBwlJSUbGxsvLy9paWkuLi4SEhJSUlIZGRlXV1dEREQ7OzspKSkkJCR4eHhQUFAnJycmJiYXFxchISF9fX1kZGQsLCxjY2NqamqQkJBnZ2dycnI8PDyCgoI6OjpLS0tFRUU+Pj5DQ0NaWlp7e3szMzOIiIiPj49/f39+fn5vb295eXlJSUmSkpJCQkI/Pz9bW1twcHAjIyMqKiowMDBsbGxlZWUaGho0NDQ2NjZGRkYNDQ0gICCUlJQoKCgrKyuHh4c5OTmYmJh8fHyXl5cdHR0VFRWAgIBHR0dYWFhra2tMTExWVlZiYmIfHx9RUVGRkZFdXV1UVFRzc3M3NzdOTk50dHSDg4NPT08UFBRoaGhgYGCMjIxKSkpubm4LCwuFhYWdnZ1fX19cXFwMDAyTk5NTU1MQEBBNTU2JiYkWFhYiIiIKCgoODg6Li4sRERGEhISvBf36AAAAAXRSTlMAQObYZgAAAnxJREFUOMuV0lVz20AABODciRkty8zMzBRmZuakzMz/vLLlzKRp05ns635aSTc3MvKwuCYn6f/UqNfr8fD8xD21yIO6p9E4rNqT3L/GHW97tUZjvZSoVKnkvvPv8Xj8x9QzADye3sqb4+Nw+Pa3iABUKhRV741aLM3myclnAGo1u9138zQ9WTwH4BwcxOOjG7Heq+r69aLF4vEeiOIAjPvoMr/zHrygqGtqezu5u15Ll56MWlwTis0EXp9bVZNJQD2lqFAoFjtdATzvdiuPl02AwQI9FuS4ff51PB4O7+1teD2ZDCaxY0vEAASdoEUiQcWJhnmKomL98YCVFUlIb5mvQBx6LIagkXGas+d41O0mAhm/q6DNodYBWECAT/IXs8zz4ObsrCgq05FMvnzBZR1DIHdOfTguT6cOyfKSLCkcyzCOiVw2OyOZYIwR8H4wYg6QsjQLl2dyGp3rdhzspgkcBfzbgFwmnO4tl4bm81qrxZCcCzNPUgRnKy/nDZCPXmKBJUjnYWS1EOmqcMEElvacsx569x1vRj8oUgai3RlIaxCNMuY5oMV0e9FZqJc+lj6NKxJHohwtthxTUQQOgZBOC2trnS4VCjPKF5YsM6ksnwAASdmGIKQKLFtdc+524LRN03ZgIqEDoOtkYAAu7AIewVmOXWznwDLxFUanjBYxyKq5sCqo/V/AWeGqbYkQTBQYMXrkZkFlVMxqNQR3FSqqfgjAI0TXHyGQtNmGd0rGpKM+sTeLbj9EjFpHICSIW7cSw46wn1Y2bZf9pPF1OgkDt2uTYBj+Swj6SQRJkcTduh8Jm6+cyXLqzvgfK5QQ9JG2++p+GHnBNvKw/Ab1Wl3ozqEajAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "Block Breaker",
+      "description": "Isn't it obvious?\n It breaks blocks in front of it(not unbreakable, ungrown plants) using energy(5 EP / block break, stores 15)\nCan automate many things. Deactivated by redstone.",
+      "texture": "/block_breaker.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEUAAAASEhIUFBQVFRUWFhYXFxcYGBgZGRkaGhobGxscHBwdHR0eHh41Jxo3KBc1Kxg2Khw2LB46Lh45Lx88Lhs/Lx48Lx84Mhk8MB8gICAhISEiIiIjIyMkJCQlJSUmJiYnJycoKCgpKSkqKiorKyssLCwtLS0uLi4wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg6Ojo7Ozs8PDw9PT0+Pj4/Pz9OOSdPPyZSOyJOQCNQQydXRiZQQSxXRCxVRixURi5SSiVYRCdaRiZYRi5bSS1fTTFpTTRpVi9uUC5pUTRpVDNzXjl0Wjt6XjNxYzp2Yjl3YD18YztAQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExOTk5PT09QUFBSUlJTU1NVVVVXV1dYWFhZWVlaWlpdXV1fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1ubm5wcHBxcXF0dHR5eXl6enqFa0OLcUmWfEmfhE20kFq8mGKYmJjNzc3a2trb29vc3Nzh4eHs7Ozt7e3u7u7v7+8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAh0OHFAAABAHRSTlP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AU/cHJQAAAqhJREFUOMuF0/tb0lAYB3BRgTbpol0l5CIwHTYZN7uQZReEyXSwOS4xlMlQZ14ySikzkHMGZRl/cg3GD2Zq72979jnne97ned+e3/+pnr8/Y60Wcwlg4nEAIGQuACwDIKBpVcxHzwFU6wdgKAgVep6pf/sePQMYCFm2XqcoCgDQDgKAPQXUbEUBgKKgotA0A1UCIQDJLmgetwCk6Q5h229Ur4PtI63jZgc0qskFAJQ4C6l5wLIqZVm1GTrKSGUN7DybicXU1Jh2C1WHMKrWvcG0BqqrtdrLmWbzl0pi7WyW/XlyMng3Eg5IHVCRErVaolGdm+tmw2SyLIXDkTApdIDVMf00kWjsTL9YSCqKEk8mb90spyOzN+4gxg5wOgbsTx5XVxOJV9PHag3djoSlwNBVA9IFppWU3emuSLWjWqLaKEuR2XBYIPUGg8Vl6ICR4DrBuRHz84dHiZ1GOR2OXL+m0+s9eNDRp0X408LeYclstjx6vVqVAoPXUJPOhqe4LKHrgGGP9GV5TyZzFptdqghkrx4VfROj2JgtqAFzcP+rtPtuKZDn7HarEenF3bnQuNfnWXZojzT71zZSxYNscTs7wVmNk5grl0nnU4sEQXTbLK3J3L5U2eYL634rOhokH3iXlxanMILUwDC/W+b2tz6/LWXKhZE+x1iWFEgMm/IQqNamNcfzvLzF85siuW4y3CfzYwKPhbBMCO+2uVL6wBcPZX5DPPAj6KgQcgliyI2FQi6tC6c9RXwS5TcyL4oFpN8RCKn/xsUMbkF03ZGzj3AlvrjIfxQLVr0jk8O8mBf3IL2nhtZiLpGH72VZsqI+DMsTPpsJPTP2ZiSX35SdI/2YL+/26XXnLI7byU3kTEYcww36C1bPPMAh6CRy5ZLldSAocul2/1t/AHFcJAW56OTIAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 4,
+          "texture": "/battery_cell.png"
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEUAAAASEhIUFBQVFRUWFhYXFxcYGBgZGRkaGhobGxscHBwdHR0eHh41Jxo3KBc1Kxg2Khw2LB46Lh45Lx88Lhs/Lx48Lx84Mhk8MB8gICAhISEiIiIjIyMkJCQlJSUmJiYnJycoKCgpKSkqKiorKyssLCwtLS0uLi4wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg6Ojo7Ozs8PDw9PT0+Pj4/Pz9OOSdPPyZSOyJOQCNQQydXRiZQQSxXRCxVRixURi5SSiVYRCdaRiZYRi5bSS1fTTFpTTRpVi9uUC5pUTRpVDNzXjl0Wjt6XjNxYzp2Yjl3YD18YztAQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExOTk5PT09QUFBSUlJTU1NVVVVXV1dYWFhZWVlaWlpdXV1fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1ubm5wcHBxcXF0dHR5eXl6enqFa0OLcUmWfEmfhE20kFq8mGKYmJjNzc3a2trb29vc3Nzh4eHs7Ozt7e3u7u7v7+8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAh0OHFAAABAHRSTlP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AU/cHJQAAAqhJREFUOMuF0/tb0lAYB3BRgTbpol0l5CIwHTYZN7uQZReEyXSwOS4xlMlQZ14ySikzkHMGZRl/cg3GD2Zq72979jnne97ned+e3/+pnr8/Y60Wcwlg4nEAIGQuACwDIKBpVcxHzwFU6wdgKAgVep6pf/sePQMYCFm2XqcoCgDQDgKAPQXUbEUBgKKgotA0A1UCIQDJLmgetwCk6Q5h229Ur4PtI63jZgc0qskFAJQ4C6l5wLIqZVm1GTrKSGUN7DybicXU1Jh2C1WHMKrWvcG0BqqrtdrLmWbzl0pi7WyW/XlyMng3Eg5IHVCRErVaolGdm+tmw2SyLIXDkTApdIDVMf00kWjsTL9YSCqKEk8mb90spyOzN+4gxg5wOgbsTx5XVxOJV9PHag3djoSlwNBVA9IFppWU3emuSLWjWqLaKEuR2XBYIPUGg8Vl6ICR4DrBuRHz84dHiZ1GOR2OXL+m0+s9eNDRp0X408LeYclstjx6vVqVAoPXUJPOhqe4LKHrgGGP9GV5TyZzFptdqghkrx4VfROj2JgtqAFzcP+rtPtuKZDn7HarEenF3bnQuNfnWXZojzT71zZSxYNscTs7wVmNk5grl0nnU4sEQXTbLK3J3L5U2eYL634rOhokH3iXlxanMILUwDC/W+b2tz6/LWXKhZE+x1iWFEgMm/IQqNamNcfzvLzF85siuW4y3CfzYwKPhbBMCO+2uVL6wBcPZX5DPPAj6KgQcgliyI2FQi6tC6c9RXwS5TcyL4oFpN8RCKn/xsUMbkF03ZGzj3AlvrjIfxQLVr0jk8O8mBf3IL2nhtZiLpGH72VZsqI+DMsTPpsJPTP2ZiSX35SdI/2YL+/26XXnLI7byU3kTEYcww36C1bPPMAh6CRy5ZLldSAocul2/1t/AHFcJAW56OTIAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        }
+      ]
+    },
+    {
+      "name": "Vacuum Hopper",
+      "description": "Sucks all items in a radius of 4 blocks in.\n Pretty expensive.\n Uses 1 EP per Item(15 EP storage)\nCan be deactivated by redstone.",
+      "texture": "/vacuum_hopper.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJFBMVEUAAABdP113UHd6VXqAVoCHXoeLYIuOY46PY4+TZpOXaZeedJ4AZ0UMAAAAAXRSTlMAQObYZgAAAHRJREFUKJGtyEENw0AMBdFPYSkMhVIwhaWwFEzBFELBFEyuh6pSsoqbS+c2T/pbZg9gVVfawcrd80Q7WHlGnmgHK/cjj0xPGoB0z/RkNFDrQ8wOVkRAMl+/YAWzhwJiMcfsAIZYDI0GJCSC792BJHgCCd3DG4R9U8/YtQ5zAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB5klEQVRYhe3UX0tTYRzAcV+CeCGpMbpQb3SKqS2mmOZB3Ji1su00w/To/nhsU9TFZuiqrdRRLZeQaNSUvNQbvYlQg4IgvBJfgHe+jSP7ynNzKCo1dhJ/8Ll7Dr8v5xyevLzzOZ9jzoX6Ju1nzm5A0ZVrWlbJ1RY0jYbhnH6I6+PjKJXsOPWgnAWIxbb4HO4kH0GZH8NgJgh1yQvvu2GElmM4cUjOAvSLe1/GsXewj+XNDUxmJhBek5H6oeL1pzlIkSD+OiTnAWZ3n5blSs1Cv3jq6w2Y24oxv/sA0fVOiPMNQz7UdMkwfkBBhVXLUhdi6H8/DbH4yVY7mnvKYaougFUuQ2LLA1/GBfEp7NF+FNY0wvgBN5MJDCw+Q89CK17syLA4S1FSkY/qdhNmvnVhbK0DnqQKKXLk/wmoUkK4lw7A98GJkVUb6hyXcNGcD0mpROzzLXS/lRDfDsM6rML4AWKKLc1alviJPGkXAkudSHw5ctlhwvPvbgyuSBDPyakQxMX228WGCRCfom5oAuJi6ZhyQE63wh6pxd03EsRicb5cVvDHr94wAfqQMrcCKerH7ac+9M5Owr+YgOdVELbwYxx7sWEC9CHiZzJ334f/YwC13iCKLC04tcWGCfhVkN4/W2i4gDMzh75yECkjguDVAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJFBMVEUAAABdP113UHd6VXqAVoCHXoeLYIuOY46PY4+TZpOXaZeedJ4AZ0UMAAAAAXRSTlMAQObYZgAAAHRJREFUKJGtyEENw0AMBdFPYSkMhVIwhaWwFEzBFELBFEyuh6pSsoqbS+c2T/pbZg9gVVfawcrd80Q7WHlGnmgHK/cjj0xPGoB0z/RkNFDrQ8wOVkRAMl+/YAWzhwJiMcfsAIZYDI0GJCSC792BJHgCCd3DG4R9U8/YtQ5zAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAiwz5l5AAAACiSURBVDhPvdGxCsMgFIXhPFLAohmMIHYROiRDhAwODj6NL11P09baDnop5N/i/YioQ2o0nAZiLlTNcz/A0LnrV+vqHFAfwILWUgrBc9MkpdZYE6IPhOAfWcv5Jce5tfhell6AlDLG+3JYpcaxuocmwC/NO3AqOMi23Z4x9lqnAe/3HeOyAQWAxIhNPsdnAzw8QDkiHRxX9Q9IibF6TAe/NcEd2afAYEZDwU0AAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "Drill",
+      "description": "When powered digs a 5x5 hole till a undestroyable block and mines ores stuff.\n Everthing is transported upwards by a tube and dropped in front of it.\nMines a block every 2s for 1 EP / 2 EP for new stage(15 internal storage)",
+      "texture": "/drill.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAIVBMVEUAAAADJiAGOTELTUIMNzAQXlEbe2slhHQszbE0mYiM9OJEKROfAAAAAXRSTlMAQObYZgAAAHJJREFUKFOl0UERwCAMBEAsYAELsXAWYgELsYCFWEBlr4/STiFtZ3q/2w8kSeljADwCYFavdAe4q2qtiACuvYnQEAJ7KaQAYMqe85AV7J1gEdQDPACK8NUibfxjBhWm9RASVMV8zLYArnCf/ewzvN/lZzbVIke5bTg3CwAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAG1BMVEUAAAAOPzYnspooHgsrx6wz68tJNhVoTh6JZyeOWyJJAAAAAXRSTlMAQObYZgAAAGJJREFUKM+tzzERgEAMRNG18C3EQizEAhZi4SycbAqgOCChYcs3k8yu9FsA6IAtzIIcJQjAbHoNkpRhtJDDLWggpwtrIIerhZwuiSghhx8bK8hrFXqH80BrB62le7h/eMJHdmd8H+EtVQVtAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABpFBMVEUAAACC5OBEdHFCc3FgqaZkqqeH5eFJdXNvrapHdXI1cG5srKlMdnRoq6h3rqw/cnBp39pRd3WM5+OW6eVOdnSR6ORdqKVzrqt949+q7ep+sK6b6uZOpaJ6r61Td3al7Ok6cW9ZqKVVp6MAYl1z4dyg6+hu4NsAY149cnAAZGAAv7V44t4AjoYZzsYAZF9KpaEAX1o3cW8Aj4gAkIgAkYkAYVxWeHYAkYoAYFsAkosAk4wAlI0SmZMAw7kAxr0AwbcycG1SpqIIZmJk3tkAx74Ai4QArJ8AXlkAjIUWmZQ81c9a3NYPy8MElY8snpkAwrgAY18tb2xGpJ8Ai4IAvrQAxbwAsqYNaGQLl5Eea2gCZWFDo58AWlQAXVcAxLoAhHsAraAj0MgAZFYy08wARDtB1tAhbGkPaGQAyL8AZ1oAgHdL2NISaWUFycEHlpAwcGwAZWA/op4ARj0AT0cobmsrb2swn5oAWVMAQzgAvLIXamYAV1AAi3kjbGkem5UAiIAZamc0n5st0ssampQAuK0lnJcAYlMAlI4Ag3oAgHYmbWoAjYV6B2XiAAAAAXRSTlMAQObYZgAAAmJJREFUOMuV09Vu5TAUBdCxHWbOZWbGMjMzd5iZmRl/enyTVKqqtlL3Q172yokj+Zw7d7YMjo+/P6W+aJqalslcPrEO4l4zNQosH1MP6UHcKIpuBjUN+N4cqSeiOAAoqRQApm5SFAATh2u/E11XFAUAijI7D5+v7NVFRdf0dNrvT0dNTDKU0/qU+VThhgOu/py/5wMY+KPRNJ6S8lFYpHyFwq2bDpip3rlbLgMQTOtBJwpIZTKDg/ntWI8DWmKVmGwODxczxWKRooJBDcwVCrUsyq26oJcXeZIozTwYurbwtVyeuzL+fbinJiPIyS7oZnhRFAlrsntoc3N54fbWVi2JZMgiOZb0gEjytkhaxMOBjY2pqafPIGIhxP0BsHmS4RmeFK347Mvrr0fqLCvQNJJlue0CngwRPI/PEQ8lSrURlqUNmqYhlOveIW2RSBAkzxOWtV9KsnTnffwJGHs07YA+RgqFCILEExJWaYVmaQFBCGPyi922B8JYhEicRKKVFVgOIcTVOY5FF1wQDjAMFqMEaVmtrEGjGIdjGHDEBf2BQFjiMUkQ1mgrS0OEa0EwVHj//AEISOFwZ0pirZE1WMTRgqoacPexB8JSuDNEspknS6WsoCIhElEN4/ne2CvvkIzkAvy/6ytCpEvFgM29HWu/c0A8JBKSJDG2bZPVRiXShaMKuQ9jyZ5p707tfyQJWxTja0vVTy4w2PrnSvLQrRzot+LxLwOL3y7lu1QcObdXOXKvG83RH7M7vzAQ8I+2k8dsxmJfb3Pndz7Cytv5E3art9n4UxFW/56ynf/Wc9wZ9/0//9dcTPE3CYQAAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "Conveyor Belt",
+      "description": "Transports all kind of entities in the pointed direction.\n Great for transporting items.",
+      "texture": "/belt.png",
+      "crafting": [
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJ1BMVEUAAAAAAAAcHCI6OkRKQEpWVmRjY3NkWmZxZ3N4STh5ZXGRaF+9jIF+4Af4AAAAAXRSTlMAQObYZgAAAFdJREFUKFNjYBh0YPeZ3QQEZu5WEsQrIKjkgk9AUFCwvMMYt4CgYGhoxyoXJWNcAoJpaatWrVIyVlLCKWBs3BFqjOBjCgANBatHdgWaANhhqD7FEKAxAAD0JR7RBUYX3gAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJ1BMVEUAAAAAAAAcHCI6OkRKQEpWVmRjY3NkWmZxZ3N4STh5ZXGRaF+9jIF+4Af4AAAAAXRSTlMAQObYZgAAAFdJREFUKFNjYBh0YPeZ3QQEZu5WEsQrIKjkgk9AUFCwvMMYt4CgYGhoxyoXJWNcAoJpaatWrVIyVlLCKWBs3BFqjOBjCgANBatHdgWaANhhqD7FEKAxAAD0JR7RBUYX3gAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJ1BMVEUAAAAAAAAcHCI6OkRKQEpWVmRjY3NkWmZxZ3N4STh5ZXGRaF+9jIF+4Af4AAAAAXRSTlMAQObYZgAAAFdJREFUKFNjYBh0YPeZ3QQEZu5WEsQrIKjkgk9AUFCwvMMYt4CgYGhoxyoXJWNcAoJpaatWrVIyVlLCKWBs3BFqjOBjCgANBatHdgWaANhhqD7FEKAxAAD0JR7RBUYX3gAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMA/1uRIrUAAAElSURBVDjL5ZNPS8MwGIf3BYUh6M2YQsbwtoPCDnqfzewhDMSPIRRqxuoOqzv4AUaL2eguYYUVbf0A832bKI7OedffoZfnyS/Nv8bmlzT+pCDDvYLUkPsfhQjxbKb1405hgjhN4BMnOqwJkzwHnAJO0FFqtCUMESv1ah2c5vNfUPBXK8RvFqfJ2krSCBfPkV7gaPWSZXo+XwOPY3B8/6ASLjkPIqzIM6goS1s08gk5rISru1vOpSwKcBAvl4XWYUgIY0Y4F2Iw8LynYFG+YxE4D4HjMIiZYnPDrTI1K5HS4BP6tUzPExDXDaZaDyU9bbUYI2Rro7w+KtfueExpGzB1alvdr1o6zbM2Yw7deVhuT4ju0bfR9ePu8e4xpXsvTKf5L95FLR8SfKVVWI/QzAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMA/1uRIrUAAAElSURBVDjL5ZNPS8MwGIf3BYUh6M2YQsbwtoPCDnqfzewhDMSPIRRqxuoOqzv4AUaL2eguYYUVbf0A832bKI7OedffoZfnyS/Nv8bmlzT+pCDDvYLUkPsfhQjxbKb1405hgjhN4BMnOqwJkzwHnAJO0FFqtCUMESv1ah2c5vNfUPBXK8RvFqfJ2krSCBfPkV7gaPWSZXo+XwOPY3B8/6ASLjkPIqzIM6goS1s08gk5rISru1vOpSwKcBAvl4XWYUgIY0Y4F2Iw8LynYFG+YxE4D4HjMIiZYnPDrTI1K5HS4BP6tUzPExDXDaZaDyU9bbUYI2Rro7w+KtfueExpGzB1alvdr1o6zbM2Yw7deVhuT4ju0bfR9ePu8e4xpXsvTKf5L95FLR8SfKVVWI/QzAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMA/1uRIrUAAAElSURBVDjL5ZNPS8MwGIf3BYUh6M2YQsbwtoPCDnqfzewhDMSPIRRqxuoOqzv4AUaL2eguYYUVbf0A832bKI7OedffoZfnyS/Nv8bmlzT+pCDDvYLUkPsfhQjxbKb1405hgjhN4BMnOqwJkzwHnAJO0FFqtCUMESv1ah2c5vNfUPBXK8RvFqfJ2krSCBfPkV7gaPWSZXo+XwOPY3B8/6ASLjkPIqzIM6goS1s08gk5rISru1vOpSwKcBAvl4XWYUgIY0Y4F2Iw8LynYFG+YxE4D4HjMIiZYnPDrTI1K5HS4BP6tUzPExDXDaZaDyU9bbUYI2Rro7w+KtfueExpGzB1alvdr1o6zbM2Yw7deVhuT4ju0bfR9ePu8e4xpXsvTKf5L95FLR8SfKVVWI/QzAAAAABJRU5ErkJggg=="
+        }
+      ]
+    },
+    {
+      "name": "Extractor",
+      "description": "Can extract items out of a item container and puts them as entities on a conveyor belt.",
+      "texture": "/extractor.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAiwz5l5AAAACiSURBVDhPvdGxCsMgFIXhPFLAohmMIHYROiRDhAwODj6NL11P09baDnop5N/i/YioQ2o0nAZiLlTNcz/A0LnrV+vqHFAfwILWUgrBc9MkpdZYE6IPhOAfWcv5Jce5tfhell6AlDLG+3JYpcaxuocmwC/NO3AqOMi23Z4x9lqnAe/3HeOyAQWAxIhNPsdnAzw8QDkiHRxX9Q9IibF6TAe/NcEd2afAYEZDwU0AAAAASUVORK5CYII="
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 7,
+          "texture": "/assets/tekpack/belt.png"
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABblBMVEUAAAD///8mJiYoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1vb29wcHBxcXFycnJzc3N0dHR1dXV3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKWlpaXl5eZmZmampqbm5ucnJyenp6ioqKjo6OlpaWnp6epqamrq6usrKyurq6wsLC/v78jku9tAAAAAnRSTlMAAQGU/a4AAAKASURBVBgZlcFrVxJBGADgKXBCGkEzQHhlQRjcJVyZEVEmHATBKO+IjqNkUmoXu3hpU/v3sccPHY/6wedBjyR70MO+S9luX1466H4b3e0VrpS2F5wldJd0NtbEr6szzrXz9eB6B93GZ2a6XYdb7baUeu9Y66MjG/13dnrKudaHuRLnUtb/Mt5TqbxFNw7yn86OTk7kmZS1lW+/96Q+1T8uLuSJ1tfIVcpsdPXanDq/6jSKjvO5VDn8eKylnHyfn0auGqWK852d2vGfiQnd83NlUoh63fsCALnohpoXk+fnr2f3Zc/cnHSqCwswQGwzjlyUFoWpVEvntJSO8+GL03GYnUpjQvqeoJ5ltZofUZVOKdM4b3K9X9QwnJgG4xkhw8jVUQAgmqLRMCakrFbJdJBlAHAWSBC5CrMMwCovigrd3OrEBtiUl42mMctCwodcxfmx1q4lwgIyVIgkiQIG8OAcUH8QuWiBl4sUwjHVpktzZCIbw0EIliHV5yfIRZV6OVyi1pESgkYJwRgTTIh/IBVgyDUi5stJqFG6viiobTFcmAKSH6VDhMWRa8SoNcK777bLoirmbSsWehXFScaGgLE4ckG6FqYmUyrJmmNWIeHHT6dMxsDDKCAXXQdKaVapN6vRpBGJhJk/EPIBEMPwIVdrazne2ssaIheqj5sjjIGHDPq8hBiAkcusN6zSZpkJkaaKEkgAIfEQIySJA8hVibZ4OryoIzStlCL9SbALaW7ECCaj6EZBiJLJFe1UVNnbj30xOxDuh0GG/gMzOSZLSjYFJpZJPP7n4EG3bYqEKFalQXLpBIAN6C4RzoEAO28DDqL7bSoYD6QiCfQwWk70ocf5B6IXhqa+eIiqAAAAAElFTkSuQmCC"
+        }
+      ]
+    },
+    {
+      "name": "Item Filter",
+      "description": "When placed inside a hopper it filters the item that is in the first slot.\n A extractor has to face the hopper.",
+      "texture": "/item_filter.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAiwz5l5AAAACiSURBVDhPvdGxCsMgFIXhPFLAohmMIHYROiRDhAwODj6NL11P09baDnop5N/i/YioQ2o0nAZiLlTNcz/A0LnrV+vqHFAfwILWUgrBc9MkpdZYE6IPhOAfWcv5Jce5tfhell6AlDLG+3JYpcaxuocmwC/NO3AqOMi23Z4x9lqnAe/3HeOyAQWAxIhNPsdnAzw8QDkiHRxX9Q9IibF6TAe/NcEd2afAYEZDwU0AAAAASUVORK5CYII="
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAdElEQVRIie3RQQ6AIAxEUa7Yy3sIL4ELmaRghVKHuNB2R/JfQFP6Zzh7PvcdAHEYeQQg2spOI2FAhxpwI2GgvbIFdJEwYIUjBMsBJIsr0mdSlgN4ETy1CmmAhVjAbUwBgFi/9fLRlgHtU6ZCGgAkFNKAj80BPZzHw7cT0RcAAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "Gridwalk",
+      "description": "Decorative block",
+      "texture": "/grid_walk.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACGElEQVR42s3WX4/SQBQFcL4Z0QUU2imNMWsoQwssSAHbysbwx112xd2YaBaNqE/4tPTJxvUjXueelZdNxj4yk/yeOJkckumdKRQerFdRQkxYNhQ06zTsELNqNuhys6hPzK27UMhbBy/wK90SG4Uj0OV2aUosHIagy02jHrFa9SmYXyBLfxK7fHcJs+kUkiSB3S6FLPsNLemDbr8kiYm5VgnML7DdfCTmed695j1b2CBlC7abT7D/XbdfrA40c51nYH6B1Swm1ul2QJc7m4TEpJSgy0VxTEwIB8wvEAQBsaPSI9Dlut5zYqVyGbR/aLUiJuo2mF8gVcOF9ftd0OWG4YCYZduQt99gMADzClxdXxHbB7Msg1gNHabbeDwcE3NdF/IKLC/O4f08gUXyEg5fwFLDhfmtDmw238DzGqDbeDIMiDnqinX+c81++bwm5r3woOkHIISAwxd4uNY3a2I9/xi0h3CkDuEo/xDerNfE9p937ldw8ALtdkCsdlQEXe58uSRWExbocvuRXqlUwPwCibo42LHzBPKeZOPREHIHmxpazPwCcRQRc+sO5G18/TaBizdj+HA2gXR3C3d3f0C2JJhfYKae0KxaqYIu933zg5hsNaHR8EA4AvaD7PbrCtrtLphfIFZPaGbbAnS5q8VrYr5sgi43ny+IyaYP5heYnE6IaS+Lf6t30iVWLBZBlztRGVYuPwbjCvwFLdkawbOkFLcAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        }
+      ]
+    },
+    {
+      "name": "Gridwalk Stairs",
+      "description": "Decorative block",
+      "texture": "/grid_walk_stairs.png",
+      "crafting": [
+        {
+          "slot": 5,
+          "texture": "/grid_walk.png"
+        },
+        {
+          "slot": 7,
+          "texture": "/grid_walk.png"
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMA/1uRIrUAAAD5SURBVDjL7ZLxSsMwEMb3jBaKGfocwnDD5o/pM5kYWpteaLhPO9h8nXppOynS6QPoEUhCfvd9yV1W/S+x+pOA8eR+AJ59oDdQeQGwHiHNB5BdAIwH/Lg8YqYyAaZB7AKD+v4EIDKfVQbgpWZKmR1HluO2kk0EVRNgHdrXgT4dY0TbNKMRw9kB2Dw4YhL/DzDLYK6F7VCbdTYCWj+VgdskLsnvAAewNzdKfQG62JcEbmg0YnirUmTTJbe60LtCkDoZHc7H17Nn7kRFPzoxakX8VuVK5d8KVSRkXwVv1yk7Xyj1NiF3V4P6hWbda73JZtkL7S4E+P/2S/EJ1G2qnC9xu6QAAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "Hardened Metal",
+      "description": "Decorative block",
+      "texture": "/metal.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAA7OztAQEBWVlZeXl50dHR/f39qampISEiPj49NTU00NDRoaGiAgIBBQUFWXyGYAAAAAXRSTlMAQObYZgAAAUdJREFUeF51jjFrwzAUhP0XniZDJmkSGLpIIPAqgaG7DIasfmBwJxkE2azJ0FkB7YZCx0yFzs3vqkQIJENuu093T1e9Eo7PfopDfPSpP89DenjHDzyOw3D31/ForR3Ge2vsx+zTbPv5r3iL1k4Rj4hxwD4DbW3OXCc72YgkAyNSLqQ42IRAM3j3HaLtp5gwBJZB1/oTJjuc8XPjpAAj3GLHOPOVwGcGyu3KC0TYarqFDJwWi9wl3SDU6++tInSnGVyA8JIwGShhGgbkQnlJOLV8eclXILQuCa2ENOrE84WftQDjpN7dN30DEkgZtjtncqumpOGh7NDat517Dw009W2pMK1UC1/rQ4Ct3GhFp5ynsOXtJSG0Ucti2Mrqw8qqrFYI1xnGADhkm+VlK04XYOXTm0xnJK2h+DvRntOtepCQDKonGahe6B/7Hmuy2OXaXQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAA7OztAQEBWVlZeXl50dHR/f39qampISEiPj49NTU00NDRoaGiAgIBBQUFWXyGYAAAAAXRSTlMAQObYZgAAAUdJREFUeF51jjFrwzAUhP0XniZDJmkSGLpIIPAqgaG7DIasfmBwJxkE2azJ0FkB7YZCx0yFzs3vqkQIJENuu093T1e9Eo7PfopDfPSpP89DenjHDzyOw3D31/ForR3Ge2vsx+zTbPv5r3iL1k4Rj4hxwD4DbW3OXCc72YgkAyNSLqQ42IRAM3j3HaLtp5gwBJZB1/oTJjuc8XPjpAAj3GLHOPOVwGcGyu3KC0TYarqFDJwWi9wl3SDU6++tInSnGVyA8JIwGShhGgbkQnlJOLV8eclXILQuCa2ENOrE84WftQDjpN7dN30DEkgZtjtncqumpOGh7NDat517Dw009W2pMK1UC1/rQ4Ct3GhFp5ynsOXtJSG0Ucti2Mrqw8qqrFYI1xnGADhkm+VlK04XYOXTm0xnJK2h+DvRntOtepCQDKonGahe6B/7Hmuy2OXaXQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAA7OztAQEBWVlZeXl50dHR/f39qampISEiPj49NTU00NDRoaGiAgIBBQUFWXyGYAAAAAXRSTlMAQObYZgAAAUdJREFUeF51jjFrwzAUhP0XniZDJmkSGLpIIPAqgaG7DIasfmBwJxkE2azJ0FkB7YZCx0yFzs3vqkQIJENuu093T1e9Eo7PfopDfPSpP89DenjHDzyOw3D31/ForR3Ge2vsx+zTbPv5r3iL1k4Rj4hxwD4DbW3OXCc72YgkAyNSLqQ42IRAM3j3HaLtp5gwBJZB1/oTJjuc8XPjpAAj3GLHOPOVwGcGyu3KC0TYarqFDJwWi9wl3SDU6++tInSnGVyA8JIwGShhGgbkQnlJOLV8eclXILQuCa2ENOrE84WftQDjpN7dN30DEkgZtjtncqumpOGh7NDat517Dw009W2pMK1UC1/rQ4Ct3GhFp5ynsOXtJSG0Ucti2Mrqw8qqrFYI1xnGADhkm+VlK04XYOXTm0xnJK2h+DvRntOtepCQDKonGahe6B/7Hmuy2OXaXQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAA7OztAQEBWVlZeXl50dHR/f39qampISEiPj49NTU00NDRoaGiAgIBBQUFWXyGYAAAAAXRSTlMAQObYZgAAAUdJREFUeF51jjFrwzAUhP0XniZDJmkSGLpIIPAqgaG7DIasfmBwJxkE2azJ0FkB7YZCx0yFzs3vqkQIJENuu093T1e9Eo7PfopDfPSpP89DenjHDzyOw3D31/ForR3Ge2vsx+zTbPv5r3iL1k4Rj4hxwD4DbW3OXCc72YgkAyNSLqQ42IRAM3j3HaLtp5gwBJZB1/oTJjuc8XPjpAAj3GLHOPOVwGcGyu3KC0TYarqFDJwWi9wl3SDU6++tInSnGVyA8JIwGShhGgbkQnlJOLV8eclXILQuCa2ENOrE84WftQDjpN7dN30DEkgZtjtncqumpOGh7NDat517Dw009W2pMK1UC1/rQ4Ct3GhFp5ynsOXtJSG0Ucti2Mrqw8qqrFYI1xnGADhkm+VlK04XYOXTm0xnJK2h+DvRntOtepCQDKonGahe6B/7Hmuy2OXaXQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAA7OztAQEBWVlZeXl50dHR/f39qampISEiPj49NTU00NDRoaGiAgIBBQUFWXyGYAAAAAXRSTlMAQObYZgAAAUdJREFUeF51jjFrwzAUhP0XniZDJmkSGLpIIPAqgaG7DIasfmBwJxkE2azJ0FkB7YZCx0yFzs3vqkQIJENuu093T1e9Eo7PfopDfPSpP89DenjHDzyOw3D31/ForR3Ge2vsx+zTbPv5r3iL1k4Rj4hxwD4DbW3OXCc72YgkAyNSLqQ42IRAM3j3HaLtp5gwBJZB1/oTJjuc8XPjpAAj3GLHOPOVwGcGyu3KC0TYarqFDJwWi9wl3SDU6++tInSnGVyA8JIwGShhGgbkQnlJOLV8eclXILQuCa2ENOrE84WftQDjpN7dN30DEkgZtjtncqumpOGh7NDat517Dw009W2pMK1UC1/rQ4Ct3GhFp5ynsOXtJSG0Ucti2Mrqw8qqrFYI1xnGADhkm+VlK04XYOXTm0xnJK2h+DvRntOtepCQDKonGahe6B/7Hmuy2OXaXQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAA7OztAQEBWVlZeXl50dHR/f39qampISEiPj49NTU00NDRoaGiAgIBBQUFWXyGYAAAAAXRSTlMAQObYZgAAAUdJREFUeF51jjFrwzAUhP0XniZDJmkSGLpIIPAqgaG7DIasfmBwJxkE2azJ0FkB7YZCx0yFzs3vqkQIJENuu093T1e9Eo7PfopDfPSpP89DenjHDzyOw3D31/ForR3Ge2vsx+zTbPv5r3iL1k4Rj4hxwD4DbW3OXCc72YgkAyNSLqQ42IRAM3j3HaLtp5gwBJZB1/oTJjuc8XPjpAAj3GLHOPOVwGcGyu3KC0TYarqFDJwWi9wl3SDU6++tInSnGVyA8JIwGShhGgbkQnlJOLV8eclXILQuCa2ENOrE84WftQDjpN7dN30DEkgZtjtncqumpOGh7NDat517Dw009W2pMK1UC1/rQ4Ct3GhFp5ynsOXtJSG0Ucti2Mrqw8qqrFYI1xnGADhkm+VlK04XYOXTm0xnJK2h+DvRntOtepCQDKonGahe6B/7Hmuy2OXaXQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAA7OztAQEBWVlZeXl50dHR/f39qampISEiPj49NTU00NDRoaGiAgIBBQUFWXyGYAAAAAXRSTlMAQObYZgAAAUdJREFUeF51jjFrwzAUhP0XniZDJmkSGLpIIPAqgaG7DIasfmBwJxkE2azJ0FkB7YZCx0yFzs3vqkQIJENuu093T1e9Eo7PfopDfPSpP89DenjHDzyOw3D31/ForR3Ge2vsx+zTbPv5r3iL1k4Rj4hxwD4DbW3OXCc72YgkAyNSLqQ42IRAM3j3HaLtp5gwBJZB1/oTJjuc8XPjpAAj3GLHOPOVwGcGyu3KC0TYarqFDJwWi9wl3SDU6++tInSnGVyA8JIwGShhGgbkQnlJOLV8eclXILQuCa2ENOrE84WftQDjpN7dN30DEkgZtjtncqumpOGh7NDat517Dw009W2pMK1UC1/rQ4Ct3GhFp5ynsOXtJSG0Ucti2Mrqw8qqrFYI1xnGADhkm+VlK04XYOXTm0xnJK2h+DvRntOtepCQDKonGahe6B/7Hmuy2OXaXQAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAAA7OztAQEBWVlZeXl50dHR/f39qampISEiPj49NTU00NDRoaGiAgIBBQUFWXyGYAAAAAXRSTlMAQObYZgAAAUdJREFUeF51jjFrwzAUhP0XniZDJmkSGLpIIPAqgaG7DIasfmBwJxkE2azJ0FkB7YZCx0yFzs3vqkQIJENuu093T1e9Eo7PfopDfPSpP89DenjHDzyOw3D31/ForR3Ge2vsx+zTbPv5r3iL1k4Rj4hxwD4DbW3OXCc72YgkAyNSLqQ42IRAM3j3HaLtp5gwBJZB1/oTJjuc8XPjpAAj3GLHOPOVwGcGyu3KC0TYarqFDJwWi9wl3SDU6++tInSnGVyA8JIwGShhGgbkQnlJOLV8eclXILQuCa2ENOrE84WftQDjpN7dN30DEkgZtjtncqumpOGh7NDat517Dw009W2pMK1UC1/rQ4Ct3GhFp5ynsOXtJSG0Ucti2Mrqw8qqrFYI1xnGADhkm+VlK04XYOXTm0xnJK2h+DvRntOtepCQDKonGahe6B/7Hmuy2OXaXQAAAABJRU5ErkJggg=="
+        }
+      ]
+    },
+    {
+      "name": "Hardened Metal Ventilation",
+      "description": "Decorative block",
+      "texture": "/metal_ventilation.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAD1BMVEUAAAAoHgtJNhVoTh6JZyeD1iHJAAAAAXRSTlMAQObYZgAAAChJREFUKFNjYKA2UBIkIKDkQkCAsAJjdAXGI9MEQgoYBNEjA0OAAAAAaxAKXZj4SkAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 2,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAD1BMVEUAAAAoHgtJNhVoTh6JZyeD1iHJAAAAAXRSTlMAQObYZgAAAChJREFUKFNjYKA2UBIkIKDkQkCAsAJjdAXGI9MEQgoYBNEjA0OAAAAAaxAKXZj4SkAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 3,
+          "texture": "/metal.png"
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAAnRSTlMAAHaTzTgAAAHsSURBVBgZBcHLap1VHAfQ9d/fPiexmpR4Q1M6EBw4KOhIEMEHcOhr+CaCo3jF4gWHoo8gOBRnhWCk4EhpS0BCvTTJd/b+uRYAAAAAAMDpw4ffAwAFAKfHYuf+2wAoAE6P2wwVeXAHQAH8+nIN2dlLG5I/3gAUcHaM1a5pWiXi/DVQcHYLDFd0paYyXbyK4nzuzdaUGHWlespkzP7g6LbOyXx/7NeGymLP1ajSZpZHvmx0bh99/uy7jvSapey7rBnnvmj7f9NZ+p3+4/Kml1IsFps8ufBpO8hEp6rXi37OO/OpdbOz3d34c/tZDksaOinh+fzU38o6955c+LodpihFh6g26oX6pV73yMn2FkVAR1VqtnCQe/2H+UpRBKFjZqggufHXc88sqoJK0KhmmYlSbWhLEQky6chyjRBdVUoQYzYa2BoDTVoYYc6kbwcNVdkwJlVUtcxJ7wY6VUqvNbMJibDAOumg0myso8ZUYVHM64GOUFK2uRqkzaVgtzY0kgBqsz+KpTDHaOukcXOdIxHYLapUSda5s6Hznu+un7ZMc4y+AyQZPkEB346bcb3OfnF2GAz/5SNQAHfr6HLO/HN2OMXj+hhQAHwzzc3j3w5mLucJgAKAr2b+vX+wmx8CoACAu+P3fAAAAAAAAPwPKR/+EeS72xAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 5,
+          "texture": "/metal.png"
+        },
+        {
+          "slot": 6,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAD1BMVEUAAAAoHgtJNhVoTh6JZyeD1iHJAAAAAXRSTlMAQObYZgAAAChJREFUKFNjYKA2UBIkIKDkQkCAsAJjdAXGI9MEQgoYBNEjA0OAAAAAaxAKXZj4SkAAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAkUlEQVRIie2TywmAMBAF05QdWIxnGxAsIjVYkt1oHmZlWWO+i5f45uLBGYREY/5lbzwuvg2QBDZPUaQqICVsZyQjVYGQJMVopCmAB+vgexMnweDQCWCIpCQr0A3gZYrEJDB79AL8eBZHTOLoBVZPKMAFOjrivkhNARlBIPSpD0n+TE0BHqFAlqQaoEixpBrodCcsViVaBKQNuAAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 8,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAD1BMVEUAAAAoHgtJNhVoTh6JZyeD1iHJAAAAAXRSTlMAQObYZgAAAChJREFUKFNjYKA2UBIkIKDkQkCAsAJjdAXGI9MEQgoYBNEjA0OAAAAAaxAKXZj4SkAAAAAASUVORK5CYII="
+        }
+      ]
+    },
+    {
+      "name": "Barrier Tape",
+      "description": "Decorative block",
+      "texture": "/barrier_tape.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJ1BMVEUAAAAAAAAcHCI6OkRKQEpWVmRjY3NkWmZxZ3N4STh5ZXGRaF+9jIF+4Af4AAAAAXRSTlMAQObYZgAAAFdJREFUKFNjYBh0YPeZ3QQEZu5WEsQrIKjkgk9AUFCwvMMYt4CgYGhoxyoXJWNcAoJpaatWrVIyVlLCKWBs3BFqjOBjCgANBatHdgWaANhhqD7FEKAxAAD0JR7RBUYX3gAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABJlBMVEUAAADJux1nYA+VixVsZRFlXg+YjRbWyCHNvh5fWA2flBhZUwzezyqHfRJcVQxwaBW8rxmLghKDehKZjxalmR9kXA6IfxKTiBVoYQ9cVg26rBmdkxi2qRi3qxleVw2xpRjGtxyKgBKckRdUTwuPhRVqYxCBdxF5cA6MghRXUQuimBpYUQxrZBHBtBxiXA7UxiGAdxB8dBDTxB/bzSNhWw6uoRdSTApOSAlyag1vaBXDthxfWQ6jmR7PwR5vZxKRhxWsoBaOhBR7chDczimjlxOajxJhWg51bQ50bA1UTgujmR1+dRCkmRWnnRZTTQummhVvaBSekxOqnhZ6cRBPSgmZjhFWUAuwpBeCehFQSgpxaQ3czie9sBvazCKilxmdkhLAshtuZxGMn7rhAAAAAXRSTlMAQObYZgAAAm5JREFUGBmVwUWSFEEAAMDyanf3HneX9Vk33N3+/wmo4EAQwIFM8J8WED4H/wbz3LI0bQz+7kJ7VpacL7lkleBPmZRfLI55eZyMK8taS+B3p5wnSaZJ4/GbN1e85DzLTsEvUp5DKElfLiHnVVVeVZxL0qtXFfjpSfnpYHl5mSdcsmCyzjSYW48ODi6k/OMTILwNppXFpeWjYwlyCLNjbmkPs1NtCvt3QNjhB60kgdC6GpelZWnaGEJJSpK+Hx8CoaHcN1xnudQWX6sK/iBpz6dTtJGbiAJhF9gDZus4h1nGNe1ZcnrwwaB3Bto3R0DAPddWQrvDutN1JXH4EEaqPCSIxP0NEOY9x61bNjvXw3CxWK9fD5EsI5k0o34BhKMbx3W7iqOw9/PZuRo/NYlPVN9oGkMfCIHXcPa6e7qtDI6C3oTK18Vqa/ixbKIREFhw1Gq9DfRQ3wUMt0lEos1W3VKZkiYQdDZnuBc6e7rreukkVieRGrfNiMivnwIhtesUK2nDC164sy49VMn20B8axmNkToCQKuy269QdHXt6p0vfqdGKjAzZNFf9CRBmDvMUG+u2iz1WN822SdVCpbK/KigQ6gAHCsMO1ltYCffjfYPKlLRl+o4+BgLDt2ntYqXhndkP0hg12xtEiWogk+wDYfB5kA7mrNOwMfPmSC4QQWgY+eS6GALh3NkpLNxrOTpuze4NglARbVfXyEBtAn5KOyG2b93w5ma2GxFKT5ryy7YxUsEvteJ6Z8zzatxXX26QH5kxBb8b9Bp67wy/KOIT06cnh+BPAQ6ZcoToRC4I+LuOU3dOvo188G8N5U4F/+c7jz5LX8MdVt8AAAAASUVORK5CYII="
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABJlBMVEUAAADJux1nYA+VixVsZRFlXg+YjRbWyCHNvh5fWA2flBhZUwzezyqHfRJcVQxwaBW8rxmLghKDehKZjxalmR9kXA6IfxKTiBVoYQ9cVg26rBmdkxi2qRi3qxleVw2xpRjGtxyKgBKckRdUTwuPhRVqYxCBdxF5cA6MghRXUQuimBpYUQxrZBHBtBxiXA7UxiGAdxB8dBDTxB/bzSNhWw6uoRdSTApOSAlyag1vaBXDthxfWQ6jmR7PwR5vZxKRhxWsoBaOhBR7chDczimjlxOajxJhWg51bQ50bA1UTgujmR1+dRCkmRWnnRZTTQummhVvaBSekxOqnhZ6cRBPSgmZjhFWUAuwpBeCehFQSgpxaQ3czie9sBvazCKilxmdkhLAshtuZxGMn7rhAAAAAXRSTlMAQObYZgAAAm5JREFUGBmVwUWSFEEAAMDyanf3HneX9Vk33N3+/wmo4EAQwIFM8J8WED4H/wbz3LI0bQz+7kJ7VpacL7lkleBPmZRfLI55eZyMK8taS+B3p5wnSaZJ4/GbN1e85DzLTsEvUp5DKElfLiHnVVVeVZxL0qtXFfjpSfnpYHl5mSdcsmCyzjSYW48ODi6k/OMTILwNppXFpeWjYwlyCLNjbmkPs1NtCvt3QNjhB60kgdC6GpelZWnaGEJJSpK+Hx8CoaHcN1xnudQWX6sK/iBpz6dTtJGbiAJhF9gDZus4h1nGNe1ZcnrwwaB3Bto3R0DAPddWQrvDutN1JXH4EEaqPCSIxP0NEOY9x61bNjvXw3CxWK9fD5EsI5k0o34BhKMbx3W7iqOw9/PZuRo/NYlPVN9oGkMfCIHXcPa6e7qtDI6C3oTK18Vqa/ixbKIREFhw1Gq9DfRQ3wUMt0lEos1W3VKZkiYQdDZnuBc6e7rreukkVieRGrfNiMivnwIhtesUK2nDC164sy49VMn20B8axmNkToCQKuy269QdHXt6p0vfqdGKjAzZNFf9CRBmDvMUG+u2iz1WN822SdVCpbK/KigQ6gAHCsMO1ltYCffjfYPKlLRl+o4+BgLDt2ntYqXhndkP0hg12xtEiWogk+wDYfB5kA7mrNOwMfPmSC4QQWgY+eS6GALh3NkpLNxrOTpuze4NglARbVfXyEBtAn5KOyG2b93w5ma2GxFKT5ryy7YxUsEvteJ6Z8zzatxXX26QH5kxBb8b9Bp67wy/KOIT06cnh+BPAQ6ZcoToRC4I+LuOU3dOvo188G8N5U4F/+c7jz5LX8MdVt8AAAAASUVORK5CYII="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJ1BMVEUAAAAAAAAcHCI6OkRKQEpWVmRjY3NkWmZxZ3N4STh5ZXGRaF+9jIF+4Af4AAAAAXRSTlMAQObYZgAAAFdJREFUKFNjYBh0YPeZ3QQEZu5WEsQrIKjkgk9AUFCwvMMYt4CgYGhoxyoXJWNcAoJpaatWrVIyVlLCKWBs3BFqjOBjCgANBatHdgWaANhhqD7FEKAxAAD0JR7RBUYX3gAAAABJRU5ErkJggg=="
+        }
+      ]
+    },
+    {
+      "name": "Misted Glass",
+      "description": "Decorative block",
+      "texture": "/misted_glass.png",
+      "crafting": [
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJ1BMVEUAAAAAAAAcHCI6OkRKQEpWVmRjY3NkWmZxZ3N4STh5ZXGRaF+9jIF+4Af4AAAAAXRSTlMAQObYZgAAAFdJREFUKFNjYBh0YPeZ3QQEZu5WEsQrIKjkgk9AUFCwvMMYt4CgYGhoxyoXJWNcAoJpaatWrVIyVlLCKWBs3BFqjOBjCgANBatHdgWaANhhqD7FEKAxAAD0JR7RBUYX3gAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAFVBMVEUAAABUVGhzc4S5ucvV1d/q6ur///9zyeLNAAAAAXRSTlMAQObYZgAAAHhJREFUKJGl0UENA0EMQ9FQ+BRMIRRMIRTMH0IvW6mzM3Oqj0+KLDlVVUW98gYCix9gGgpzATJDDLlCS5GteW42KDzKtKwLkIncQk/xCRSpFV/AVuxWzJyBSJba9Ld2BYytWPScoSiwNHCDqmKmf0fdoYD1YRv8lQ/5qTOJvwQA1AAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAHlBMVEUAAACAgIC8vLyFn6LA9f6OtrxabG+z1tthfID+/v64t/aYAAAAAXRSTlMAQObYZgAAAMVJREFUKBUFwSFrw0AYANCXXe7IuS+u8jioL5T5isBsWZmvKpMVg9io6oj+4L0HAABgrwDATgUAUAF4jxjHCrADVGC5YFn2nQpfAPCHvjJWuIzPA1pfAcwFTQesM2j0J5h5obd87SvrvFHQoa9LYALgOJuEggZSDISCdqURYaDgyLd8CwBkftLMBgApTAzQgGAwFGQ6yQYFV7mRDoQoaCAFmHCDD2Ey+YUzGvAATrIUuAMk0kQB4CRt7gBwzvEAAD5fAAAA/yGYFv17pOKEAAAAAElFTkSuQmCC"
+        },
+        {
+          "slot": 5,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAFVBMVEUAAABUVGhzc4S5ucvV1d/q6ur///9zyeLNAAAAAXRSTlMAQObYZgAAAHhJREFUKJGl0UENA0EMQ9FQ+BRMIRRMIRTMH0IvW6mzM3Oqj0+KLDlVVUW98gYCix9gGgpzATJDDLlCS5GteW42KDzKtKwLkIncQk/xCRSpFV/AVuxWzJyBSJba9Ld2BYytWPScoSiwNHCDqmKmf0fdoYD1YRv8lQ/5qTOJvwQA1AAAAABJRU5ErkJggg=="
+        },
+        {
+          "slot": 7,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJ1BMVEUAAAAAAAAcHCI6OkRKQEpWVmRjY3NkWmZxZ3N4STh5ZXGRaF+9jIF+4Af4AAAAAXRSTlMAQObYZgAAAFdJREFUKFNjYBh0YPeZ3QQEZu5WEsQrIKjkgk9AUFCwvMMYt4CgYGhoxyoXJWNcAoJpaatWrVIyVlLCKWBs3BFqjOBjCgANBatHdgWaANhhqD7FEKAxAAD0JR7RBUYX3gAAAABJRU5ErkJggg=="
+        }
+      ]
+    },
+    {
+      "name": "White Bricks",
+      "description": "Decorative block",
+      "texture": "/white_bricks.png",
+      "crafting": [
+        {
+          "slot": 0,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAADQ1tfO1NXP1dbR1tfO1NSEh4iDh4daXV2EiIlZXF1bXV2FiIlZXFyDhocUJg2AAAAAAXRSTlMAQObYZgAAAS1JREFUKFN1j9FpBCEQhrcFNQ2sW4F6DYRUkCZGhDwrwpHnwSOvswhXwLBpIBUcpIPrIG1E3SRcIPl9+j5+nXGa/omQv1nZxdzyLOQi3A0bp/Qs7DdLrRcn1HK431mZuwctxONi9pfl7Jx0xigjhFua8HZWWigrD1oYbCJWoYWzWkuncYiQtZOLna1A3JrIFMkpZY1C5N4gH31wVhku5dQF1GMK4ATyto03jpXWNVBBLtvLaHiIKRPjK29cukhE6SlxG3HFLsKa148KTfQ0cakBfIaduYl3qrk+02lwF3UNNQTAcuWyr+4BAgEzlm1fvYKP2WNpZzRqJkiQOp5GI0VKEGITG4/GVOt6hvyGWMrgaVpDBOpX+tAR8pfEX/09ORCPj/0kpPGvW9MH/plPIXmMml56XXUAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 1,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAADQ1tfO1NXP1dbR1tfO1NSEh4iDh4daXV2EiIlZXF1bXV2FiIlZXFyDhocUJg2AAAAAAXRSTlMAQObYZgAAAS1JREFUKFN1j9FpBCEQhrcFNQ2sW4F6DYRUkCZGhDwrwpHnwSOvswhXwLBpIBUcpIPrIG1E3SRcIPl9+j5+nXGa/omQv1nZxdzyLOQi3A0bp/Qs7DdLrRcn1HK431mZuwctxONi9pfl7Jx0xigjhFua8HZWWigrD1oYbCJWoYWzWkuncYiQtZOLna1A3JrIFMkpZY1C5N4gH31wVhku5dQF1GMK4ATyto03jpXWNVBBLtvLaHiIKRPjK29cukhE6SlxG3HFLsKa148KTfQ0cakBfIaduYl3qrk+02lwF3UNNQTAcuWyr+4BAgEzlm1fvYKP2WNpZzRqJkiQOp5GI0VKEGITG4/GVOt6hvyGWMrgaVpDBOpX+tAR8pfEX/09ORCPj/0kpPGvW9MH/plPIXmMml56XXUAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 3,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAADQ1tfO1NXP1dbR1tfO1NSEh4iDh4daXV2EiIlZXF1bXV2FiIlZXFyDhocUJg2AAAAAAXRSTlMAQObYZgAAAS1JREFUKFN1j9FpBCEQhrcFNQ2sW4F6DYRUkCZGhDwrwpHnwSOvswhXwLBpIBUcpIPrIG1E3SRcIPl9+j5+nXGa/omQv1nZxdzyLOQi3A0bp/Qs7DdLrRcn1HK431mZuwctxONi9pfl7Jx0xigjhFua8HZWWigrD1oYbCJWoYWzWkuncYiQtZOLna1A3JrIFMkpZY1C5N4gH31wVhku5dQF1GMK4ATyto03jpXWNVBBLtvLaHiIKRPjK29cukhE6SlxG3HFLsKa148KTfQ0cakBfIaduYl3qrk+02lwF3UNNQTAcuWyr+4BAgEzlm1fvYKP2WNpZzRqJkiQOp5GI0VKEGITG4/GVOt6hvyGWMrgaVpDBOpX+tAR8pfEX/09ORCPj/0kpPGvW9MH/plPIXmMml56XXUAAAAASUVORK5CYII="
+        },
+        {
+          "slot": 4,
+          "texture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAALVBMVEUAAADQ1tfO1NXP1dbR1tfO1NSEh4iDh4daXV2EiIlZXF1bXV2FiIlZXFyDhocUJg2AAAAAAXRSTlMAQObYZgAAAS1JREFUKFN1j9FpBCEQhrcFNQ2sW4F6DYRUkCZGhDwrwpHnwSOvswhXwLBpIBUcpIPrIG1E3SRcIPl9+j5+nXGa/omQv1nZxdzyLOQi3A0bp/Qs7DdLrRcn1HK431mZuwctxONi9pfl7Jx0xigjhFua8HZWWigrD1oYbCJWoYWzWkuncYiQtZOLna1A3JrIFMkpZY1C5N4gH31wVhku5dQF1GMK4ATyto03jpXWNVBBLtvLaHiIKRPjK29cukhE6SlxG3HFLsKa148KTfQ0cakBfIaduYl3qrk+02lwF3UNNQTAcuWyr+4BAgEzlm1fvYKP2WNpZzRqJkiQOp5GI0VKEGITG4/GVOt6hvyGWMrgaVpDBOpX+tAR8pfEX/09ORCPj/0kpPGvW9MH/plPIXmMml56XXUAAAAASUVORK5CYII="
+        }
+      ]
+    }
+  ]
+}

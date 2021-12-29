@@ -13,12 +13,13 @@ import 'package:stevertus/src/data/text_parts.dart';
 )
 class TextRenderComponent {
   @Input('text')
-  List<TextPart> text;
+  late List<TextPart> text;
 
-  ListTextPart getListText(TextPart p) => p is ListTextPart ? p : null;
-  LinkTextPart getLinkText(TextPart p) => p is LinkTextPart ? p : null;
-  ImgTextPart getImgText(TextPart p) => p is ImgTextPart ? p : null;
-  InternalLinkTextPart getIntLinkText(TextPart p) =>
+  ListTextPart? getListText(TextPart p) => p is ListTextPart ? p : null;
+
+  LinkTextPart? getLinkText(TextPart p) => p is LinkTextPart ? p : null;
+  ImgTextPart? getImgText(TextPart p) => p is ImgTextPart ? p : null;
+  InternalLinkTextPart? getIntLinkText(TextPart p) =>
       p is InternalLinkTextPart ? p : null;
   bool isRawText(TextPart p) => p.text.isNotEmpty;
 }

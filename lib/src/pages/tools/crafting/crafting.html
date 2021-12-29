@@ -4,7 +4,7 @@
       <h2>Crafting Generator</h2>
       <version-dropdown
         [min]="15"
-        [max]="17"
+        [max]="18"
         [selected]="mcversion"
         (versionChange)="mcversion = $event"
       ></version-dropdown>
@@ -36,8 +36,8 @@
         <div class="content" (click)="onSelect(slot)">
           <img
             *ngIf="current.ingredients[slot] != null"
-            [src]="getItemImage(current.ingredients[slot])"
-            [alt]="current.ingredients[slot].getId()"
+            [src]="getItemImage(current.ingredients[slot]!)"
+            [alt]="current.ingredients[slot]!.getId()"
           />
         </div>
       </div>
@@ -72,10 +72,14 @@
           placeholder="Override Recipe ID"
         />
 
-        <fluid-checkbox [(value)]="isShapeless" label="Shapeless">
-        </fluid-checkbox>
-        <fluid-checkbox [(value)]="exactlyPlaced" label="Check for Empty Slots">
-        </fluid-checkbox>
+        <fluid-checkbox
+          [(value)]="isShapeless"
+          label="Shapeless"
+        ></fluid-checkbox>
+        <fluid-checkbox
+          [(value)]="exactlyPlaced"
+          label="Check for Empty Slots"
+        ></fluid-checkbox>
 
         <input
           type="number"
@@ -89,7 +93,8 @@
           fluidInput
           [(ngModel)]="table.name"
           placeholder="Project namespace"
-        /><br />
+        />
+        <br />
         <input
           type="number"
           fluidInput
@@ -101,13 +106,11 @@
           [value]="table.useBarrel"
           (click)="table.useBarrel = !table.useBarrel"
           label="use a barrel instead of a chest"
-        >
-        </fluid-checkbox>
+        ></fluid-checkbox>
         <fluid-checkbox
           [(value)]="table.invisibleHitbox"
           label="make the chest invisible(just up to 1.14)"
-        >
-        </fluid-checkbox>
+        ></fluid-checkbox>
 
         <button
           fluidBtn
@@ -130,8 +133,7 @@
         <fluid-checkbox
           [(value)]="table.giveCommandFunction"
           label=" include a function to generate recipes in minecraft"
-        >
-        </fluid-checkbox>
+        ></fluid-checkbox>
       </div>
       <div class="output">
         <button highlight fluidBtn (click)="copy()">
@@ -220,8 +222,10 @@
     </nb-card> -->
 </div>
 
-<item-selector [(item)]="selectedItem" name="crafting_item_selector">
-</item-selector>
+<item-selector
+  [(item)]="selectedItem"
+  name="crafting_item_selector"
+></item-selector>
 <item-selector
   [(item)]="table.placeholder"
   name="crafting_placeholder"

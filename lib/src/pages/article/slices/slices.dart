@@ -22,16 +22,16 @@ import 'package:stevertus/src/data/text.dart';
 )
 class SlicesComponent {
   @Input('slices')
-  List<Slice> slices;
+  late List<Slice> slices;
 
   bool checkType<T>(val) => val is T;
-  DownloadSlice checkDownload(val) => val is DownloadSlice ? val : null;
-  ImageSlice checkImage(val) => val is ImageSlice ? val : null;
-  TextSlice checkText(val) => val is TextSlice ? val : null;
-  RecommendedSlice checkRecommendations(val) =>
+  DownloadSlice? checkDownload(val) => val is DownloadSlice ? val : null;
+  ImageSlice? checkImage(val) => val is ImageSlice ? val : null;
+  TextSlice? checkText(val) => val is TextSlice ? val : null;
+  RecommendedSlice? checkRecommendations(val) =>
       val is RecommendedSlice ? val : null;
 
-  openDownloadLink(DownloadSlice slice) {
-    window.location.href = slice.link;
+  void openDownloadLink(Slice slice) {
+    window.location.href = (slice as DownloadSlice).link;
   }
 }

@@ -8,16 +8,13 @@ class DownloadSlice extends Slice {
   DownloadSlice(this.title, this.link);
 
   factory DownloadSlice.fromJson(Map j) {
-    final p = j["primary"];
-    if (j == null ||
-        p == null ||
-        p["link"] == null ||
-        p["button_text"] == null) {
-      return null;
+    final p = j['primary'];
+    if (p == null || p['link'] == null || p['button_text'] == null) {
+      throw ('DownloadSlice not decodable');
     }
     return DownloadSlice(
-      p["button_text"][0]["text"],
-      p["link"]["url"],
+      p['button_text'][0]['text'],
+      p['link']['url'],
     );
   }
 }
@@ -29,15 +26,17 @@ class ImageSlice extends Slice {
   ImageSlice(this.url, this.width, this.height);
 
   factory ImageSlice.fromJson(Map j) {
-    if (j == null || j["primary"] == null || j["primary"]["img"] == null) {
-      return null;
+    if (j['primary'] == null || j['primary']['img'] == null) {
+      throw ('ImageSlice not decodable');
     }
-    final Map img = j["primary"]["img"];
-    if (img["url"] == null || img["dimensions"] == null) return null;
+    final Map img = j['primary']['img'];
+    if (img['url'] == null || img['dimensions'] == null) {
+      throw ('ImageSlice not decodable');
+    }
     return ImageSlice(
-      img["url"],
-      img["dimensions"]["width"],
-      img["dimensions"]["height"],
+      img['url'],
+      img['dimensions']['width'],
+      img['dimensions']['height'],
     );
   }
 }
@@ -47,13 +46,17 @@ class RecommendedSlice extends Slice {
   RecommendedSlice(this.recommended);
 
   factory RecommendedSlice.fromJson(List j) {
-    List<Document> articles = [];
+    final articles = <Document>[];
     for (Map m in j) {
-      if (m["recomm"] != null) {
-        final art = Document.fromJson(m["recomm"]);
-        if (art != null) articles.add(art);
+      if (m['recomm'] != null) {
+        try {
+          final art = Document.fromJson(m['recomm']);
+          articles.add(art);
+        } catch (err) {
+          print(err);
+        }
       }
     }
-    return articles.isNotEmpty ? RecommendedSlice(articles) : null;
+    return RecommendedSlice(articles);
   }
 }

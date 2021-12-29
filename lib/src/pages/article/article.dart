@@ -1,9 +1,9 @@
 import 'package:angular/angular.dart';
-import 'package:angular/security.dart';
 import 'package:angular_router/angular_router.dart';
 import 'package:fluix_web/fluix/icon/icon.dart';
 import 'package:fluix_web/fluix/spinner/spinner.dart';
 import 'package:ng_translate/ng_translate.dart';
+import 'package:ngsecurity/security.dart';
 import 'package:stevertus/src/data/article.dart';
 import 'package:stevertus/src/http.dart';
 import 'package:stevertus/src/pages/article/slices/slices.dart';
@@ -13,6 +13,7 @@ import 'package:stevertus/src/services/safe_url.dart';
   selector: 'article',
   styleUrls: ['article.css'],
   templateUrl: 'article.html',
+  providers: [ClassProvider(DomSanitizationService)],
   directives: [
     coreDirectives,
     NgIf,
@@ -25,7 +26,7 @@ import 'package:stevertus/src/services/safe_url.dart';
 class ArticlePage implements OnActivate {
   TranslationService lang;
 
-  FullArticle article;
+  FullArticle? article;
   DomSanitizationService sanitizer;
 
   ArticlePage(this.sanitizer, this.lang);
@@ -35,7 +36,9 @@ class ArticlePage implements OnActivate {
   bool playingVideo = false;
 
   SafeResourceUrl get safeVideoUrl => sanitizer.bypassSecurityTrustResourceUrl(
-      'https://www.youtube.com/embed/' + article.video + '?rel=0;&autoplay=1');
+      'https://www.youtube.com/embed/' +
+          article!.video! +
+          '?rel=0;&autoplay=1');
 
   void getArticle(String id) async {
     loading = true;
@@ -45,8 +48,8 @@ class ArticlePage implements OnActivate {
 
   @override
   void onActivate(_, RouterState current) {
-    getArticle(current.parameters['id']);
+    getArticle(current.parameters['id']!);
 
-    lang.localeChange.addListener((l) => getArticle(current.parameters['id']));
+    lang.localeChange.addListener((l) => getArticle(current.parameters['id']!));
   }
 }

@@ -7,15 +7,15 @@
 //   }
 // }
 import 'package:angular/angular.dart';
-import 'package:angular/security.dart';
+import 'package:ngsecurity/security.dart';
 
 @Pipe('safeURL')
-class SafeURLPipe implements PipeTransform {
+class SafeURLPipe {
   DomSanitizationService sanitizer;
 
   SafeURLPipe(this.sanitizer);
 
-  transform(url) {
+  SafeResourceUrl transform(String url) {
     return sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

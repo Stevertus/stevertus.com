@@ -31,14 +31,14 @@ class HeaderComponent implements OnInit {
   TranslationService lang;
 
   final List<String> locales;
-  int selected;
+  late int selected;
 
   HeaderComponent(this.lang) : locales = TranslationService.supportedLocales;
 
   @override
   void ngOnInit() {
     if (window.localStorage.containsKey('lang')) {
-      lang.setLocale(window.localStorage['lang']);
+      lang.setLocale(window.localStorage['lang']!);
     } else {
       lang.setLocale(window.navigator.language);
       saveCurrent(lang.currentLocale);

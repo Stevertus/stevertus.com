@@ -37,9 +37,9 @@ class ItemSelectorComponent implements AfterChanges {
   ItemSelectorComponent(this.service);
 
   @Input()
-  Item item;
+  Item? item;
   @Input()
-  String name;
+  String? name;
   @Input()
   bool showId = true;
   @Input()
@@ -49,39 +49,40 @@ class ItemSelectorComponent implements AfterChanges {
   @Input()
   bool showModel = true;
 
-  final _itemChange = StreamController<Item>();
+  final _itemChange = StreamController<Item?>();
   @Output('itemChange')
-  Stream<Item> get itemChange => _itemChange.stream;
+  Stream<Item?> get itemChange => _itemChange.stream;
 
-  String errorMsg;
+  String? errorMsg;
 
-  String id;
-  int model;
-  int count;
-  String nbt;
+  String? id;
+  int? model;
+  int? count;
+  String? nbt;
 
   @override
   void ngAfterChanges() {
     name ??= 'item_selector';
     item ??= Item('');
-    id = item.getId();
-    model = item.tag['CustomModelData'];
-    count = item.count;
-    nbt = gson.encode(item.tag);
+    id = item!.getId();
+    model = item!.tag?['CustomModelData'];
+    count = item!.count;
+    nbt = gson.encode(item!.tag);
     if (nbt == '{}') nbt = '';
   }
 
   void submit() {
     errorMsg = null;
     try {
-      Map<String, dynamic> tag = nbt.isNotEmpty ? gson.decode(nbt) : {};
+      Map<String, dynamic> tag = nbt!.isNotEmpty ? gson.decode(nbt!) : {};
+      print(item!.copyWith(nbt: tag, type: id, model: model, count: count));
       _itemChange.add(
-        id.isEmpty
+        id!.isEmpty
             ? null
-            : item.copyWith(nbt: tag, type: id, model: model, count: count),
+            : item!.copyWith(nbt: tag, type: id, model: model, count: count),
       );
       item = Item('');
-      service.close(name);
+      service.close(name!);
     } catch (err) {
       errorMsg = err.toString();
       print(err);

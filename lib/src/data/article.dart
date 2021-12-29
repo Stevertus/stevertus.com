@@ -4,61 +4,68 @@ import 'package:stevertus/src/data/text.dart';
 class FullArticle {
   final String img;
   final String title;
-  final DateTime date;
-  final String video;
+  final DateTime? date;
+  final String? video;
   final List<Slice> slices;
   FullArticle(
     this.title,
     this.img,
     this.date, {
-    this.video = "",
+    this.video = '',
     this.slices = const [],
   });
 
   factory FullArticle.fromJson(Map json) {
-    String img = "";
-    if (json["header"] != null && json["header"]["url"] != null) {
-      img = json["header"]["url"];
+    var img = '';
+    if (json['header'] != null && json['header']['url'] != null) {
+      img = json['header']['url'];
     }
 
-    String title = "";
-    if (json["title"] != null && json["title"][0]["text"] != null) {
-      title = json["title"][0]["text"];
+    var title = '';
+    if (json['title'] != null && json['title'][0]['text'] != null) {
+      title = json['title'][0]['text'];
     }
 
-    DateTime date = DateTime.tryParse(json["date"]);
+    var date = DateTime.tryParse(json['date']);
 
-    String video;
+    String? video;
 
-    if (json["video"] != null && json["video"]["embed_url"] != null) {
-      video = json["video"]["embed_url"].contains("v=")
-          ? json["video"]["embed_url"].split("v=")[1]
-          : json["video"]["embed_url"].split("/").last;
+    if (json['video'] != null && json['video']['embed_url'] != null) {
+      video = json['video']['embed_url'].contains('v=')
+          ? json['video']['embed_url'].split('v=')[1]
+          : json['video']['embed_url'].split('/').last;
     }
 
-    List<Slice> slices = [];
+    final slices = <Slice>[];
 
-    if (json["slices"] != null) {
-      json["slices"].forEach((slice) {
-        Slice ret;
+    if (json['slices'] != null) {
+      json['slices'].forEach((slice) {
+        Slice? ret;
 
-        if (slice["__typename"] == "ArticleSlicesText" &&
-            slice["primary"] != null &&
-            slice["primary"]["text"] != null) {
-          ret = TextSlice.fromJson(slice["primary"]["text"]);
-        }
-        if (slice["__typename"] == "ArticleSlicesImage") {
-          ret = ImageSlice.fromJson(slice);
-        }
-        if (slice["__typename"] == "ArticleSlicesRecommended" &&
-            slice["fields"] != null) {
-          ret = RecommendedSlice.fromJson(slice["fields"]);
-        }
-        if (slice["__typename"] == "ArticleSlicesDownload") {
-          ret = DownloadSlice.fromJson(slice);
-        }
+        try {
+          if (slice['__typename'] == 'ArticleSlicesText' &&
+              slice['primary'] != null &&
+              slice['primary']['text'] != null) {
+            ret = TextSlice.fromJson(slice['primary']['text']);
+          }
+          if (slice['__typename'] == 'ArticleSlicesImage') {
+            ret = ImageSlice.fromJson(slice);
+          }
+          if (slice['__typename'] == 'ArticleSlicesRecommended' &&
+              slice['fields'] != null) {
+            final s = RecommendedSlice.fromJson(slice['fields']);
+            if (s.recommended.isNotEmpty) {
+              ret = s;
+            }
+          }
+          if (slice['__typename'] == 'ArticleSlicesDownload') {
+            ret = DownloadSlice.fromJson(slice);
+          }
 
-        if (ret != null) slices.add(ret);
+          if (ret != null) slices.add(ret);
+        } catch (err) {
+          print(err);
+        }
       });
     }
 
@@ -67,6 +74,6 @@ class FullArticle {
 
   @override
   String toString() {
-    return "Title: $title \nImg: $img \nDate: $date \nVideo: $video \nSlices: ${slices.length}";
+    return 'Title: $title \nImg: $img \nDate: $date \nVideo: $video \nSlices: ${slices.length}';
   }
 }

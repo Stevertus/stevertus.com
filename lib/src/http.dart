@@ -4,48 +4,48 @@ import 'package:http/http.dart' as http;
 import 'package:stevertus/src/data/article.dart';
 import 'package:stevertus/src/data/document.dart';
 
-const httpURI = "https://stevertus.com/";
+const httpURI = 'http://localhost:8080/'; //'https://stevertus.com/';
 
-const uri = "https://stevertuscom.cdn.prismic.io/";
-const guri = uri + "graphql";
+const uri = 'https://stevertuscom.cdn.prismic.io/';
+const guri = uri + 'graphql';
 
 final client = http.Client();
-String token;
+String? token;
 
 Future _getToken() async {
-  final res = await http.get(uri + 'api');
+  final res = await http.get(Uri.parse(uri + 'api'));
   if (res.body == null || res.statusCode != 200) return null;
   final body = json.decode(res.body);
 
-  if (body["refs"] == null) return null;
+  if (body['refs'] == null) return null;
 
-  token = body["refs"][0]["ref"];
+  token = body['refs'][0]['ref'];
   return token;
 }
 
 Future<Map> query(String q) async {
   await _getToken();
-  final res = await http.get(guri + "?query=" + q, headers: {
-    "Prismic-ref": token,
+  final res = await http.get(Uri.parse(guri + '?query=' + q), headers: {
+    'Prismic-ref': token!,
     'Content-Type': 'application/octet-stream; charset=UTF-8',
   });
-  if (res.body == null || res.statusCode != 200) throw ("Request failed!");
+  if (res.body == null || res.statusCode != 200) throw ('Request failed!');
   final body = json.decode(Utf8Decoder().convert(res.bodyBytes));
-  if (body == null) throw ("No Json body!");
+  if (body == null) throw ('No Json body!');
   return body;
 }
 
 Future<List<Document>> getArticlePreviews(
   String locale, [
-  List<String> tags,
-  String search = "",
+  List<String> tags = const [],
+  String search = '',
 ]) async {
-  String sTags = json.encode(tags);
+  final sTags = json.encode(tags);
 
   locale = _getPrismicLocale(locale);
 
-  Map res = await query("""{
-  allArticles(sortBy:date_DESC,fulltext: "${search}",tags_in:$sTags,lang:"$locale",where: {public: true}) {
+  final res = await query('''{
+  allArticles(sortBy:date_DESC,fulltext: "$search",tags_in:$sTags,lang:"$locale",where: {public: true}) {
     edges {
       node {
         header
@@ -58,16 +58,16 @@ Future<List<Document>> getArticlePreviews(
     }
   }
 }
-""");
-  if (res["data"] == null ||
-      res["data"]["allArticles"] == null ||
-      res["data"]["allArticles"]["edges"] == null) return [];
+''');
+  if (res['data'] == null ||
+      res['data']['allArticles'] == null ||
+      res['data']['allArticles']['edges'] == null) return [];
 
-  List<Document> ret = [];
+  final ret = <Document>[];
 
-  for (Map<String, dynamic> article in res["data"]["allArticles"]["edges"]) {
-    if (article["node"] != null) {
-      final node = article["node"];
+  for (Map<String, dynamic> article in res['data']['allArticles']['edges']) {
+    if (article['node'] != null) {
+      final node = article['node'];
       ret.add(Document.fromJson(node));
     }
   }
@@ -76,20 +76,21 @@ Future<List<Document>> getArticlePreviews(
 }
 
 Future<String> getTextFile(String url) async {
-  final res = await http.get(url.startsWith("http") ? url : httpURI + url);
-  if (res.body == null || res.statusCode != 200) throw ("Request failed!");
+  final res =
+      await http.get(Uri.parse(url.startsWith('http') ? url : httpURI + url));
+  if (res.statusCode != 200) throw ('Request failed!');
   return res.body;
 }
 
 Future<dynamic> getJsonFile(String url) async {
-  final String inp = await getTextFile(url);
+  final inp = await getTextFile(url);
   return json.decode(inp);
 }
 
 Future<List<Document>> getProjects(String locale) async {
   locale = _getPrismicLocale(locale);
 
-  Map res = await query("""{
+  final res = await query('''{
   allProjects(sortBy:date_DESC,lang:"$locale") {
     edges {
       node {
@@ -101,16 +102,16 @@ Future<List<Document>> getProjects(String locale) async {
     }
   }
 }
-""");
-  if (res["data"] == null ||
-      res["data"]["allProjects"] == null ||
-      res["data"]["allProjects"]["edges"] == null) return [];
+''');
+  if (res['data'] == null ||
+      res['data']['allProjects'] == null ||
+      res['data']['allProjects']['edges'] == null) return [];
 
-  List<Document> ret = [];
+  final ret = <Document>[];
 
-  for (Map<String, dynamic> article in res["data"]["allProjects"]["edges"]) {
-    if (article["node"] != null) {
-      final node = article["node"];
+  for (Map<String, dynamic> article in res['data']['allProjects']['edges']) {
+    if (article['node'] != null) {
+      final node = article['node'];
       ret.add(Document.fromJson(node));
     }
   }
@@ -124,10 +125,10 @@ String _getPrismicLocale(String locale) {
   return 'en-us';
 }
 
-Future<FullArticle> getFullArticle(String uid, String locale) async {
+Future<FullArticle?> getFullArticle(String uid, String locale) async {
   locale = _getPrismicLocale(locale);
 
-  Map res = await query(r'''{
+  final res = await query(r'''{
 article(uid:"''' +
       uid +
       '''",lang: "$locale"){
@@ -156,7 +157,7 @@ article(uid:"''' +
 }
 ''');
 
-  if (res["data"] == null || res["data"]["article"] == null) return null;
+  if (res['data'] == null || res['data']['article'] == null) return null;
 
-  return FullArticle.fromJson(res["data"]["article"]);
+  return FullArticle.fromJson(res['data']['article']);
 }

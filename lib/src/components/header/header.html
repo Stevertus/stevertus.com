@@ -1,7 +1,7 @@
 <fluid-appbar>
   <fluid-bar-align>
-    <a class="logo-title" routerLink="/"
-      ><svg
+    <a class="logo-title" routerLink="/">
+      <svg
         width="175"
         height="60"
         viewBox="0 0 175 60"
@@ -131,20 +131,20 @@
       <a
         href="https://www.youtube.com/channel/UCpXIIRHJ_U0LosNt_MIVl4A/videos"
         ngtranslate
-        >videos</a
       >
+        videos
+      </a>
     </div>
     <div trailing>
       <button routerLink="/contact" fluidBtn small>
-        {{'contact' | ngtranslate}}
+        {{$pipe.ngtranslate('contact')}}
       </button>
 
       <fluid-dropdown
         [values]="locales"
         [selected]="selected"
         (selectedChange)="changeLang($event)"
-      >
-      </fluid-dropdown>
+      ></fluid-dropdown>
     </div>
   </fluid-bar-align>
 </fluid-appbar>

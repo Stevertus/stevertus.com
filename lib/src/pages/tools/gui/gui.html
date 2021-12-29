@@ -4,7 +4,7 @@
       <h2>Gui Generator</h2>
       <version-dropdown
         [min]="15"
-        [max]="17"
+        [max]="18"
         [selected]="mcversion"
         (versionChange)="mcversion = $event"
       ></version-dropdown>
@@ -21,8 +21,7 @@
         icon="arrowRight"
         class="icon"
         [size]="32"
-      >
-      </fluid-icon>
+      ></fluid-icon>
     </div>
     <div
       id="leftControl"
@@ -32,7 +31,7 @@
       <fluid-icon class="icon" icon="arrowLeft" [size]="32"></fluid-icon>
     </div>
 
-    <div class="grid" [style.--columns]="columns">
+    <div class="grid" [style.--columns]="columns.toString()">
       <div class="slot" *ngFor="let i of slotCount">
         <div class="content" (click)="changeSlot(i)">
           <img [src]="getImageUrl(i)" />
@@ -44,62 +43,64 @@
 
   <fluid-card class="card">
     <h3>
-      {{'page' | ngtranslate}} {{currentPageIndex + 1}} {{'of' | ngtranslate}}
-      {{module.pages.length}}
+      {{$pipe.ngtranslate('page')}} {{currentPageIndex + 1}}
+      {{$pipe.ngtranslate('of')}} {{module.pages.length}}
     </h3>
 
     <fluid-checkbox
       [(value)]="currentPage.fillEmptySlots"
-      [label]="'gui.fillEmptySlots' | ngtranslate"
-    >
-    </fluid-checkbox>
+      [label]="$pipe.ngtranslate('gui.fillEmptySlots')"
+    ></fluid-checkbox>
 
     <button fluidBtn secondary (click)="modalService.open('gui_placeholder')">
-      {{'gui.gui_placeholder' | ngtranslate}}
+      {{$pipe.ngtranslate('gui.gui_placeholder')}}
     </button>
 
-    <h3>{{'project' | ngtranslate}}</h3>
+    <h3>{{$pipe.ngtranslate('project')}}</h3>
 
     <input
       [(ngModel)]="namespace"
       fluidInput
-      [placeholder]="'namespace' | ngtranslate"
-    /><br />
+      [placeholder]="$pipe.ngtranslate('namespace')"
+    />
+    <br />
 
     <fluid-dropdown
       [selected]="selectedContainer"
       (selectedChange)="containerChanged($event)"
       [values]="containers"
-    >
-    </fluid-dropdown>
+    ></fluid-dropdown>
 
     <input
       *ngIf="showLocation"
       [(ngModel)]="blockLocation"
       fluidInput
-      [placeholder]="'gui.blockLocation' | ngtranslate"
-    /><br />
+      [placeholder]="$pipe.ngtranslate('gui.blockLocation')"
+    />
+    <br />
 
     <ng-container *ngIf="selected == 'HandItem'">
       <button fluidBtn secondary (click)="modalService.open('gui_trigger')">
-        {{'gui.gui_trigger' | ngtranslate}}</button
-      ><br />
+        {{$pipe.ngtranslate('gui.gui_trigger')}}
+      </button>
+      <br />
       <input
-        [(ngModel)]="module.minecartName.value['text']"
+        [(ngModel)]="module.minecartName!.value['text']"
         fluidInput
-        [placeholder]="'gui.minecartName' | ngtranslate"
-      /><br />
+        [placeholder]="$pipe.ngtranslate('gui.minecartName')"
+      />
+      <br />
 
       <fluid-checkbox
         [(value)]="module.minecartAlwaysActive"
-        [label]="'gui.minecartAlwaysActive' | ngtranslate"
-      >
-      </fluid-checkbox>
+        [label]="$pipe.ngtranslate('gui.minecartAlwaysActive')"
+      ></fluid-checkbox>
       <input
         [(ngModel)]="offsetLocation"
         fluidInput
-        [placeholder]="'gui.offset' | ngtranslate"
-      /><br />
+        [placeholder]="$pipe.ngtranslate('gui.offset')"
+      />
+      <br />
     </ng-container>
 
     <textarea
@@ -116,7 +117,7 @@
     >
 
     <button class="full" fluidBtn (click)="download()">
-      {{'download' | ngtranslate}} Datapack
+      {{$pipe.ngtranslate('download')}} Datapack
     </button>
   </fluid-card>
 </div>
@@ -134,12 +135,12 @@
   [showModel]="showItemInputs"
 >
   <div before>
-    <p>{{'gui.actionSelect' | ngtranslate}}</p>
+    <p>{{$pipe.ngtranslate('gui.actionSelect')}}</p>
     <fluid-dropdown
       [(selected)]="selectedGuiType"
       [values]="guiSlots"
-    ></fluid-dropdown
-    ><br />
+    ></fluid-dropdown>
+    <br />
     <textarea
       style="width: 90%"
       *ngIf="selectedGuiType == 1"
@@ -147,35 +148,35 @@
       fluidMultiInput
       cols="30"
       rows="5"
-      [placeholder]="'gui.executeCommands' | ngtranslate"
+      [placeholder]="$pipe.ngtranslate('gui.executeCommands')"
     ></textarea>
 
     <input
       *ngIf="selectedGuiType == 1"
       fluidInput
       [(ngModel)]="selectedCountScore"
-      [placeholder]="'gui.countScoreboard' | ngtranslate"
+      [placeholder]="$pipe.ngtranslate('gui.countScoreboard')"
     />
     <input
       *ngIf="selectedGuiType == 1"
       fluidInput
       [(ngModel)]="selectedCountScoreEntity"
-      [placeholder]="'gui.countEntity' | ngtranslate"
+      [placeholder]="$pipe.ngtranslate('gui.countEntity')"
     />
     <input
       *ngIf="selectedGuiType == 5"
       type="number"
       fluidInput
       [(ngModel)]="selectedSlotPage"
-      [placeholder]="'gui.pageNumber' | ngtranslate"
+      [placeholder]="$pipe.ngtranslate('gui.pageNumber')"
     />
 
-    <h3 *ngIf="showItemInputs">{{'gui.selectItem' | ngtranslate}}</h3>
+    <h3 *ngIf="showItemInputs">{{$pipe.ngtranslate('gui.selectItem')}}</h3>
   </div>
 </item-selector>
 
 <item-selector [(item)]="currentPage.placeholder" name="gui_placeholder">
-  <p before>{{'gui.placeholderItem' | ngtranslate}}</p>
+  <p before>{{$pipe.ngtranslate('gui.placeholderItem')}}</p>
 </item-selector>
 
 <item-selector
@@ -183,5 +184,5 @@
   *ngIf="selected == 'HandItem'"
   name="gui_trigger"
 >
-  <p before>{{'gui.handItem' | ngtranslate}}</p>
+  <p before>{{$pipe.ngtranslate('gui.handItem')}}</p>
 </item-selector>

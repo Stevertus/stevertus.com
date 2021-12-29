@@ -20,15 +20,15 @@ class DocumentGridComponent {
   DocumentGridComponent(this.router);
 
   @Input('documents')
-  List<Document> documents;
+  late List<Document> documents;
   @Input('scroll')
-  bool scroll;
+  bool scroll = false;
 
-  String getInternalLink(Document doc) =>
+  String? getInternalLink(Document doc) =>
       doc.url.startsWith('http') ? null : doc.url;
 
   void openDocument(Document doc) {
-    bool isExternal = doc.url.startsWith('http');
+    final isExternal = doc.url.startsWith('http');
 
     if (isExternal) {
       html.window.location.href = doc.url;

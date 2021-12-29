@@ -1,11 +1,27 @@
 <div class="slice" *ngFor="let slice of slices">
-    <button class="download" fluidBtn highlight *ngIf="checkDownload(slice) != null" (click)="openDownloadLink(slice)">
-        {{checkDownload(slice).title ?? 'Download'}}
-    </button>
+  <button
+    class="download"
+    fluidBtn
+    highlight
+    *ngIf="checkDownload(slice) != null"
+    (click)="openDownloadLink(slice)"
+  >
+    {{checkDownload(slice)?.title ?? 'Download'}}
+  </button>
 
-    <img *ngIf="checkImage(slice) != null" [src]="checkImage(slice).url" alt="" class="img">
-    <render-text *ngIf="checkText(slice) != null" [text]="checkText(slice).body"></render-text>
-    <doc-grid scroll *ngIf="checkRecommendations(slice) != null" [documents]="checkRecommendations(slice).recommended">
-    </doc-grid>
-
+  <img
+    *ngIf="checkImage(slice) != null"
+    [src]="checkImage(slice)!.url"
+    alt=""
+    class="img"
+  />
+  <render-text
+    *ngIf="checkText(slice) != null"
+    [text]="checkText(slice)!.body"
+  ></render-text>
+  <doc-grid
+    scroll
+    *ngIf="checkRecommendations(slice) != null"
+    [documents]="checkRecommendations(slice)!.recommended"
+  ></doc-grid>
 </div>

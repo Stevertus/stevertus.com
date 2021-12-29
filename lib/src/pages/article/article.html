@@ -1,34 +1,37 @@
 <div class="container">
-    <fluid-spinner *ngIf="loading">
-    </fluid-spinner>
-    <ng-container *ngIf="!loading && article != null">
-        <div class="img-container" *ngIf="article.img.isNotEmpty">
-            <img [src]="article.img" alt="Header Image">
-            <div class="startVideo" *ngIf="article.video != null && !playingVideo" (click)="playingVideo = true">
-                <fluid-icon icon="mediaPlay" [size]="40"></fluid-icon>
-            </div>
-            <div class="video" *ngIf="article.video != null && playingVideo">
-                <iframe [src]="safeVideoUrl" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-                <div class="stopVideo" (click)="playingVideo = false">
-                    <fluid-icon icon="close" [size]="20"></fluid-icon>
-                </div>
-            </div>
-
-
+  <fluid-spinner *ngIf="loading"></fluid-spinner>
+  <ng-container *ngIf="!loading && article != null">
+    <div class="img-container" *ngIf="article!.img.isNotEmpty">
+      <img [src]="article!.img" alt="Header Image" />
+      <div
+        class="startVideo"
+        *ngIf="article!.video != null && !playingVideo"
+        (click)="playingVideo = true"
+      >
+        <fluid-icon icon="mediaPlay" [size]="40"></fluid-icon>
+      </div>
+      <div class="video" *ngIf="article!.video != null && playingVideo">
+        <iframe
+          [src]="safeVideoUrl"
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen
+        ></iframe>
+        <div class="stopVideo" (click)="playingVideo = false">
+          <fluid-icon icon="close" [size]="20"></fluid-icon>
         </div>
-        <div class="content">
-            <p class="date" *ngIf="article.date != null">
-                {{article.date.day}}/{{article.date.month}}/{{article.date.year}}
-            </p>
+      </div>
+    </div>
+    <div class="content">
+      <p class="date" *ngIf="article!.date != null">
+        {{article!.date!.day}}/{{article!.date!.month}}/{{article!.date!.year}}
+      </p>
 
-            <h1 class="title" *ngIf="article.title.isNotEmpty">
-                {{article.title}}
-            </h1>
+      <h1 class="title" *ngIf="article!.title.isNotEmpty">
+        {{article!.title}}
+      </h1>
 
-            <article-slices [slices]="article.slices"></article-slices>
-        </div>
-
-    </ng-container>
-
-
+      <article-slices [slices]="article!.slices"></article-slices>
+    </div>
+  </ng-container>
 </div>

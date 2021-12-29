@@ -43,19 +43,19 @@ class BlocksToolPage implements OnInit {
   BlocksToolPage(this.modalService);
 
   var blocks = <CustomBlock>[];
-  int selectedIndex;
-  CustomBlock selected;
-  int mcversion = 17;
+  int selectedIndex = 0;
+  CustomBlock? selected;
+  int mcversion = 18;
 
-  String get id => selected.id != null && selected.id.isNotEmpty
-      ? selected.id
-      : selected.name.toLowerCase().replaceAll(RegExp(r'\s'), '_');
-  set id(String s) => s == id ? null : selected.id = s;
+  String get id => selected!.id.isNotEmpty
+      ? selected!.id
+      : selected!.name!.toLowerCase().replaceAll(RegExp(r'\s'), '_');
+  set id(String s) => s == id ? null : selected!.id = s;
 
-  set blockid(String s) => selected.block = Block(s);
-  String get blockid => selected.block.toString();
-  set tags(String s) => selected.tags = s.split(' ');
-  String get tags => selected.tags.join(' ');
+  set blockid(String s) => selected!.block = Block(s);
+  String get blockid => selected!.block.toString();
+  set tags(String s) => selected!.tags = s.split(' ');
+  String get tags => selected!.tags.join(' ');
 
   @override
   void ngOnInit() {
@@ -84,9 +84,9 @@ class BlocksToolPage implements OnInit {
     }
   }
 
-  String errorText;
+  String? errorText;
 
-  Map<String, String> generatedFiles;
+  Map<String, String> generatedFiles = {};
 
   void generate() {
     selected?.id = id;

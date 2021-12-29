@@ -14,6 +14,6 @@ import 'package:stevertus/src/data/document.dart';
 )
 class DocumentPreviewComponent {
   @Input('document')
-  Document doc;
+  late Document doc;
   // Nothing here yet. All logic is in TodoListComponent.
 }

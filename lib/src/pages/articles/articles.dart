@@ -34,7 +34,7 @@ class ArticlesPage implements OnActivate {
 
   bool loading = true;
 
-  String searchInput = "";
+  String searchInput = '';
 
   List<Document> articles = [];
 
@@ -54,10 +54,10 @@ class ArticlesPage implements OnActivate {
   @override
   void onActivate(_, RouterState current) async {
     if (current.queryParameters['type'] != null) {
-      tags = {current.queryParameters['type']: true};
+      tags = {current.queryParameters['type']!: true};
     }
     if (current.queryParameters['q'] != null) {
-      searchInput = current.queryParameters['q'];
+      searchInput = current.queryParameters['q']!;
     }
     onSearch();
 

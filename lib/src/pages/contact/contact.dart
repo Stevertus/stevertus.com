@@ -6,7 +6,7 @@ import 'package:fluix_web/fluix/input/input.dart';
 import 'package:fluix_web/fluix/multi_input/input.dart';
 import 'package:http/http.dart' as http;
 
-final URL = "https://end5dyr2pyfxi28.m.pipedream.net";
+final URL = 'https://end5dyr2pyfxi28.m.pipedream.net';
 
 @Component(
   selector: 'contact',
@@ -22,40 +22,40 @@ final URL = "https://end5dyr2pyfxi28.m.pipedream.net";
   ],
 )
 class ContactPage {
-  String name = "";
-  String email = "";
-  String message = "";
+  String name = '';
+  String email = '';
+  String message = '';
 
-  String error = "";
+  String error = '';
 
-  bool success;
+  bool success = false;
 
   void submit() {
-    error = "";
+    error = '';
     if (name.isEmpty) {
-      error = "Please enter your name!";
+      error = 'Please enter your name!';
       return;
     }
     var regexp = RegExp(
         r'^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
     if (email.isEmpty || !regexp.hasMatch(email)) {
-      error = "Please enter a valid email!";
+      error = 'Please enter a valid email!';
       return;
     }
     if (message.isEmpty) {
-      error = "Please enter your message!";
+      error = 'Please enter your message!';
       return;
     }
-    http.post(URL,
-        body: {"name": name, "email": email, "message": message}).then((res) {
-      if (res != null) {
+    http.post(Uri.parse(URL),
+        body: {'name': name, 'email': email, 'message': message}).then((res) {
+      if (res.statusCode == 200) {
         success = true;
-        name = "";
-        email = "";
-        message = "";
+        name = '';
+        email = '';
+        message = '';
       }
     }).catchError((err) {
-      error = "An error occured, please try again!";
+      error = 'An error occured, please try again!';
     });
   }
 }

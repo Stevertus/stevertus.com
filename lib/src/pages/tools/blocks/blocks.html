@@ -2,7 +2,7 @@
   <h2>Custom Blocks</h2>
   <version-dropdown
     [min]="15"
-    [max]="17"
+    [max]="18"
     [selected]="mcversion"
     (versionChange)="mcversion = $event"
   ></version-dropdown>
@@ -13,7 +13,7 @@
     <fluid-list>
       <fluid-list-item clickable (click)="add()">
         <b>Add Block</b>
-        <fluid-icon trailing icon="plus"> </fluid-icon>
+        <fluid-icon trailing icon="plus"></fluid-icon>
       </fluid-list-item>
       <div *ngFor="let block of blocks; let i=index">
         <fluid-list-item
@@ -32,28 +32,26 @@
   </div>
 
   <fluid-card class="card blockSettings" *ngIf="selected != null">
-    <h2>Editing {{selected.name}}</h2>
-    <input
-      fluidInput
-      [(ngModel)]="selected.name"
-      placeholder="Display Name"
-    /><br />
-    <input fluidInput [(ngModel)]="id" placeholder="Customblock ID" /><br />
+    <h2>Editing {{selected!.name}}</h2>
+    <input fluidInput [(ngModel)]="selected!.name" placeholder="Display Name" />
+    <br />
+    <input fluidInput [(ngModel)]="id" placeholder="Customblock ID" />
+    <br />
 
     <button fluidBtn small secondary (click)="modalService.open('blocks_item')">
       Select Item
     </button>
 
     <fluid-checkbox
-      [(value)]="selected.generatePack"
+      [(value)]="selected!.generatePack"
       label="Generate seperate Pack"
     ></fluid-checkbox>
     <fluid-checkbox
-      [(value)]="selected.useItemFrame"
+      [(value)]="selected!.useItemFrame"
       label="Use an ItemFrame as display"
     ></fluid-checkbox>
     <fluid-checkbox
-      [(value)]="selected.fire"
+      [(value)]="selected!.fire"
       label="Set the entity on fire"
     ></fluid-checkbox>
 
@@ -63,19 +61,18 @@
       secondary
       (click)="modalService.open('blocks_block')"
     >
-      Select Custom Blockmodel</button
-    ><br />
+      Select Custom Blockmodel
+    </button>
+    <br />
 
     <input
       fluidInput
       [(ngModel)]="blockid"
       placeholder="Block to use underneath"
-    /><br />
-    <input
-      fluidInput
-      [(ngModel)]="tags"
-      placeholder="Custom Entity Tags"
-    /><br />
+    />
+    <br />
+    <input fluidInput [(ngModel)]="tags" placeholder="Custom Entity Tags" />
+    <br />
   </fluid-card>
 </div>
 
@@ -93,14 +90,18 @@
     cols="30"
     rows="10"
   >
-                {{errorText}}
-            </textarea
-  >
+      {{errorText}}
+  </textarea>
 </div>
 
-<item-selector [(item)]="selected.item" name="blocks_item"></item-selector>
+<item-selector
+  *ngIf="selected != null"
+  [(item)]="selected!.item"
+  name="blocks_item"
+></item-selector>
 
 <item-selector
-  [(item)]="selected.blockModel"
+  *ngIf="selected != null"
+  [(item)]="selected!.blockModel"
   name="blocks_block"
 ></item-selector>

@@ -11,26 +11,26 @@ import 'package:fluix_web/fluix/dropdown/dropdown.dart';
 )
 class VersionDropdown {
   @Input('selected')
-  int selected;
+  late int selected;
   @Input('min')
-  int min;
+  late int min;
   @Input('max')
-  int max;
+  late int max;
   @Input('values')
-  List<int> values;
+  List<int>? values;
 
   List<String> get items =>
       (values ?? List.generate(max - min + 1, (i) => max - i))
           .map((v) => '1.$v')
           .toList();
   int get selectedIndex =>
-      values != null ? values.indexOf(selected) ?? 0 : max - selected;
+      values != null ? values!.indexOf(selected) : max - selected;
 
   final _versionChange = StreamController<int>();
   @Output('versionChange')
   Stream<int> get versionChange => _versionChange.stream;
 
   void change(int index) {
-    _versionChange.add(values != null ? values[index] : max - index);
+    _versionChange.add(values != null ? values![index] : max - index);
   }
 }

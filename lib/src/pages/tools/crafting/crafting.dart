@@ -41,19 +41,19 @@ class CraftingToolPage implements OnInit {
 
   final slots = List.generate(9, (i) => i + 1);
 
-  CraftingTable table;
+  late CraftingTable table;
 
   List<Recipe> recipes = [];
   int currentIndex = 0;
 
   int selectedSlot = 0;
-  int mcversion = 17;
+  int mcversion = 18;
 
   Recipe get current => recipes[currentIndex];
   set current(Recipe r) => recipes[currentIndex] = r;
 
-  int get currentID => current.id;
-  set currentID(int id) => current = current.copyWith(id: id);
+  int? get currentID => current.id;
+  set currentID(int? id) => current = current.copyWith(id: id);
 
   bool get isShapeless => current.type == RecipeType.shapeless;
   set isShapeless(bool v) => current =
@@ -62,8 +62,8 @@ class CraftingToolPage implements OnInit {
   bool get exactlyPlaced => current.exactlyPlaced;
   set exactlyPlaced(bool v) => current = current.copyWith(exactlyPlaced: v);
 
-  int get exactResult => current.exactResult;
-  set exactResult(int v) => current = current.copyWith(exactResult: v);
+  int? get exactResult => current.exactResult;
+  set exactResult(int? v) => current = current.copyWith(exactResult: v);
 
   @override
   void ngOnInit() {
@@ -75,11 +75,13 @@ class CraftingToolPage implements OnInit {
   String getItemImage(Item i) =>
       'https://minecraftitemids.com/item/64/${i.getId()}.png';
 
-  Item get selectedItem =>
+  Item? get selectedItem =>
       selectedSlot > 9 ? current.result : current.ingredients[selectedSlot];
-  set selectedItem(Item s) => selectedSlot > 9
+  set selectedItem(Item? s) => selectedSlot > 9
       ? current = current.copyWith(result: s)
-      : current.ingredients[selectedSlot] = s;
+      : (s == null
+          ? current.ingredients.remove(selectedSlot)
+          : current.ingredients[selectedSlot] = s);
 
   void controlPages(bool isRight) {
     if (isRight) {
@@ -94,7 +96,7 @@ class CraftingToolPage implements OnInit {
 
   void addEmptyRecipe() {
     recipes.add(
-      Recipe({}, null),
+      Recipe({}, Item('')),
     );
   }
 
@@ -108,9 +110,9 @@ class CraftingToolPage implements OnInit {
     selectedSlot = index;
   }
 
-  Map<String, String> generatedFiles;
-  String result;
-  String errorText;
+  Map<String, String> generatedFiles = {};
+  String? result;
+  String? errorText;
 
   void generate() {
     errorText = null;
@@ -126,10 +128,10 @@ class CraftingToolPage implements OnInit {
       );
 
       result = generatedFiles[
-              'data/${table.name}/functions/recipes/craft.mcfunction'] +
+              'data/${table.name}/functions/recipes/craft.mcfunction']! +
           '\n' +
           generatedFiles[
-              'data/${table.name}/functions/recipes/res_craft.mcfunction'];
+              'data/${table.name}/functions/recipes/res_craft.mcfunction']!;
     } catch (err) {
       errorText = err.toString();
       print(err);
@@ -139,10 +141,10 @@ class CraftingToolPage implements OnInit {
 
   void download() {
     generate();
-    saveAsZip(generatedFiles, table.name + ".zip");
+    saveAsZip(generatedFiles, table.name + '.zip');
   }
 
   void copy() {
-    if (result != null) window.navigator.clipboard.writeText(result);
+    if (result != null) window.navigator.clipboard?.writeText(result!);
   }
 }

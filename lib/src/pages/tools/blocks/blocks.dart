@@ -93,6 +93,10 @@ class BlocksToolPage implements OnInit {
     errorText = null;
 
     try {
+      for (final b in blocks) {
+        b.breakItem = Item(b.block);
+      }
+
       generatedFiles = getAllFiles(
         Project(
           name: '',

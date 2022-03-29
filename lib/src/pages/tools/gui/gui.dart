@@ -54,7 +54,9 @@ class GuiToolPage {
   int selectedContainer = 0;
   int mcversion = 18;
 
-  GuiToolPage(this.modalService);
+  GuiToolPage(this.modalService) {
+    slotCount = calcSlotCount();
+  }
 
   int currentPageIndex = 0;
   GuiPage get currentPage => module.pages[currentPageIndex];
@@ -131,6 +133,7 @@ class GuiToolPage {
           break;
         }
     }
+    slotCount = calcSlotCount();
   }
 
   final guiSlots = [
@@ -152,7 +155,6 @@ class GuiToolPage {
 
   void changeSlot(int i) {
     selectedGuiSlot = i;
-    if (currentPage.slots.isNotEmpty) print(currentPage.slots.first.slot);
     final data = getSlotforIndex(i);
 
     if (data != null) {
@@ -214,7 +216,7 @@ class GuiToolPage {
 
     var slot = Slot.chest(selectedGuiSlot! + 1);
 
-    if (selected == 'Inventory') slot = Slot.inv(selectedGuiSlot! + 1);
+    //if (selected == 'Inventory') slot = Slot.inv(selectedGuiSlot! + 1);
 
     GuiSlot? selectedSlot;
     switch (selectedGuiType) {
@@ -288,11 +290,14 @@ class GuiToolPage {
     return 9;
   }
 
-  List get slotCount {
-    final id = (x) => x;
+  List<int> slotCount = [];
+  List<int> calcSlotCount() {
+    final id = (int x) => x;
     if (selected == 'Hopper') return List.generate(5, id);
     if (selected == 'Dropper') return List.generate(9, id);
-    if (selected == 'Inventory') return List.generate(36, id);
+    if (selected == 'Inventory') {
+      return [...List.generate(27, (x) => x + 9), ...List.generate(9, id)];
+    }
     return List.generate(27, id);
   }
 
@@ -354,7 +359,7 @@ class GuiToolPage {
   }
 
   GuiSlot? getSlotforIndex(int i) {
-    //if(selected == 'Inventory') i = Slot.
+    if (selected == 'Inventory') {}
     return currentPage.slots.firstWhereOrNull(
       (s) => s.slot?.id == i,
     );

@@ -10,14 +10,14 @@ _.b=e
 _.c=f
 _.d=g
 _.e=h},
-HF(d){var x=new B.nQ(A.c([],y.m))
-x.nh(d)
+HF(d){var x=new B.nR(A.c([],y.m))
+x.ni(d)
 return x},
 aO:function aO(d){this.a=d
 this.c=this.b=null},
 x4:function x4(d){this.a=d},
 x5:function x5(){},
-nQ:function nQ(d){var _=this
+nR:function nR(d){var _=this
 _.b=_.a=""
 _.c=!1
 _.d=""
@@ -25,62 +25,62 @@ _.e=d},
 x2:function x2(d){this.a=d},
 x3:function x3(){},
 HG(){return D.c3},
-P_(d,e){return new B.qV(A.H(y.j.a(d),A.m(e),y.J))},
-P0(d,e){return new B.qW(A.H(y.j.a(d),A.m(e),y.J))},
+P_(d,e){return new B.qW(A.H(y.j.a(d),A.n(e),y.J))},
+P0(d,e){return new B.qX(A.H(y.j.a(d),A.n(e),y.J))},
 P1(d,e){y.j.a(d)
-A.m(e)
-return new B.qX(A.ah(),A.H(d,e,y.J))},
-P2(d,e){return new B.qY(A.H(y.j.a(d),A.m(e),y.J))},
-P3(d,e){return new B.qZ(A.H(y.j.a(d),A.m(e),y.J))},
-P4(d,e){return new B.r_(A.H(y.j.a(d),A.m(e),y.J))},
+A.n(e)
+return new B.qY(A.ah(),A.H(d,e,y.J))},
+P2(d,e){return new B.qZ(A.H(y.j.a(d),A.n(e),y.J))},
+P3(d,e){return new B.r_(A.H(y.j.a(d),A.n(e),y.J))},
+P4(d,e){return new B.r0(A.H(y.j.a(d),A.n(e),y.J))},
 P5(d,e){y.j.a(d)
-A.m(e)
-return new B.r0(A.ah(),A.H(d,e,y.J))},
-P6(d,e){y.j.a(d)
-A.m(e)
+A.n(e)
 return new B.r1(A.ah(),A.H(d,e,y.J))},
-P7(){return new B.r2(new A.cE())},
+P6(d,e){y.j.a(d)
+A.n(e)
+return new B.r2(A.ah(),A.H(d,e,y.J))},
+P7(){return new B.r3(new A.cE())},
 k0:function k0(d){var _=this
 _.c=_.b=_.a=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=_.e=$
 _.d=d},
-qV:function qV(d){var _=this
+qW:function qW(d){var _=this
 _.b=null
 _.d=_.c=$
 _.a=d},
-qW:function qW(d){var _=this
+qX:function qX(d){var _=this
 _.c=_.b=$
 _.d=null
 _.a=d},
-qX:function qX(d,e){var _=this
+qY:function qY(d,e){var _=this
 _.b=d
 _.d=_.c=$
 _.x=_.r=_.f=_.e=null
 _.Q=_.z=_.y=$
 _.a=e},
-qY:function qY(d){this.c=this.b=$
+qZ:function qZ(d){this.c=this.b=$
 this.a=d},
-qZ:function qZ(d){this.b=null
+r_:function r_(d){this.b=null
 this.c=$
 this.a=d},
-r_:function r_(d){var _=this
+r0:function r0(d){var _=this
 _.e=_.d=_.c=_.b=$
 _.f=null
 _.a=d},
-r0:function r0(d,e){var _=this
+r1:function r1(d,e){var _=this
 _.b=d
 _.d=_.c=$
 _.e=null
 _.a=e},
-r1:function r1(d,e){this.b=d
+r2:function r2(d,e){this.b=d
 this.a=e},
-r2:function r2(d){var _=this
+r3:function r3(d){var _=this
 _.c=_.b=_.a=_.e=$
 _.d=d},
-nt:function nt(d){this.a=d},
-M6(d){var x,w=$.FV(),v=J.ae(w)
+nu:function nu(d){this.a=d},
+M6(d){var x,w=$.FU(),v=J.ae(w)
 v.seT(w,d)
 x=v.geT(w)
-if(w._docChildren==null)v.sp4(w,new A.mc(w,new A.ie(w)))
+if(w._docChildren==null)v.sp5(w,new A.mc(w,new A.ie(w)))
 v=w._docChildren
 v.toString
 J.BF(v)
@@ -114,23 +114,23 @@ C=c[2]
 D=c[7]
 B.aO.prototype={
 w(){B.zw("assets/tekpack.json").bf(new B.x4(this),y.P).io(new B.x5())}}
-B.nQ.prototype={
-nh(d){var x,w,v,u,t=this,s="texture",r="isNotBlue",q=J.af(d),p=q.k(d,"name")
+B.nR.prototype={
+ni(d){var x,w,v,u,t=this,s="texture",r="isNotBlue",q=J.af(d),p=q.k(d,"name")
 t.a=A.p(p==null?"":p)
 p=q.k(d,"description")
-p=p==null?null:J.Gq(p,"\n","<br>")
+p=p==null?null:J.Gp(p,"\n","<br>")
 t.b=p==null?"":p
 p=q.k(d,s)
 p=A.p(p==null?"":p)
 t.d=p
 if(C.a.ab(p,"/"))t.d="assets/tekpack"+p
 t.c=A.aZ(q.k(d,r)!=null&&q.k(d,r))
-t.sul(A.c([],y.m))
-for(p=y._,x=y.Y,w=0;w<=8;++w){v=x.a(J.Gf(p.a(q.k(d,"crafting")),new B.x2(w),new B.x3()))
+t.sum(A.c([],y.m))
+for(p=y._,x=y.Y,w=0;w<=8;++w){v=x.a(J.Ge(p.a(q.k(d,"crafting")),new B.x2(w),new B.x3()))
 if(v!=null&&J.R(v,s)!=null){u=A.p(J.R(v,s))
 if(C.a.ab(u,"/"))u="assets/tekpack"+u
 C.b.p(t.e,u)}else C.b.p(t.e,null)}},
-sul(d){this.e=y.q.a(d)}}
+sum(d){this.e=y.q.a(d)}}
 B.k0.prototype={
 t(){var x,w,v,u,t,s,r,q,p,o,n,m,l,k,j,i=this,h="_compView_3",g="rootElement",f="_FluidCard_3_5",e="_compView_11",d="fluidBtn",a0="style",a1="_FluidButton_11_5",a2="_compView_15",a3="_FluidButton_15_5",a4="_appEl_18",a5="_appEl_19",a6="_appEl_20",a7=i.a9(),a8=document
 a8.toString
@@ -231,12 +231,12 @@ w=A.a(i.db,a6)
 A.b(i.dx,"_NgIf_20_9")
 i.dx=new A.N(new A.E(a8,B.Ny()),w)
 a8=y.C
-J.a9(t,"click",i.B(i.grW(),a8,a8))
-J.a9(l,"click",i.B(i.grY(),a8,a8))
+J.a9(t,"click",i.B(i.grX(),a8,a8))
+J.a9(l,"click",i.B(i.grZ(),a8,a8))
 a8=i.d
 a8=a8.a.L(C.ai,a8.b,y.B)
 A.b(i.dy,"_pipe_safeURL_0")
-i.dy=new B.nt(a8)},
+i.dy=new B.nu(a8)},
 A(){var x,w,v=this,u="_FluidButton_11_5",t="_FluidButton_15_5",s=A.a(v.a,"ctx"),r=v.d.f===0
 if(r)A.a(v.f,"_FluidCard_3_5").w()
 if(r)A.a(v.x,u).d=!0
@@ -263,12 +263,12 @@ A.a(x.db,"_appEl_20").F()
 A.a(x.e,"_compView_3").u()
 A.a(x.r,"_compView_11").u()
 A.a(x.y,"_compView_15").u()},
-rX(d){A.a(this.a,"ctx")
+rY(d){A.a(this.a,"ctx")
 y.F.a(window.location).href="https://dmanager.stevertus.com/pack/open/stevertus:tekpack"},
-rZ(d){A.a(this.a,"ctx")
+t_(d){A.a(this.a,"ctx")
 y.F.a(window.location).href="https://github.com/Stevertus/tekPack"}}
-B.qV.prototype={
-gra(){return A.a(this.c,"_pipe_safeURL_0_0")},
+B.qW.prototype={
+grb(){return A.a(this.c,"_pipe_safeURL_0_0")},
 t(){var x,w=this,v="_el_1",u=document,t=u.createElement("div")
 y.z.a(t)
 w.C(t,"video")
@@ -283,19 +283,19 @@ A.h(A.a(w.d,v),"frameborder","0")
 x=A.a(w.d,v)
 w.gi().j(x)
 x=A.a(w.a.c.dy,"_pipe_safeURL_0")
-x=y.g.a(B.LL(x.gv9(x),y.L,y.N))
+x=y.g.a(B.LL(x.gva(x),y.L,y.N))
 A.b(w.c,"_pipe_safeURL_0_0")
-w.snU(x)
+w.snV(x)
 w.J(t)},
 A(){var x,w=this,v=w.a.a.b
 v.toString
-x=w.rb("https://www.youtube.com/embed/"+v+"?rel=0&amp;controls=0&amp;showinfo=0")
+x=w.rd("https://www.youtube.com/embed/"+v+"?rel=0&amp;controls=0&amp;showinfo=0")
 v=w.b
-if(v!==x){A.a(w.d,"_el_1").src=A.EX(x)
+if(v!==x){A.a(w.d,"_el_1").src=A.EW(x)
 w.b=x}},
-snU(d){this.c=y.g.a(d)},
-rb(d){return this.gra().$1(d)}}
-B.qW.prototype={
+snV(d){this.c=y.g.a(d)},
+rd(d){return this.grb().$1(d)}}
+B.qX.prototype={
 t(){var x,w,v=this,u="_appEl_1",t=document.createElement("div")
 y.z.a(t)
 v.C(t,"grid")
@@ -314,7 +314,7 @@ x.d=v}u=A.a(x.c,w)
 u.aR()
 A.a(x.b,"_appEl_1").G()},
 E(){A.a(this.b,"_appEl_1").F()}}
-B.qX.prototype={
+B.qY.prototype={
 t(){var x,w,v=this,u="_el_3",t="_el_4",s="_appEl_5",r="_el_6",q=document,p=q.createElement("div"),o=y.z
 o.a(p)
 v.C(p,"item")
@@ -368,7 +368,7 @@ q=u.x
 if(q!==v){A.a(u.Q,"_el_6").innerHTML=B.M6(v)
 u.x=v}},
 E(){A.a(this.c,"_appEl_5").F()}}
-B.qY.prototype={
+B.qZ.prototype={
 t(){var x,w,v=this,u="_appEl_1",t=document.createElement("div")
 y.z.a(t)
 v.C(t,"crafting-item")
@@ -385,7 +385,7 @@ A(){var x=this.a.f.k(0,"$implicit")
 A.a(this.c,"_NgIf_1_9").sK(x!=null)
 A.a(this.b,"_appEl_1").G()},
 E(){A.a(this.b,"_appEl_1").F()}}
-B.qZ.prototype={
+B.r_.prototype={
 t(){var x=this,w="_el_0",v=document.createElement("img")
 y.z.a(v)
 A.b(x.c,w)
@@ -396,7 +396,7 @@ x.J(A.a(x.c,w))},
 A(){var x=this,w=x.a.c.a.f.k(0,"$implicit"),v=x.b
 if(v!=w){A.a(x.c,"_el_0").src=A.eD(w)
 x.b=w}}}
-B.r_.prototype={
+B.r0.prototype={
 t(){var x,w,v,u=this,t="_compView_0",s="_FluidCard_0_5",r="_appEl_3",q=A.ia(u,0)
 A.b(u.b,t)
 u.b=q
@@ -431,7 +431,7 @@ A.a(w.d,"_appEl_3").G()
 A.a(w.b,"_compView_0").q()},
 E(){A.a(this.d,"_appEl_3").F()
 A.a(this.b,"_compView_0").u()}}
-B.r0.prototype={
+B.r1.prototype={
 t(){var x,w=this,v="_appEl_4",u=document,t=u.createElement("div"),s=y.z
 s.a(t)
 w.gi().j(t)
@@ -463,7 +463,7 @@ if(typeof t=="string")u=t
 else u=t==null?"":A.u(t)
 w.b.a_(u)},
 E(){A.a(this.c,"_appEl_4").F()}}
-B.r1.prototype={
+B.r2.prototype={
 t(){var x=document.createElement("li")
 y.z.a(x)
 this.gi().j(x)
@@ -473,9 +473,9 @@ A(){var x,w=this.a.f.k(0,"$implicit")
 if(typeof w=="string")x=w
 else x=w==null?"":A.u(w)
 this.b.a_(x)}}
-B.r2.prototype={
-t(){var x,w=this,v="rootElement",u="componentView",t=new B.k0(A.av(w,0,3)),s=$.DC
-if(s==null)s=$.DC=A.aw($.MS,null)
+B.r3.prototype={
+t(){var x,w=this,v="rootElement",u="componentView",t=new B.k0(A.av(w,0,3)),s=$.DB
+if(s==null)s=$.DB=A.aw($.MS,null)
 A.b($,"componentStyles")
 t.b=s
 x=document.createElement("tekpack")
@@ -497,10 +497,10 @@ return x===$?this.e=C.a7:x}return f},
 A(){var x=this.d.e
 if(x===0)A.a(this.a,"component").w()
 A.a(this.b,"componentView").q()}}
-B.nt.prototype={
+B.nu.prototype={
 am(d,e){A.p(e)
 return new A.jF(e)}}
-var z=a.updateTypes(["k<~>(t,l)","~(@)","ns(i)","S<aO>()"])
+var z=a.updateTypes(["l<~>(t,k)","~(@)","nt(i)","S<aO>()"])
 B.zT.prototype={
 $1(d){var x,w,v=this
 v.d.a(d)
@@ -520,11 +520,11 @@ x=A.Y(x,x)}u.c=y.Y.a(x)
 if(t.k(d,v)!=null)for(u=u.a,x=y.G,w=0;w<A.yM(J.ay(t.k(d,v)));++w)C.b.p(u,B.HF(x.a(J.R(t.k(d,v),w))))},
 $S:3}
 B.x5.prototype={
-$1(d){return A.dE(d)},
+$1(d){return A.e0(d)},
 $S:0}
 B.x2.prototype={
 $1(d){return J.aj(J.R(d,"slot"),this.a)},
-$S:25}
+$S:24}
 B.x3.prototype={
 $0(){return null},
 $S:5};(function installTearOffs(){var x=a._static_2,w=a._static_0,v=a._instance_1u,u=a._instance_1i
@@ -538,23 +538,23 @@ x(B,"Nz","P5",0)
 x(B,"NA","P6",0)
 w(B,"NB","P7",3)
 var t
-v(t=B.k0.prototype,"grW","rX",1)
-v(t,"grY","rZ",1)
-u(B.nt.prototype,"gv9","am",2)})();(function inheritance(){var x=a.inheritMany,w=a.inherit
+v(t=B.k0.prototype,"grX","rY",1)
+v(t,"grZ","t_",1)
+u(B.nu.prototype,"gva","am",2)})();(function inheritance(){var x=a.inheritMany,w=a.inherit
 x(A.bQ,[B.zT,B.x4,B.x5,B.x2])
-x(A.r,[B.aO,B.nQ,B.nt])
+x(A.r,[B.aO,B.nR,B.nu])
 w(B.x3,A.fr)
 w(B.k0,A.D)
-x(A.k,[B.qV,B.qW,B.qX,B.qY,B.qZ,B.r_,B.r0,B.r1])
-w(B.r2,A.S)})()
-A.q_(b.typeUniverse,JSON.parse('{"k0":{"D":["aO"],"t":[],"v":[],"w":[],"D.T":"aO"},"qV":{"k":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"k.T":"aO"},"qW":{"k":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"k.T":"aO"},"qX":{"k":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"k.T":"aO"},"qY":{"k":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"k.T":"aO"},"qZ":{"k":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"k.T":"aO"},"r_":{"k":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"k.T":"aO"},"r0":{"k":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"k.T":"aO"},"r1":{"k":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"k.T":"aO"},"r2":{"S":["aO"],"A":[],"v":[],"w":[],"B":[],"S.T":"aO"}}'))
+x(A.l,[B.qW,B.qX,B.qY,B.qZ,B.r_,B.r0,B.r1,B.r2])
+w(B.r3,A.S)})()
+A.q0(b.typeUniverse,JSON.parse('{"k0":{"D":["aO"],"t":[],"v":[],"w":[],"D.T":"aO"},"qW":{"l":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"l.T":"aO"},"qX":{"l":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"l.T":"aO"},"qY":{"l":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"l.T":"aO"},"qZ":{"l":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"l.T":"aO"},"r_":{"l":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"l.T":"aO"},"r0":{"l":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"l.T":"aO"},"r1":{"l":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"l.T":"aO"},"r2":{"l":["aO"],"t":[],"A":[],"v":[],"G":[],"w":[],"B":[],"l.T":"aO"},"r3":{"S":["aO"],"A":[],"v":[],"w":[],"B":[],"S.T":"aO"}}'))
 var y=(function rtii(){var x=A.aD
-return{a:x("eG"),d:x("e8"),B:x("iW"),C:x("L"),z:x("P"),v:x("fG"),Q:x("J<o<r>>"),f:x("J<r>"),K:x("J<nQ>"),m:x("J<i?>"),_:x("o<@>"),q:x("o<i?>"),F:x("fK"),G:x("K<@,@>"),P:x("ac"),j:x("t"),L:x("ns"),g:x("ns(i)"),N:x("i"),J:x("aO"),M:x("i4"),A:x("@"),k:x("n<r?>?"),Y:x("K<@,@>?")}})();(function constants(){D.c3=new A.az("tekpack",B.NB(),A.aD("az<aO>"))})();(function staticFields(){$.Nf=A.c(['@font-face {font-family:"Minecraft";font-style:normal;font-weight:400;src:url("fonts/minecraft_font.woff") format("woff")}.container._ngcontent-%ID%{position:relative}.logo._ngcontent-%ID%{width:20vw;margin:2% calc(40vw - 2.25rem)}.floatingCard._ngcontent-%ID%{margin:8% 6%;width:45%}fluid-card._ngcontent-%ID%{margin:8% 6%;width:45%}.video._ngcontent-%ID%{width:35vw;position:absolute;right:5%;background:black;height:19.69vw;margin-top:-24vw}.video._ngcontent-%ID% iframe._ngcontent-%ID%{height:100%;width:100%}.grid._ngcontent-%ID%{margin:5vw;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-gap:1vw}.item._ngcontent-%ID%{min-height:200px}.item._ngcontent-%ID% h5._ngcontent-%ID%{font-family:Minecraft;text-align:center;border-bottom:1px solid #373737;padding:2% 0;margin:0 4%;font-weight:500;font-size:1.25rem}.item._ngcontent-%ID% .icon._ngcontent-%ID%{image-rendering:pixelated;width:30%;margin:4% 35%}.item:hover._ngcontent-%ID%{border:2px solid #373737;border-right-color:#fff;border-bottom-color:#fff;background:#c6c6c6;border-radius:5px;transform:scale(1.1)}.item:hover._ngcontent-%ID% .crafting-grid._ngcontent-%ID%{display:none}.item:hover._ngcontent-%ID% .description._ngcontent-%ID%{line-height:2rem;height:12vw;visibility:visible;margin:5% 8%}.description._ngcontent-%ID%{font-family:Minecraft;visibility:hidden;height:5px;font-size:14px;color:#555}.crafting-grid._ngcontent-%ID%{padding:3% 6%;background:#c6c6c6;width:calc(12vw + 12%);margin:2% auto;display:grid;grid-template-columns:1fr 1fr 1fr}.crafting-blue._ngcontent-%ID%{background:#4a6e9e}.crafting-blue._ngcontent-%ID% .crafting-item._ngcontent-%ID%{background-color:#344e70;border:3px solid #1c2a3d;border-right-color:#6ea4ea;border-bottom-color:#6ea4ea}.crafting-item._ngcontent-%ID%{height:4vw;background-color:#8b8b8b;border:3px solid #373737;border-right-color:#fff;border-bottom-color:#fff}.crafting-item._ngcontent-%ID% img._ngcontent-%ID%{image-rendering:pixelated;height:100%;width:100%}'],y.f)
-$.DC=null
+return{a:x("eG"),d:x("e8"),B:x("iW"),C:x("L"),z:x("P"),v:x("fG"),Q:x("J<o<r>>"),f:x("J<r>"),K:x("J<nR>"),m:x("J<i?>"),_:x("o<@>"),q:x("o<i?>"),F:x("fK"),G:x("K<@,@>"),P:x("ac"),j:x("t"),L:x("nt"),g:x("nt(i)"),N:x("i"),J:x("aO"),M:x("i4"),A:x("@"),k:x("m<r?>?"),Y:x("K<@,@>?")}})();(function constants(){D.c3=new A.az("tekpack",B.NB(),A.aD("az<aO>"))})();(function staticFields(){$.Nf=A.c(['@font-face {font-family:"Minecraft";font-style:normal;font-weight:400;src:url("fonts/minecraft_font.woff") format("woff")}.container._ngcontent-%ID%{position:relative}.logo._ngcontent-%ID%{width:20vw;margin:2% calc(40vw - 2.25rem)}.floatingCard._ngcontent-%ID%{margin:8% 6%;width:45%}fluid-card._ngcontent-%ID%{margin:8% 6%;width:45%}.video._ngcontent-%ID%{width:35vw;position:absolute;right:5%;background:black;height:19.69vw;margin-top:-24vw}.video._ngcontent-%ID% iframe._ngcontent-%ID%{height:100%;width:100%}.grid._ngcontent-%ID%{margin:5vw;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-gap:1vw}.item._ngcontent-%ID%{min-height:200px}.item._ngcontent-%ID% h5._ngcontent-%ID%{font-family:Minecraft;text-align:center;border-bottom:1px solid #373737;padding:2% 0;margin:0 4%;font-weight:500;font-size:1.25rem}.item._ngcontent-%ID% .icon._ngcontent-%ID%{image-rendering:pixelated;width:30%;margin:4% 35%}.item:hover._ngcontent-%ID%{border:2px solid #373737;border-right-color:#fff;border-bottom-color:#fff;background:#c6c6c6;border-radius:5px;transform:scale(1.1)}.item:hover._ngcontent-%ID% .crafting-grid._ngcontent-%ID%{display:none}.item:hover._ngcontent-%ID% .description._ngcontent-%ID%{line-height:2rem;height:12vw;visibility:visible;margin:5% 8%}.description._ngcontent-%ID%{font-family:Minecraft;visibility:hidden;height:5px;font-size:14px;color:#555}.crafting-grid._ngcontent-%ID%{padding:3% 6%;background:#c6c6c6;width:calc(12vw + 12%);margin:2% auto;display:grid;grid-template-columns:1fr 1fr 1fr}.crafting-blue._ngcontent-%ID%{background:#4a6e9e}.crafting-blue._ngcontent-%ID% .crafting-item._ngcontent-%ID%{background-color:#344e70;border:3px solid #1c2a3d;border-right-color:#6ea4ea;border-bottom-color:#6ea4ea}.crafting-item._ngcontent-%ID%{height:4vw;background-color:#8b8b8b;border:3px solid #373737;border-right-color:#fff;border-bottom-color:#fff}.crafting-item._ngcontent-%ID% img._ngcontent-%ID%{image-rendering:pixelated;height:100%;width:100%}'],y.f)
+$.DB=null
 $.MS=A.c([$.Nf],y.f)})();(function lazyInitializers(){var x=a.lazyFinal
-x($,"R9","FV",()=>{var w=A.KF().createDocumentFragment()
+x($,"R9","FU",()=>{var w=A.KF().createDocumentFragment()
 w.toString
 return w})})()}
-$__dart_deferred_initializers__["lAYrasnnMSdhTaYLRP6ocOvz37o="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["uZNtGnRJj1GBsvw+Ks6gK2EGV7w="] = $__dart_deferred_initializers__.current
 
 //# sourceMappingURL=main.dart.js_1.part.js.map
